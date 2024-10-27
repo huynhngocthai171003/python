@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>Thêm phần tử trong Python</title>
+    <meta name="og:description" content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image" content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item " >
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="far fa-file-alt"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./List.html">
+                                    <span> Truy cập phần tử của List</span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Match-Case.html">
+                                <span class="d2c_icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </span>
+                                <span> Match-case trong Python </span>
+                            </a>
+                        </li>
+                        <!-- End:Child Sub Menu -->
+                    </li>
+
+                    
+                <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <!-- Title -->
+           
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: black; font-weight: bolder;" href="#">Thêm phần tử vào List trong Python</a></h1>
+                                        <p style="font-size: large;" class="mb-0">Trong Python, danh sách (list) là một cấu trúc dữ liệu rất phổ biến và linh hoạt, cho phép lưu trữ nhiều giá trị trong một biến duy nhất. Việc thêm phần tử vào danh sách là một thao tác cơ bản nhưng rất quan trọng. Bài viết này sẽ hướng dẫn chi tiết cách thêm phần tử vào danh sách trong Python, bao gồm các phương pháp append(), insert(), extend(), và sử dụng toán tử +. Chúng ta cũng sẽ xem xét các ví dụ cụ thể để minh họa cách sử dụng từng phương pháp.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp append()</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Phương pháp append() được sử dụng để thêm một phần tử vào cuối danh sách. Đây là một trong những phương pháp đơn giản và phổ biến nhất để thêm phần tử vào danh sách.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    list.append(element)
+    # list: Danh sách mà bạn muốn thêm phần tử.
+    # element: Phần tử mà bạn muốn thêm vào danh sách.                                                
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo một danh sách các loại trái cây
+    fruits = ['apple', 'banana', 'cherry']
+                                                    
+    # Thêm một phần tử vào cuối danh sách
+    fruits.append('orange')
+                                                    
+    # In danh sách sau khi thêm phần tử
+    print(fruits)    # ['apple', 'banana', 'cherry', 'orange']                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, phần tử 'orange' được thêm vào cuối danh sách fruits.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp insert()</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Phương pháp insert() cho phép bạn chèn một phần tử vào một vị trí cụ thể trong danh sách. Điều này rất hữu ích khi bạn cần thêm phần tử vào giữa danh sách hoặc vào một vị trí cụ thể nào đó.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    list.insert(index, element)
+    # list: Danh sách mà bạn muốn thêm phần tử.
+    # index: Vị trí mà bạn muốn chèn phần tử.
+    # element: Phần tử mà bạn muốn thêm vào danh sách.                                                
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo một danh sách các số nguyên tố
+    prime_numbers = [2, 3, 5, 7]
+                                                    
+    # Chèn phần tử 11 vào vị trí thứ 4 (chỉ số 3)
+    prime_numbers.insert(3, 11)
+                                                    
+    # In danh sách sau khi chèn phần tử
+    print(prime_numbers)    #[2, 3, 5, 11, 7]                                        
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, phần tử 11 được chèn vào vị trí thứ 4 trong danh sách prime_numbers.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp extend()</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Phương pháp extend() được sử dụng để thêm các phần tử từ một iterable (như danh sách, tuple, set, v.v.) vào cuối danh sách hiện tại. Phương pháp này rất hữu ích khi bạn muốn kết hợp hai danh sách hoặc thêm nhiều phần tử cùng một lúc.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    list.extend(iterable)
+    # list: Danh sách mà bạn muốn thêm phần tử.
+    # iterable: Một iterable chứa các phần tử mà bạn muốn thêm vào danh sách.                                               
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo một danh sách các loại xe
+    cars = ['Audi', 'BMW', 'Jaguar']
+    
+    # Tạo một danh sách các loại xe khác
+    other_cars = ['Maruti', 'Tata']
+    
+    # Thêm các phần tử từ danh sách other_cars vào danh sách cars
+    cars.extend(other_cars)
+    
+    # In danh sách sau khi thêm phần tử
+    print(cars)     # ['Audi', 'BMW', 'Jaguar', 'Maruti', 'Tata']                                   
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, các phần tử từ danh sách other_cars được thêm vào cuối danh sách cars.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng toán tử + để nối danh sách</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Toán tử + có thể được sử dụng để nối hai danh sách lại với nhau, tạo ra một danh sách mới chứa tất cả các phần tử từ cả hai danh sách ban đầu. Phương pháp này không thay đổi các danh sách ban đầu mà tạo ra một danh sách mới.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    new_list = list1 + list2
+    # list1: Danh sách đầu tiên.
+    # list2: Danh sách thứ hai.
+    # new_list: Danh sách mới chứa các phần tử từ cả list1 và list2.                                               
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo hai danh sách
+    list1 = [1, 2, 3]
+    list2 = [4, 5, 6]
+    
+    # Nối hai danh sách lại với nhau
+    new_list = list1 + list2
+    
+    # In danh sách mới
+    print(new_list)     #[1, 2, 3, 4, 5, 6]                              
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, danh sách new_list chứa tất cả các phần tử từ cả list1 và list2.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng toán tử * để nối danh sách</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Toán tử * có thể được sử dụng để nối nhiều danh sách lại với nhau trong Python 3.6 trở lên. Phương pháp này rất tiện lợi và ngắn gọn.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    new_list = [*list1, *list2]
+    # list1: Danh sách đầu tiên.
+    # list2: Danh sách thứ hai.
+    # new_list: Danh sách mới chứa các phần tử từ cả list1 và list2.                                               
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo hai danh sách
+    list1 = [1, 2, 3]
+    list2 = [4, 5, 6]
+    
+    # Nối hai danh sách lại với nhau bằng toán tử *
+    new_list = [*list1, *list2]
+    
+    # In danh sách mới
+    print(new_list)     #[1, 2, 3, 4, 5, 6]                         
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, danh sách new_list chứa tất cả các phần tử từ cả list1 và list2 bằng cách sử dụng toán tử *.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng phương pháp +=</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Toán tử += có thể được sử dụng để nối một danh sách với một danh sách khác. Phương pháp này thay đổi danh sách ban đầu bằng cách thêm các phần tử từ danh sách khác vào cuối danh sách.<br>
+
+                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    list1 += list2
+    # list1: Danh sách đầu tiên.
+    # list2: Danh sách thứ hai.                                               
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo hai danh sách
+    list1 = [1, 2, 3]
+    list2 = [4, 5, 6]
+    
+    # Nối hai danh sách lại với nhau bằng toán tử +=
+    list1 += list2
+    
+    # In danh sách sau khi nối
+    print(list1)    #[1, 2, 3, 4, 5, 6]                     
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, danh sách list1 được nối với danh sách list2 bằng cách sử dụng toán tử +=.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập danh sách từ bàn phím bằng lệnh input</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Ngoài danh sách rỗng được gán sẵn, người dùng có thể tự nhập phần tử vào danh sách với số lượng tùy ý<br>
+
+                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    số_lượng = 5                                               
+    my_list = []
+    for i in range(số_lượng):
+        phần_tử = int(input(f"Nhập phần thử thứ {i + 1}: "))                                            
+        my_list.append(phần_tử)
+    print(f"Danh sách sau khi nhập là: {my_list}")
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <span class="text-danger">2. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Tạo hai danh sách
+    list1 = [1, 2, 3]
+    list2 = [4, 5, 6]
+    
+    # Nối hai danh sách lại với nhau bằng toán tử +=
+    list1 += list2
+    
+    # In danh sách sau khi nối
+    print(list1)    #[1, 2, 3, 4, 5, 6]                     
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            Trong ví dụ trên, danh sách list1 được nối với danh sách list2 bằng cách sử dụng toán tử +=.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                </div>
+            </div>
+            <!-- End:Title -->
+
+            <!-- copyright -->
+            <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+        </div>
+        <!-- End:Main Body -->
+
+
+       
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->

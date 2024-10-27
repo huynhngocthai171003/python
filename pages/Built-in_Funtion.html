@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>Built-in Funtion</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="far fa-file-alt"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Match-Case.html">
+                                <span class="d2c_icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </span>
+                                <span> Match-case trong Python </span>
+                            </a>
+                        </li>
+                        <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <!-- Title -->
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+
+                </div>
+                <!-- <div class="col">
+                    <p class="mb-0">Welcome Back</p>
+                    <h4 class="text-capitalize">List</h4>
+                </div> -->
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">Tổng hợp các hàm của List trong Python</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Python là một ngôn ngữ lập trình mạnh mẽ và linh hoạt, được sử dụng rộng rãi trong nhiều lĩnh vực như phát triển web, khoa học dữ liệu, trí tuệ nhân tạo, và nhiều lĩnh vực khác. Một trong những cấu trúc dữ liệu quan trọng nhất trong Python là danh sách (list). Danh sách trong Python là một cấu trúc dữ liệu có thể chứa nhiều loại dữ liệu khác nhau và có thể thay đổi được. Trong bài viết này, chúng ta sẽ tìm hiểu chi tiết về các hàm và phương thức của danh sách trong Python, kèm theo các ví dụ minh họa.</p>
+                                        <!-- <span class="text-danger">Ví dụ: </span> <br> -->
+
+                                        <!-- <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    list = []                                            
+    list1 = ['java', 'python', 1997, 2000]
+    list2 = [1, 2, 3, 4, 5]
+    list3 = ["a", "b", "c", "d"]                                                
+                                            </code>
+                                        </deckgo-highlight-code> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Index() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về chỉ số (vị trí) của phần tử đầu tiên khớp với giá trị chỉ định.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+list.index(x[, start[, end]])                                                
+Tham số:
+x: Phần tử cần tìm.
+start: (Tùy chọn) Vị trí bắt đầu tìm kiếm.
+end: (Tùy chọn) Vị trí kết thúc tìm kiếm.
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 3, 2]
+print(my_list.index(2))  # Kết quả: 1
+print(my_list.index(2, 2))  # Tìm từ vị trí thứ 2, Kết quả: 3                          
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                        
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Copy() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về một bản sao nông (shallow copy) của danh sách.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+new_list = list.copy()
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+original = [1, 2, 3]
+copied = original.copy()
+print(copied)  # Kết quả: [1, 2, 3]
+                          
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Count() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về số lần xuất hiện của một phần tử trong danh sách.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+list.count(x)
+x: Phần tử cần đếm trong danh sách.
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 2, 3, 4]
+print(my_list.count(2))  # Kết quả: 2                         
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Reverse() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Đảo ngược thứ tự của các phần tử trong danh sách.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+list.reverse()
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 3]
+my_list.reverse()
+print(my_list)  # Kết quả: [3, 2, 1]                         
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sort() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Phương thức sort() là một phương thức của đối tượng list, được sử dụng để sắp xếp các phần tử của list tại chỗ (in-place). Điều này có nghĩa là list ban đầu sẽ bị thay đổi và không tạo ra một list mới.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+list.sort(key=None, reverse=False)
+key (tuỳ chọn): Một hàm có thể được sử dụng để tùy chỉnh thứ tự sắp xếp.
+reverse (tuỳ chọn): Một giá trị boolean. Nếu True, list sẽ được sắp xếp theo thứ tự giảm dần. Mặc định là False.
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+fruits = ['apple', 'banana', 'cherry']
+fruits.sort()
+print(fruits)  # Kết quả: ['apple', 'banana', 'cherry']                        
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">3. Sắp xếp theo thứ tự giảm dần:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+fruits = ['apple', 'banana', 'cherry']
+fruits.sort(reverse=True)
+print(fruits)  # Kết quả: ['cherry', 'banana', 'apple']                        
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">4. Sắp xếp với hàm tùy chỉnh:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+def myfunc(n):
+return abs(n - 50)
+
+numbers = [100, 50, 65, 82, 23]
+numbers.sort(key=myfunc)
+print(numbers)  # Kết quả: [50, 65, 23, 82, 100]                        
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sorted() </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Phương thức sorted() là một hàm tích hợp sẵn trong Python, được sử dụng để sắp xếp các phần tử của một iterable và trả về một list mới đã được sắp xếp. Hàm này không thay đổi iterable ban đầu</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+sorted(iterable, key=None, reverse=False)
+iterable: Một đối tượng có thể lặp lại (list, tuple, dictionary, v.v.).
+key (tuỳ chọn): Một hàm có thể được sử dụng để tùy chỉnh thứ tự sắp xếp.
+reverse (tuỳ chọn): Một giá trị boolean. Nếu True, list sẽ được sắp xếp theo thứ tự giảm dần. Mặc định là False.
+                                            </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+fruits = ['apple', 'banana', 'cherry']
+sorted_fruits = sorted(fruits)
+print(sorted_fruits)  # Kết quả: ['apple', 'banana', 'cherry']
+print(fruits)         # Kết quả: ['apple', 'banana', 'cherry']]                        
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">3. Sắp xếp theo thứ tự giảm dần:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+fruits = ['apple', 'banana', 'cherry']
+sorted_fruits = sorted(fruits, reverse=True)
+print(sorted_fruits)  # Kết quả: ['cherry', 'banana', 'apple']                        
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">4. Sắp xếp với hàm tùy chỉnh:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+def myfunc(n):
+return abs(n - 50)
+
+numbers = [100, 50, 65, 82, 23]
+sorted_numbers = sorted(numbers, key=myfunc)
+print(sorted_numbers)  # Kết quả: [50, 65, 23, 82, 100]                        
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sắp xếp List chứa các kiểu dữ liệu khác nhau </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Python cho phép sắp xếp các list chứa các kiểu dữ liệu khác nhau như số nguyên, chuỗi, và thậm chí là các list khác. Tuy nhiên, tất cả các phần tử trong list phải có thể so sánh được với nhau.</p>
+                                        <span class="text-danger">1. Ví dụ</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+mixed_list = [3, 'banana', 1, 'apple', 2, 'cherry']
+# mixed_list.sort()  # Sẽ gây ra lỗi TypeError
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <span>Để sắp xếp một list chứa các kiểu dữ liệu khác nhau, bạn có thể sử dụng tham số key để xác định tiêu chí sắp xếp.</span>
+<br>
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+mixed_list = [3, 'banana', 1, 'apple', 2, 'cherry']
+sorted_mixed_list = sorted(mixed_list, key=str)
+print(sorted_mixed_list)  # Kết quả: [1, 2, 3, 'apple', 'banana', 'cherry']                        
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Min(), Max()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về phần tử nhỏ nhất và lớn nhấttrong danh sách.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+min_value = min(list)
+max_value = max(list)
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [3, 1, 4, 2]
+print(min(my_list))  # Kết quả: 1
+print(max(my_list))  # Kết quả: 4                   
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Enumerate()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về một đối tượng liệt kê (iterator) chứa các cặp (chỉ số, giá trị) từ danh sách.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+enumerated_list = enumerate(list, start=0)
+list: Danh sách cần liệt kê.
+start: (Tùy chọn) Giá trị chỉ số bắt đầu. Mặc định là 0
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = ['a', 'b', 'c']
+for index, value in enumerate(my_list):
+    print(index, value)
+# Kết quả:
+# 0 a
+# 1 b
+# 2 c           
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">All()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về True nếu tất cả phần tử trong danh sách là True. Ngược lại trả về False.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+result = all(list)
+list: Danh sách chứa các phần tử cần kiểm tra.
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 3]
+print(all(my_list))  # Kết quả: True
+
+my_list = [0, 2, 3]
+print(all(my_list))  # Kết quả: False       
+                                          </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Any()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trả về True nếu có ít nhất một phần tử trong danh sách là True. Nếu không, trả về False.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+result = any(list)
+list: Danh sách chứa các phần tử cần kiểm tra.
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [0, 1, 2]
+print(any(my_list))  # Kết quả: True
+
+my_list = [0, 0, 0]
+print(any(my_list))  # Kết quả: False       
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Filter()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Lọc các phần tử của danh sách dựa trên một điều kiện cụ thể.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+filtered_list = filter(function, list)
+function: Hàm trả về True hoặc False cho từng phần tử.
+list: Danh sách cần lọc.
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 3, 4, 5]
+def is_even(n):
+    return n % 2 == 0
+filtered = filter(is_even, my_list)
+print(list(filtered))  # Kết quả: [2, 4]     
+                                          </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Map()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Áp dụng một hàm cho từng phần tử của danh sách và trả về danh sách kết quả.</p>
+                                        <span class="text-danger">1. Cú pháp</span> <br>
+                                           
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+mapped_list = map(function, list)
+function: Hàm được áp dụng cho từng phần tử.
+list: Danh sách có các phần tử được áp dụng hàm
+                                            </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">2. Ví dụ:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_list = [1, 2, 3]
+def square(n):
+    return n * 2
+mapped = map(square, my_list)
+print(list(mapped))  # Kết quả: [2, 4, 6]     
+                                          </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        <br>
+
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End:Title -->
+
+            <!-- copyright -->
+            <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+        </div>
+        <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
