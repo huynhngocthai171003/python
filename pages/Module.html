@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
-    <title>Thêm phần tử trong Python</title>
+    <title>Xóa phần tử trong List</title>
     <meta name="og:description" content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
     <meta name="robots" content="index, follow">
     <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
@@ -83,15 +83,14 @@
                             <!-- End:Child Menu Item -->
 
                             <!-- Child Menu Item -->
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="./Modifying_List.html">
                                     <span> Thay đổi phần tử của List </span>
                                 </a>
                             </li>
                             <!-- End:Child Menu Item -->
 
-                            <!-- Child Menu Item -->
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="./Add_List.html">
                                     <span> Thêm phần tử vào List </span>
                                 </a>
@@ -120,7 +119,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="./Module.html">
                                 <span class="d2c_icon">
                                     <i class="fas fa-exchange-alt"></i>
@@ -166,8 +165,14 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h1><a style="color: black; font-weight: bolder;" href="#">Thêm phần tử vào List trong Python</a></h1>
-                                        <p style="font-size: large;" class="mb-0">Trong Python, danh sách (list) là một cấu trúc dữ liệu rất phổ biến và linh hoạt, cho phép lưu trữ nhiều giá trị trong một biến duy nhất. Việc thêm phần tử vào danh sách là một thao tác cơ bản nhưng rất quan trọng. Bài viết này sẽ hướng dẫn chi tiết cách thêm phần tử vào danh sách trong Python, bao gồm các phương pháp append(), insert(), extend(), và sử dụng toán tử +. Chúng ta cũng sẽ xem xét các ví dụ cụ thể để minh họa cách sử dụng từng phương pháp.</p>
+                                        <h1><a style="color: black; font-weight: bolder;" href="#">MODULE TRONG PYTHON</a></h1>
+                                        <p style="font-size: large;" class="mb-0">Trong Python, module và package là hai khái niệm cơ bản giúp tổ chức và quản lý mã nguồn một cách hiệu quả.
+                                        </p><hr>
+                                        <h5>Module</h5>
+                                        <p>Một module trong Python là một file chứa định nghĩa và câu lệnh Python. File này có phần mở rộng là .py. Module có thể chứa định nghĩa của hàm, lớp và biến, cũng như mã thực thi. Mục đích chính của việc sử dụng module là để tái sử dụng mã nguồn. Bạn có thể định nghĩa các hàm, lớp và biến trong một module và sau đó sử dụng chúng trong một chương trình khác thông qua việc import module đó.</p>
+                                        <h5>Package</h5>
+                                        <p>Package trong Python là một thư mục chứa một hoặc nhiều modules hay các package khác nhau, nó được tạo ra  nhằm mục đích phân bố các modules có cùng chức năng hay một cái gì đó, để dễ quản lý source code.</p>
+                                        
                                     </div>
                                     
                                 </div>
@@ -181,31 +186,31 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp append()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương pháp append() được sử dụng để thêm một phần tử vào cuối danh sách. Đây là một trong những phương pháp đơn giản và phổ biến nhất để thêm phần tử vào danh sách.<br>
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Tạo 1 module</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Để tạo 1 module, chúng ta viết mã bằng tập lệnh Python và lưu nó dưới dạng tệp .py. Tạo 1 một tệp có tên mymodule.py trong thư mục dự án.
+                                            <br>                                    
+                                            <span class="text-danger">1. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    #mymodule.py                                            
+    def generate_full_name(firstname, lastname):
+      space = ' '
+      fullname = firstname + space + lastname
+      return fullname
 
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list.append(element)
-    # list: Danh sách mà bạn muốn thêm phần tử.
-    # element: Phần tử mà bạn muốn thêm vào danh sách.                                                
+    def sum_two_nums (num1, num2):
+        return num1 + num2
+    gravity = 9.81
+    person = {
+        "firstname": "Asabeneh",
+        "age": 250,
+        "country": "Finland",
+        "city":'Helsinki'
+    }
                                                 </code>
                                             </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo một danh sách các loại trái cây
-    fruits = ['apple', 'banana', 'cherry']
-                                                    
-    # Thêm một phần tử vào cuối danh sách
-    fruits.append('orange')
-                                                    
-    # In danh sách sau khi thêm phần tử
-    print(fruits)    # ['apple', 'banana', 'cherry', 'orange']                                            
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, phần tử 'orange' được thêm vào cuối danh sách fruits.
+                                            
+                                            
                                         </p>
                                     </div>
                                     
@@ -221,249 +226,19 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp insert()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương pháp insert() cho phép bạn chèn một phần tử vào một vị trí cụ thể trong danh sách. Điều này rất hữu ích khi bạn cần thêm phần tử vào giữa danh sách hoặc vào một vị trí cụ thể nào đó.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list.insert(index, element)
-    # list: Danh sách mà bạn muốn thêm phần tử.
-    # index: Vị trí mà bạn muốn chèn phần tử.
-    # element: Phần tử mà bạn muốn thêm vào danh sách.                                                
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo một danh sách các số nguyên tố
-    prime_numbers = [2, 3, 5, 7]
-                                                    
-    # Chèn phần tử 11 vào vị trí thứ 4 (chỉ số 3)
-    prime_numbers.insert(3, 11)
-                                                    
-    # In danh sách sau khi chèn phần tử
-    print(prime_numbers)    #[2, 3, 5, 11, 7]                                        
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, phần tử 11 được chèn vào vị trí thứ 4 trong danh sách prime_numbers.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương pháp extend()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương pháp extend() được sử dụng để thêm các phần tử từ một iterable (như danh sách, tuple, set, v.v.) vào cuối danh sách hiện tại. Phương pháp này rất hữu ích khi bạn muốn kết hợp hai danh sách hoặc thêm nhiều phần tử cùng một lúc.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list.extend(iterable)
-    # list: Danh sách mà bạn muốn thêm phần tử.
-    # iterable: Một iterable chứa các phần tử mà bạn muốn thêm vào danh sách.                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo một danh sách các loại xe
-    cars = ['Audi', 'BMW', 'Jaguar']
-    
-    # Tạo một danh sách các loại xe khác
-    other_cars = ['Maruti', 'Tata']
-    
-    # Thêm các phần tử từ danh sách other_cars vào danh sách cars
-    cars.extend(other_cars)
-    
-    # In danh sách sau khi thêm phần tử
-    print(cars)     # ['Audi', 'BMW', 'Jaguar', 'Maruti', 'Tata']                                   
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, các phần tử từ danh sách other_cars được thêm vào cuối danh sách cars.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng toán tử + để nối danh sách</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Toán tử + có thể được sử dụng để nối hai danh sách lại với nhau, tạo ra một danh sách mới chứa tất cả các phần tử từ cả hai danh sách ban đầu. Phương pháp này không thay đổi các danh sách ban đầu mà tạo ra một danh sách mới.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    new_list = list1 + list2
-    # list1: Danh sách đầu tiên.
-    # list2: Danh sách thứ hai.
-    # new_list: Danh sách mới chứa các phần tử từ cả list1 và list2.                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo hai danh sách
-    list1 = [1, 2, 3]
-    list2 = [4, 5, 6]
-    
-    # Nối hai danh sách lại với nhau
-    new_list = list1 + list2
-    
-    # In danh sách mới
-    print(new_list)     #[1, 2, 3, 4, 5, 6]                              
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, danh sách new_list chứa tất cả các phần tử từ cả list1 và list2.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng toán tử * để nối danh sách</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Toán tử * có thể được sử dụng để nối nhiều danh sách lại với nhau trong Python 3.6 trở lên. Phương pháp này rất tiện lợi và ngắn gọn.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    new_list = [*list1, *list2]
-    # list1: Danh sách đầu tiên.
-    # list2: Danh sách thứ hai.
-    # new_list: Danh sách mới chứa các phần tử từ cả list1 và list2.                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo hai danh sách
-    list1 = [1, 2, 3]
-    list2 = [4, 5, 6]
-    
-    # Nối hai danh sách lại với nhau bằng toán tử *
-    new_list = [*list1, *list2]
-    
-    # In danh sách mới
-    print(new_list)     #[1, 2, 3, 4, 5, 6]                         
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, danh sách new_list chứa tất cả các phần tử từ cả list1 và list2 bằng cách sử dụng toán tử *.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Sử dụng phương pháp +=</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Toán tử += có thể được sử dụng để nối một danh sách với một danh sách khác. Phương pháp này thay đổi danh sách ban đầu bằng cách thêm các phần tử từ danh sách khác vào cuối danh sách.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list1 += list2
-    # list1: Danh sách đầu tiên.
-    # list2: Danh sách thứ hai.                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo hai danh sách
-    list1 = [1, 2, 3]
-    list2 = [4, 5, 6]
-    
-    # Nối hai danh sách lại với nhau bằng toán tử +=
-    list1 += list2
-    
-    # In danh sách sau khi nối
-    print(list1)    #[1, 2, 3, 4, 5, 6]                     
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, danh sách list1 được nối với danh sách list2 bằng cách sử dụng toán tử +=.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập danh sách từ bàn phím bằng lệnh input</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Ngoài danh sách rỗng được gán sẵn, người dùng có thể tự nhập phần tử vào danh sách với số lượng tùy ý<br>
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập vào 1 module</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Để nhập tệp, chúng ta sử dụng từ khóa import và tên của tệp<br>
 
                                             <span class="text-danger">1. Ví dụ:</span><br>
                                             <deckgo-highlight-code language="python">
                                                 <code slot="code">
-    số_lượng = 5                                               
-    my_list = []
-    for i in range(số_lượng):
-        phần_tử = int(input(f"Nhập phần thử thứ {i + 1}: "))                                            
-        my_list.append(phần_tử)
-    print(f"Danh sách sau khi nhập là: {my_list}")
+    #main.py                                              
+    import mymodule
+    print(mymodule.generate_full_name('Asabeneh', 'Yetayeh')) # Asabeneh Yetayeh
                                                 </code>
                                             </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # Tạo hai danh sách
-    list1 = [1, 2, 3]
-    list2 = [4, 5, 6]
-    
-    # Nối hai danh sách lại với nhau bằng toán tử +=
-    list1 += list2
-    
-    # In danh sách sau khi nối
-    print(list1)    #[1, 2, 3, 4, 5, 6]                     
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, danh sách list1 được nối với danh sách list2 bằng cách sử dụng toán tử +=.
+                                            
+                                           
                                         </p>
                                     </div>
                                     
@@ -471,7 +246,280 @@
                             </div>
                             
                         </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Chúng ta có thể có nhiều hàm trong một tệp và chúng ta có thể nhập tất cả các hàm theo nhiều cách khác nhau.<br>
+
+                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py file
+    from mymodule import generate_full_name, sum_two_nums, person, gravity
+    print(generate_full_name('Asabneh','Yetayeh'))
+    print(sum_two_nums(1,9))
+    mass = 100;
+    weight = mass * gravity
+    print(weight)
+    print(person['firstname'])                                              
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module và đổi tên</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong quá trình nhập, chúng ta có thể đổi tên<br>
+
+                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py file
+    from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
+    print(fullname('Asabneh','Yetayeh'))
+    print(total(1, 9))
+    mass = 100;
+    weight = mass * g
+    print(weight)
+    print(p)
+    print(p['firstname'])                                              
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập built-in modules</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong Python, bạn có thể sử dụng các module có sẵn để tận dụng các chức năng mà Python cung cấp không cần cài đặt thêm bất kỳ gói nào. Để sử dụng, bạn cần import chúng vào chương trình <br>
+
+                                            <span class="text-danger">1. Random Module:</span><br>
+                                            <p>Cung cấp cho chúng ta một số ngẫu nhiên trong khoảng từ 0 đến 0,9999... Một số chức năng:</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    from random import ramdom, randint
+    print(random())
+    print(randint(5,20)) #trả về số nguyên trong khoảng [5,20]                                              
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <span class="text-danger" style="font-size: large;">2. Datetime Module: quản lý ngày giờ</span><br>
+                                            
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    from datetime import date                                              
+    date.today()  #ngày hiện tại
+
+    from datetime import time
+    print(time(14,30))  #đại diện thời gian trong ngày (giờ, phút, giây, microseconds), không liên quan đến múi giờ
+
+    from datetime import datetime
+    datetime.now()  #trả về ngày giờ, hiện tại
+    datetime.strftime(format) #định dạng ngày giờ theo định dạng cụ thể
+
+    from datetime import timedelta, datetime
+    now = datetime.now()
+    future_day = now + timedelta(days = 7) #tính toán ngày sau 7 ngày
+    formatted_date = now.strftime("%Y-%m-%d, %H:%M:%S")
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            <div class="col-xl-12 mb-4">
+                                                <div class="card bg-dark bg-opacity-10">
+                                                    <div class="card-body">
+                                                        <h5 class="text-capitalize mb-3">Định dạng</h5>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr class="table-warning">
+                                                                        <th scope="col" style="min-width: 120px;">Directive</th>
+                                                                        <th scope="col" style="min-width: 120px;">Description</th>
+                                                               
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="table-primary">
+                                                                        <th scope="row">%Y</th>
+                                                                        <td>Năm có 4 chữ số</td>
+                                                                        
+                                                                       
+                                                                    </tr>
+                                                                    <tr class="table-success">
+                                                                        <th scope="row">%m</th>
+                                                                        <td>Tháng 01 đến 12</td>
+                                                                        
+                                                                       
+                                                                    </tr>
+                                                                    <tr class="table-danger">
+                                                                        <th scope="row">%d</th>
+                                                                        <td>Ngày 01 đến 31</td>
+                                                                       
+                                                                        
+                                                                    </tr>
+                                                                    <tr class="table-warning">
+                                                                        <th scope="row">%H</th>
+                                                                        <td>Giờ 00 đến 23</td>
+                                                                        
+                                                                        
+                                                                    </tr>
+                                                                    <tr class="table-success">
+                                                                        <th scope="row">%M</th>
+                                                                        <td>Phút 00 đến 59</td>
+                                                                        
+                                                                        
+                                                                    </tr>
+                                                                    <tr class="table-primary">
+                                                                        <th scope="row">%S</th>
+                                                                        <td>Giây 00 đến 59</td>
+                                                                        
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <span class="text-danger" style="font-size: large;">3. Math Module</span><br>
+                                            <p>Math module chứa nhiều phép toán, hằng số để thực hiện các phép toán khác nhau. Để kiểm tra những chức năng mà module có, chúng ta sử dụng help(math) hoặc dir(math). Điều này sẽ hiển thị các chức năng có sẵn trong module</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    import math                                            
+    print(math.sqrt(2)) #1.414..
+
+    from math import pi
+    print(pi) 
+
+    from math import pi, sqrt, pow
+    print(pi)  #3.1415...
+    print(sqrt(2))   #1.414...
+    print(pow(2,3))  #8.0
+
+    from math import *
+
+    from math import pi as PI
+    print(PI)
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module và đổi tên</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong quá trình nhập, chúng ta có thể đổi tên<br>
+
+                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py file
+    from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
+    print(fullname('Asabneh','Yetayeh'))
+    print(total(1, 9))
+    mass = 100;
+    weight = mass * g
+    print(weight)
+    print(p)
+    print(p['firstname'])                                              
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module và đổi tên</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong quá trình nhập, chúng ta có thể đổi tên<br>
+
+                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py file
+    from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
+    print(fullname('Asabneh','Yetayeh'))
+    print(total(1, 9))
+    mass = 100;
+    weight = mass * g
+    print(weight)
+    print(p)
+    print(p['firstname'])                                              
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
                         
+                    </div>
                 </div>
             </div>
             <!-- End:Title -->
