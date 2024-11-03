@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
-    <title>Xóa phần tử trong List</title>
+    <title>Module trong Python</title>
     <meta name="og:description" content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
     <meta name="robots" content="index, follow">
     <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
@@ -455,24 +455,8 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module và đổi tên</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Trong quá trình nhập, chúng ta có thể đổi tên<br>
-
-                                            <span class="text-danger">1. Ví dụ:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    # main.py file
-    from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
-    print(fullname('Asabneh','Yetayeh'))
-    print(total(1, 9))
-    mass = 100;
-    weight = mass * g
-    print(weight)
-    print(p)
-    print(p['firstname'])                                              
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">PACKAGE</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Package trong Python là một thư mục chứa một hoặc nhiều modules hay các package khác nhau, nó được tạo ra  nhằm mục đích phân bố các modules có cùng chức năng hay một cái gì đó, để dễ quản lý source code.<br>
                                             
                                         </p>
                                     </div>
@@ -491,24 +475,29 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Nhập hàm từ 1 module và đổi tên</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Trong quá trình nhập, chúng ta có thể đổi tên<br>
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Build package trong Python.</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Để tạo ra một package trong python thì mọi người chỉ cần tạo ra một thư mục, với tên thư mục chính là tên của package và trong thư mục này nhất định phải có một file có tên __init__.py. File __init__.py này nó giống như các constructor, và nó sẽ được gọi ra đầu tiên khi chúng ta import package đó.<br>
 
-                                            <span class="text-danger">1. Ví dụ:</span><br>
+                                            <span class="text-danger">1. Cấu trúc:</span><br>
                                             <deckgo-highlight-code language="python">
                                                 <code slot="code">
-    # main.py file
-    from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
-    print(fullname('Asabneh','Yetayeh'))
-    print(total(1, 9))
-    mass = 100;
-    weight = mass * g
-    print(weight)
-    print(p)
-    print(p['firstname'])                                              
+    |demopackage/__init__py
+    |main.py                                            
                                                 </code>
                                             </deckgo-highlight-code>
-                                            
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # __init__.py
+    print("Duoc in tu file __init__py")                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py
+    import demopackage                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <p>Sau đó các bạn chạy file main.py, sẽ thu được kết quả như sau: Duoc in tu file __init__py</p>
                                             
                                         </p>
                                     </div>
@@ -518,7 +507,515 @@
                             
                         </div>
 
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Import package.</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Để import các package thì các bạn sử dụng cú pháp giống như đối với modules. Nhưng bây giờ các bạn sẽ phải gọi từ package -> module.<br>
+
+                                            <span class="text-danger">1. Cấu trúc:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    |--demopackage/
+    |             |--modules.py
+    |             └── __init__py
+    |--main.py                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # demopackage/modules.py
+    def say_hello():
+        print("Hello!")
+    
+    def say_goodbye():
+        print("Goodbye!")                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py
+    from demopackage.modules import *
+    # Duoc in tu file __init__py
+    
+    say_hello()
+    # Hello!
+    
+    say_goodbye()
+    # Goodbye!                                           
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py
+    import demopackage.modules
+    # Duoc in tu file __init__py
+    
+    demopackage.modules.say_hello()
+    # Hello!
+    
+    demopackage.modules.say_goodbye()
+    # Goodbye!                                           
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py
+    import demopackage.modules as modules
+    # Duoc in tu file __init__py
+    
+    modules.say_hello()
+    # Hello!
+    
+    modules.say_goodbye()
+    # Goodbye!                                           
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Package chứa package.</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Đối với package trong Python thì nó cũng có thể chứa 1 hoặc nhiều package khác trong nó, và không dưới hạn số lần chứa đó nhưng các bạn vẫn phải luôn tuân thủ quy tắc của 1 package là phải có file __init__.py. Tức là package a chứa package b và package b lại chưa package c,...<br>
+
+                                            <span class="text-danger">1. Cấu trúc:</span><br>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    |--demopackage/
+    |             |--modules.py
+    |             |--packagechild/
+    |                            |-- childmodule.py
+    |                            └── __init__py
+    |             └── __init__py
+    |--main.py                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # packagechild/childmodule.py
+    def say():
+        print("childmodule.py: Hello")                                            
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # packagechild/__init__.py
+    print("childpackage __init__.py")                                           
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # main.py
+    from demopackage.packagechild.childmodule import *
+    # childpackage __init__.py
+    
+    say()
+    # childmodule.py: Hello                                           
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">LIBRARIES</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong Python, libraries là tập hợp các module chứa các hàm, lớp, và công cụ đã được viết sẵn để thực hiện các chức năng nhất định. Libraries giúp chúng ta tiết kiệm thời gian và công sức bằng cách cung cấp các chức năng tiện ích cho các tác vụ phổ biến như xử lý dữ liệu, tính toán khoa học, phân tích dữ liệu, v.v. Thay vì phải viết mã từ đầu, ta có thể sử dụng các hàm có sẵn từ thư viện.<br></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Libraries Python Phổ Biến</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Dưới đây là một số thư viện nổi bật trong Python, cùng với mô tả về cách sử dụng và ứng dụng của chúng:<br></p>
+                                        <ul>
+                                            <li>math: Cung cấp các hàm toán học cơ bản như sqrt, pow, sin, cos, và factorial.</li>
+                                            <li>datetime: Làm việc với ngày và giờ.</li>
+                                            <li>random: Sinh số ngẫu nhiên, trộn danh sách ngẫu nhiên, chọn ngẫu nhiên phần tử.</li>
+                                            <li>os: Quản lý tệp và thư mục, truy cập hệ thống tệp.</li>
+                                            <li>sys: Xử lý các thông tin liên quan đến trình thông dịch Python, như đường dẫn hệ thống.</li>
+                                            <li>json và csv: Đọc và ghi tệp JSON, CSV.</li>
+                                            <li>collections: Các cấu trúc dữ liệu nâng cao như Counter, deque, namedtuple, và defaultdict.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">FRAMEWORK</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Framework trong Python là một bộ công cụ cung cấp cấu trúc sẵn có để phát triển các ứng dụng theo các nguyên tắc và kiến trúc tiêu chuẩn. Framework giúp lập trình viên tiết kiệm thời gian khi xây dựng ứng dụng bằng cách cung cấp các tính năng và thư viện đã được xây dựng và tối ưu hóa.<br></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Các Framework Phổ Biến trong Python</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Dưới đây là một số thư viện nổi bật trong Python, cùng với mô tả về cách sử dụng và ứng dụng của chúng:<br></p>
+                                        <span class="text-danger">1. Framework Web: Hỗ trợ phát triển ứng dụng web, xử lý yêu cầu HTTP, xác thực người dùng, quản lý cơ sở dữ liệu, và hiển thị nội dung.</span><br>
+                                        <ul>
+                                            <li>Django: Django là một framework web mạnh mẽ và toàn diện. Nó tuân theo mô hình MVC (Model-View-Controller) và giúp dễ dàng phát triển ứng dụng lớn một cách nhanh chóng.</li>
+                                            <li>Flask: Flask là một micro-framework, nhẹ và linh hoạt. Thích hợp cho các dự án nhỏ và nhanh chóng.                                            </li>
+                                            <li>FastAPI: Framework hiện đại để xây dựng API nhanh chóng, được tối ưu hóa cho hiệu suất cao và hỗ trợ khai báo kiểu dữ liệu (type hinting).</li>
+                                            
+                                        </ul>
+
+                                        <span class="text-danger">2. Framework Machine Learning</span><br>
+                                        <ul>
+                                            <li>TensorFlow: Framework do Google phát triển, hỗ trợ học sâu (deep learning) và máy học (machine learning). Dùng trong xử lý ngôn ngữ tự nhiên, nhận dạng hình ảnh, phân tích dự báo, v.v.</li>
+                                            <li>PyTorch:  Framework của Facebook, nổi bật với tính linh hoạt và dễ dàng sử dụng trong nghiên cứu.</li>
+                                           
+                                        </ul>
+
+                                        
+                                        <span class="text-danger">3. Framework Phân Tích Dữ Liệu</span><br>
+                                        <ul>
+                                            <li>TensorFlow: Apache Spark với PySpark</li>
+                                           
+                                        </ul>
+
+                                        <span class="text-danger">4.  Framework Cho Các Ứng Dụng Desktop</span><br>
+                                        <ul>
+                                            <li>Tkinter: Tkinter là framework tích hợp trong thư viện chuẩn Python để xây dựng GUI (giao diện người dùng đồ họa) đơn giản.</li>
+                                           
+                                        </ul>
+
+                                        <span class="text-danger">Ưu và Nhược Điểm của Framework</span><br>
+                                        Ưu điểm
+                                        <ul>
+                                            <li>Tiết kiệm thời gian: Cung cấp nhiều tính năng sẵn có.</li>
+                                            <li>Bảo mật và ổn định: Được phát triển bởi các chuyên gia, giúp giảm thiểu lỗi bảo mật.</li>
+                                            <li>Tái sử dụng mã: Giúp mã dễ tái sử dụng, bảo trì và mở rộng.</li>
+                                            <li>Quy trình phát triển chuẩn hóa: Hỗ trợ các quy trình phát triển nhất quán.</li>
+
+                                           
+                                        </ul>
+                                        Nhược điểm
+                                        <ul>
+                                            <li>Ít linh hoạt: Phải tuân theo cấu trúc và nguyên tắc của framework.</li>
+                                            <li>Độ phức tạp tăng: Với những ứng dụng đơn giản, framework có thể khiến dự án trở nên cồng kềnh.</li>
+                                            <li>Khả năng học tập: Đòi hỏi thời gian để làm quen với framework mới.</li>
+
+                                           
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <br>
+                        <div class="col-xl-12 mb-4">
+                            <div class="card bg-warning bg-opacity-10">
+                                <div class="card-body">
+                                    <h5 class="text-capitalize mb-3">So sánh</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="min-width: 120px;">Tiêu chí</th>
+                                                    <th scope="col" style="min-width: 120px;">Module</th>
+                                                    <th scope="col" style="min-width: 120px;">Package</th>
+                                                    <th scope="col" style="min-width: 120px;">Library</th>
+                                                    <th scope="col" style="min-width: 120px;">Framework</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Định nghĩa</th>
+                                                    <td>Đơn vị mã nhỏ nhất, một file Python chứa các hàm và lớp.</td>
+                                                    <td>Thư mục chứa nhiều module hoặc các package con khác.</td>
+                                                    <td>Bộ sưu tập các hàm, lớp, và module được sử dụng để thực hiện các chức năng cụ thể.</td>
+                                                    <td>Bộ công cụ tích hợp sẵn và cấu trúc quy định cho việc phát triển ứng dụng.</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Quy mô</th>
+                                                    <td>Rất nhỏ, chỉ chứa một file .py.</td>
+                                                    <td>Nhỏ hơn library hoặc framework; là tập hợp nhiều module.</td>
+                                                    <td>Trung bình; là một tập hợp các module thực hiện chức năng cụ thể.</td>
+                                                    <td>Lớn, bao gồm nhiều components, thường bao gồm các thư viện và package.</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Ví dụ</th>
+                                                    <td>math, datetime, os</td>
+                                                    <td>numpy (có nhiều module bên trong)</td>
+                                                    <td>Requests (HTTP library), Pandas (phân tích dữ liệu)</td>
+                                                    <td>Django, Flask (framework web), TensorFlow (framework machine learning)</td>
+                                                 
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">Chức năng chính</th>
+                                                    <td>Cung cấp các hàm và lớp để thực hiện các tác vụ nhỏ lẻ.</td>
+                                                    <td>Tổ chức và gom nhóm các module liên quan thành một cấu trúc lớn hơn.</td>
+                                                    <td>Cung cấp các chức năng cụ thể mà không ép buộc quy trình.</td>
+                                                    <td>Cung cấp cấu trúc và quy trình rõ ràng để phát triển ứng dụng hoàn chỉnh.</td>
+                                                    
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <th scope="row">Mức độ kiểm soát</th>
+                                                    <td>Lập trình viên toàn quyền kiểm soát các module.</td>
+                                                    <td>Lập trình viên tự quản lý các module và package bên trong.</td>
+                                                    <td>Lập trình viên có toàn quyền gọi các hàm, lớp theo nhu cầu.</td>
+                                                    <td>Framework kiểm soát luồng làm việc, lập trình viên theo cấu trúc của framework.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Cách sử dụng</th>
+                                                    <td>import math</td>
+                                                    <td>import numpy.linalg</td>
+                                                    <td>import requests</td>
+                                                    <td>Tạo ứng dụng với cấu trúc, các component, và quy trình do framework quy định.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Tính tái sử dụng</th>
+                                                    <td>Cao, sử dụng cho các tác vụ nhỏ.</td>
+                                                    <td>Cao, giúp quản lý mã theo nhóm chức năng.</td>
+                                                    <td>Cao, cho phép gọi nhiều chức năng tiện lợi mà không cần cấu hình phức tạp.</td>
+                                                    <td>Rất cao, nhưng yêu cầu tuân theo quy trình và cấu trúc framework.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Cấu trúc</th>
+                                                    <td>Một file .py.</td>
+                                                    <td>Thư mục chứa nhiều module và file __init__.py.</td>
+                                                    <td>Gồm nhiều module hoặc package.</td>
+                                                    <td>Gồm nhiều module, package, thư viện, và các thành phần lớn hơn.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Độc lập</th>
+                                                    <td>Có thể hoạt động độc lập.</td>
+                                                    <td>Có thể chứa các module độc lập và hoạt động cùng nhau.</td>
+                                                    <td>Thường hoạt động độc lập và linh hoạt trong việc tích hợp với các hệ thống khác.</td>
+                                                    <td>Hoạt động như hệ sinh thái với cấu trúc chặt chẽ.</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">Tính linh hoạt</th>
+                                                    <td>Có thể hoạt động độc lập.</td>
+                                                    <td>Linh hoạt trong việc quản lý nhóm module liên quan.</td>
+                                                    <td>Rất linh hoạt, hỗ trợ đa dạng mục đích lập trình viên.</td>
+                                                    <td>Thấp hơn, yêu cầu tuân thủ cấu trúc và kiến trúc framework quy định.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Module Location và thứ tự ưu tiên</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Trong Python, Module location và thứ tự ưu tiên khi tìm kiếm module rất quan trọng để Python xác định đúng vị trí và thứ tự các module cần import. Cụ thể:<br></p>
+                                        <br>
+                                        <ul>
+                                            <li>Thư mục hiện tại hoặc thư mục chứa script đang chạy: Python tìm kiếm tại thư mục hiện tại trước tiên. Điều này có nghĩa là nếu có một module cùng tên trong thư mục hiện tại, Python sẽ sử dụng module này thay vì tìm đến các thư mục khác.</li>
+                                            <li>PYTHONPATH: Nếu không tìm thấy module trong thư mục hiện tại, Python sẽ tìm tiếp trong các thư mục được chỉ định trong PYTHONPATH. Điều này giúp linh hoạt bổ sung các thư mục chứa module tùy chỉnh.</li>
+                                            <li>Thư viện chuẩn của Python: Nếu không có module trong thư mục hiện tại và PYTHONPATH, Python sẽ tìm trong thư viện chuẩn của Python (thư viện mặc định). Ví dụ, các module như math, datetime, và sys đều nằm trong thư viện chuẩn này.</li>
+                                            <li>Thư viện bên thứ ba: Python tìm tiếp các module được cài đặt từ bên thứ ba, chẳng hạn các module từ site-packages. Đây là nơi chứa các package được cài đặt qua pip.</li>
+                                            
+                                        </ul>
+
+                                        <span class="text-danger">1. Ví dụ</span><br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+project_folder/
+│
+├── my_module.py
+├── script.py
+└── math.py                                            
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+# my_module.py
+def greet():
+    print("Hello from my_module!")                                          
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+# math.py
+def calculate():
+    print("This is a custom math module.")                                         
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+# script.py
+import math
+import my_module
+
+# Sử dụng module my_module
+my_module.greet()
+
+# Sử dụng module math
+math.calculate()                                        
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <span class="text-danger">2. Thực thi script.py và kết quả mong đợi </span><br>
+                                        <ul>
+                                            <li>1. Python sẽ tìm module math trong thư mục hiện tại trước. Thay vì sử dụng module math chuẩn của Python, Python sẽ tìm thấy file math.py trong thư mục project_folder và import file này. Vì thế, khi gọi math.calculate(), Python sẽ gọi hàm calculate() trong file math.py của chúng ta thay vì module math của thư viện chuẩn.</li>
+                                            <li>2. Module my_module: Python sẽ tìm thấy my_module.py trong cùng thư mục và import nó như mong đợi, vì không có module chuẩn nào tên là my_module.</li>
+                                            
+                                        </ul>
+                                        <p>* Lưu ý: Nếu bạn muốn sử dụng module math chuẩn của Python (cho các hàm như math.sqrt()), bạn nên đổi tên file math.py thành tên khác (ví dụ custom_math.py). Sau đó, bạn có thể import cả module chuẩn math và module tự tạo của mình</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Giới thiệu về External Modules</a></h3>
+                                        <p style="font-size: large; " class="mb-0">External modules (các module bên ngoài) trong Python là những module và thư viện không nằm trong thư viện chuẩn của Python. Chúng được phát triển bởi cộng đồng hoặc các nhà phát triển bên ngoài, nhằm cung cấp các chức năng mở rộng và cụ thể cho nhiều lĩnh vực khác nhau. Việc sử dụng các external modules cho phép lập trình viên giải quyết những bài toán phức tạp mà không cần phải viết lại từ đầu, tiết kiệm thời gian và công sức.<br></p>
+                                        <br>
+                                        
+                                        <span class="text-danger">1. Cài đặt External Modules</span><br>
+                                        <p>Để sử dụng các external modules, bạn thường sẽ cài đặt chúng thông qua trình quản lý package pip. Ví dụ, để cài đặt một module như requests, bạn có thể sử dụng lệnh sau trong terminal hoặc command prompt:</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+pip install requests                                           
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <span class="text-danger">2. Một số ví dụ về External Modules</span><br>
+                                        <p>Để sử dụng các external modules, bạn thường sẽ cài đặt chúng thông qua trình quản lý package pip. Ví dụ, để cài đặt một module như requests, bạn có thể sử dụng lệnh sau trong terminal hoặc command prompt:</p>
+                                        <ul>
+                                            <li>NumPy: Thư viện cho tính toán khoa học, cung cấp hỗ trợ cho mảng đa chiều và các phép toán số học.</li>
+                                            <li>Pandas: Dùng để phân tích dữ liệu, rất mạnh mẽ trong việc xử lý và phân tích dữ liệu dạng bảng.</li>
+                                            <li>Flask: Một micro framework để phát triển ứng dụng web nhẹ và nhanh</li>
+                                            <li>Django: Một framework mạnh mẽ cho phát triển ứng dụng web, cung cấp nhiều tính năng để xử lý cơ sở dữ liệu, quản lý phiên, xác thực người dùng, và nhiều hơn nữa.</li>
+                                            <li>TensorFlow: Thư viện cho học máy và AI, cung cấp công cụ cho việc xây dựng và triển khai các mô hình học sâu.</li>
+                                        </ul>
+                                      
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Cộng Đồng Phát Triển Python</a></h3>
+                                        <p style="font-size: large; " class="mb-0">Cộng đồng phát triển Python là một phần rất quan trọng giúp ngôn ngữ này trở nên phổ biến và mạnh mẽ. Dưới đây là một số đặc điểm và hoạt động nổi bật của cộng đồng này:<br></p>
+                      
+                                        
+                                        <span class="text-danger">1. Diễn đàn và Nhóm Thảo luận</span><br>                 
+                                        <ul>
+                                            <li>Stack Overflow: Một nơi tuyệt vời để hỏi và trả lời các câu hỏi liên quan đến Python.</li>
+                                            <li>Reddit: Có các subreddit như r/Python nơi người dùng chia sẻ kiến thức, bài viết, và hỏi đáp.</li>
+                                            <li>Mailing Lists: Python có nhiều mailing list cho các nhà phát triển để trao đổi ý kiến và giúp đỡ nhau.</li>
+                                           
+                                        </ul>
+                                        <span class="text-danger">2. Sự kiện và Hội nghị</span><br>                 
+                                        <ul>
+                                            <li>PyCon: Một trong những hội nghị lớn nhất dành cho các lập trình viên Python. Đây là nơi để học hỏi, chia sẻ kinh nghiệm, và kết nối với những người khác trong cộng đồng.</li>
+                                            <li>Meetups: Các buổi gặp gỡ tại địa phương, nơi người dùng Python có thể chia sẻ kiến thức và kỹ năng của mình.</li>
+                                            
+                                        </ul>
+                                        <span class="text-danger">3. Tài liệu và Hướng dẫn</span><br>                 
+                                        <ul>
+                                            <li>Documentation: Python có tài liệu chính thức rất đầy đủ, bao gồm cả hướng dẫn sử dụng cho các thư viện bên ngoài.</li>
+                                            <li>Tutorials: Có rất nhiều tutorial trực tuyến miễn phí và khóa học dành cho người mới bắt đầu và cả lập trình viên nâng cao.</li>
+                                            
+                                        </ul>
+                                        <span class="text-danger">4. Dự án mã nguồn mở</span><br>                 
+                                        <p>Nhiều dự án Python được phát triển dưới dạng mã nguồn mở, cho phép cộng đồng đóng góp, sửa lỗi, và cải thiện chất lượng của các module và thư viện. GitHub là nơi phổ biến nhất để lưu trữ và cộng tác trên các dự án này.</p>
+                                        
+                                        <span class="text-danger">5. Tính linh hoạt và Đổi mới</span><br>                 
+                                        <p>Cộng đồng Python rất cởi mở và linh hoạt trong việc chấp nhận các ý tưởng mới. Điều này dẫn đến việc phát triển nhiều thư viện và công cụ mới, giúp Python luôn cập nhật và phù hợp với nhu cầu hiện tại.</p>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
