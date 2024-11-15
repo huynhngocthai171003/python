@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
-    <title>Xóa phần tử trong List</title>
+    <title>Clean code trong Python</title>
     <meta name="og:description" content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
     <meta name="robots" content="index, follow">
     <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
@@ -96,7 +96,7 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="./Remove_List.html">
                                     <span> Xóa phần tử vào List </span>
                                 </a>
@@ -119,7 +119,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item ">
                             <a class="nav-link" href="./Module.html">
                                 <span class="d2c_icon">
                                     <i class="fas fa-layer-group"></i>
@@ -128,7 +128,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="./Clean_Code.html">
                                 <span class="d2c_icon">
                                     <i class="fas fa-code"></i>
@@ -174,14 +174,21 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h1><a style="color: black; font-weight: bolder;" href="#">Xoá phần tử của List trong Python</a></h1>
-                                        <p style="font-size: large;" class="mb-0">Python cung cấp nhiều phương thức để xoá phần tử khỏi list, bao gồm remove(), pop(), clear(), và từ khoá del. Mỗi phương thức có cách sử dụng và ứng dụng riêng, phù hợp với các tình huống khác nhau.</p>
+                                        <h1><a style="color: black; font-weight: bolder;" href="#">CLEAN CODE TRONG PYTHON</a></h1>
+                                        <p style="font-size: large;" class="mb-0">Clean Code là cách viết mã nguồn sao cho:
+                                            <ul>
+                                                <li>Dễ đọc: Người khác (hoặc chính bạn trong tương lai) có thể hiểu ý nghĩa và mục đích của code một cách dễ dàng.</li>
+                                                <li>Dễ bảo trì: Khi cần sửa đổi hoặc mở rộng, code không gây rối và giảm nguy cơ phát sinh lỗi.</li>
+                                                <li>Đơn giản: Giải quyết vấn đề theo cách trực quan, tránh phức tạp không cần thiết.</li>
+                                            </ul>
+                                        </p><hr>
+                                        
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
-                        <br>
+                       
                         <div class="row">
                             <div class="col-12 col-md-12">
                                 <div class="d2c_notification_content d-flex align-items-start">
@@ -189,159 +196,265 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương thức remove()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương thức remove() được sử dụng để xoá phần tử đầu tiên có giá trị chỉ định khỏi list. Nếu phần tử không tồn tại trong list, phương thức này sẽ gây ra lỗi ValueError.
-                                            <br>
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list.remove(element)
-    # element: Phần tử cần xoá khỏi list.                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry', 'banana']
-    fruits.remove('banana')
-    print(fruits)  # Kết quả: ['apple', 'cherry', 'banana']                                            
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Trong ví dụ trên, phần tử 'banana' đầu tiên đã bị xoá khỏi list fruits. <br>
-                                            <span class="text-danger">3. Xử lý lỗi khi phần tử không tồn tại:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    try:
-        fruits.remove('orange')
-    except ValueError:
-        print("Phần tử không tồn tại trong list")                                            
-                                                </code>
-                                            </deckgo-highlight-code>
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Good Documentation (Comment) </a></h3>
+                                        <p style="font-size: large; " class="mb-0"> Vai trò của comment:
+                                            <ul>
+                                                <li>Giải thích các đoạn code phức tạp.</li>
+                                                <li>Chỉ ra ý định và cách hoạt động của code.</li>
+                                            </ul>
+                                            
                                         </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
+                                        <p style="font-size: large; " class="mb-0"> Nguyên tắc:
+                                            <ul>
+                                                <li>Không viết những comment dư thừa (code dễ hiểu không cần comment).
+                                                </li>
+                                                <li>Comment tập trung vào "tại sao" hơn là "như thế nào".</li>
+                                            </ul>
                             
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương thức pop()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương thức pop() xoá phần tử tại vị trí chỉ định và trả về giá trị của nó. Nếu không chỉ định vị trí, pop() sẽ xoá và trả về phần tử cuối cùng.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    list.pop([index])
-    # index (tuỳ chọn): Vị trí của phần tử cần xoá. Nếu không chỉ định, phần tử cuối cùng sẽ bị xoá.                                                
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    print(fruits.pop(1))  # Kết quả: 'banana'
-    print(fruits)         # Kết quả: ['apple', 'cherry']                                        
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">3. Nếu không chỉ định vị trí:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    print(fruits.pop())  # Kết quả: 'cherry'
-    print(fruits)        # Kết quả: ['apple', 'banana']                                            
-                                                </code>
-                                            </deckgo-highlight-code>
                                         </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Từ khoá del</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Từ khoá del được sử dụng để xoá phần tử tại vị trí chỉ định hoặc xoá toàn bộ list.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                                                              
+                                            <span class="text-danger">1. Ví dụ:</span> 
                                             <deckgo-highlight-code language="python">
                                                 <code slot="code">
-    del list[index]                                              
+    # Bad Comment
+    x = 10  # Assigning value 10 to x
+    
+    # Good Comment
+    # Calculate the total price after discount
+    total_price = calculate_discount(price, discount_rate)
                                                 </code>
                                             </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    del fruits[1]
-    print(fruits)  # Kết quả: ['apple', 'cherry']                                   
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">3. Xoá toàn bộ list::</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    del fruits
-    # fruits giờ không còn tồn tại                                            
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            Nếu sau khi xóa toàn bộ danh sách với del và in ra thì sẽ bị lỗi NameError: name "fruits" is not define
-                                        </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
 
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="d2c_notification_content d-flex align-items-start">
-                                    <!-- <div>
-                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
-                                    </div> -->
-                                    <div >
-                                        <h3><a style="color: black; font-weight: bolder;" href="#">Phương thức clear()</a></h3>
-                                        <p style="font-size: large; " class="mb-0">Phương thức clear() xoá tất cả các phần tử trong list, nhưng không xoá list.<br>
-
-                                            <span class="text-danger">1. Cú pháp:</span><br>
+                                            <span class="text-danger">2. Thực hành: Thêm comment giải thích cho đoạn code sau:</span> 
                                             <deckgo-highlight-code language="python">
                                                 <code slot="code">
-    list.clear().                                               
-                                                </code>
-                                            </deckgo-highlight-code>
-                                            <span class="text-danger">2. Ví dụ:</span> 
-                                            <deckgo-highlight-code language="python">
-                                                <code slot="code">
-    fruits = ['apple', 'banana', 'cherry']
-    fruits.clear()
-    print(fruits)  # Kết quả: []                              
+    def calculate_total(items):
+    total = 0
+    for item in items:
+        total += item['price']
+    return total
                                                 </code>
                                             </deckgo-highlight-code>
                                             
-                                        </p>
+                                            
+                                        
                                     </div>
                                     
                                 </div>
                             </div>
                             
                         </div>
+                        
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Meaningful Variable and Function Names </a></h3>
+                                        <p style="font-size: large; " class="mb-0"> Nguyên tắc đặt tên:
+                                            <ul>
+                                                <li>Tên biến phải mô tả chính xác chức năng của nó.</li>
+                                                <li>Tên hàm nên biểu thị rõ nhiệm vụ của hàm.</li>
+                                            </ul>
+                                            
+                                        </p>
+                                        <p style="font-size: large; " class="mb-0"> Cần tránh:
+                                            <ul>
+                                                <li>Tên chung chung như x, temp, data.
+                                                </li>
+                                                <li>Tên quá dài hoặc viết tắt không rõ nghĩa.</li>
+                                            </ul>
+                            
+                                        </p>
+                                                                              
+                                            <span class="text-danger">1. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Bad Naming
+    def calc(x, y):
+        return x + y
+    
+    # Good Naming
+    def calculate_sum(first_number, second_number):
+        return first_number + second_number
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <span class="text-danger">2. Thực hành: Tối ưu tên biến và hàm cho đoạn code sau:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    def f(a, b):
+        c = a * b
+    return c
+
+    result = f(10, 20)
+    print(result)
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div >
+                                        <h3><a style="color: black; font-weight: bolder;" href="#">Modular Code (Split Code)</a></h3>
+                                        Định nghĩa Modular Code: Chia nhỏ chương trình thành các hàm hoặc module độc lập.
+                                        <p style="font-size: large; " class="mb-0"> Lợi ích:
+                                            <ul>
+                                                <li>Dễ kiểm tra và bảo trì.</li>
+                                                <li>Tái sử dụng code.</li>
+                                            </ul>
+                                            
+                                        </p>
+                                        <p style="font-size: large; " class="mb-0"> Quy tắc: 
+                                            <ul>
+                                                <li>Mỗi hàm/module chỉ nên đảm nhận một nhiệm vụ duy nhất (Single Responsibility Principle).
+                                                </li>
+                                                
+                                            </ul>
+                            
+                                        </p>
+                                                                              
+                                            <span class="text-danger">1. Ví dụ:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    # Without Modular Code
+    def process_data(data):
+        # Validate data
+        if not data:
+            return None
+        # Process data
+        processed_data = [item**2 for item in data]
+        return processed_data
+    
+    # With Modular Code
+    def validate_data(data):
+        return bool(data)
+    
+    def process_data(data):
+        return [item**2 for item in data]
+    
+    # Main code
+    data = [1, 2, 3]
+    if validate_data(data):
+        result = process_data(data)
+        print(result)
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <span class="text-danger">2. Thực hành: Tách đoạn code sau thành các hàm nhỏ hơn:</span> 
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    def main():
+    numbers = [1, 2, 3, 4, 5]
+    even_numbers = []
+    for num in numbers:
+        if num % 2 == 0:
+            even_numbers.append(num)
+    print(even_numbers)
+
+    main()
+                                                </code>
+                                            </deckgo-highlight-code>
+                                            
+                                            
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-12 col-md-12">
+                                    <div class="d2c_notification_content d-flex align-items-start">
+                                        <!-- <div>
+                                            <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                        </div> -->
+                                        <div >
+                                            <h3><a style="color: black; font-weight: bolder;" href="#">Bài tập</a></h3>
+                                           
+                                            <p style="font-size: large; " class="mb-0"> Bài 1: Tính Tiền Giảm Giá (Good Documentation)
+                                                <p>Đề bài: Viết comment giải thích ý định và cách hoạt động cho đoạn code sau:</p>
+                                                
+                                            </p>                               
+                                                                                  
+                                                
+                                                <deckgo-highlight-code language="python">
+                                                    <code slot="code">
+    def calculate_discounted_price(price, discount_rate):
+    discounted_price = price - (price * discount_rate / 100)
+    return discounted_price
+    
+    original_price = 1000
+    discount = 20
+    final_price = calculate_discounted_price(original_price, discount)
+    print(final_price)   
+                                                    </code>
+                                                </deckgo-highlight-code>
+    
+                                                <p style="font-size: large; " class="mb-0"> Bài 2: Tính Điểm Trung Bình (Modular)
+                                                    <p>Đề bài: Viết lại đoạn code sau sao cho sử dụng hàm và tổ chức code theo module:</p>
+                                                    
+                                                </p>                               
+                                                                                      
+                                                    
+                                                    <deckgo-highlight-code language="python">
+                                                        <code slot="code">
+    grades = [50, 70, 90]
+    total = sum(grades)
+    average = total / len(grades)
+    if average >= 60:
+        print("Pass")
+    else:
+        print("Fail")
+                                                        </code>
+                                                    </deckgo-highlight-code>
+                                                
+
+                                                
+                                                
+                                                    <p style="font-size: large; " class="mb-0"> Bài 3: Quản Lý Sinh Viên
+                                                        <p>Đề bài: Viết chương trình quản lý danh sách sinh viên trong một lớp học. Chương trình cần có các chức năng: </p>
+                                                        <ol>
+                                                            <li>Thêm sinh viên mới (họ tên, mã số, điểm).
+                                                            </li>
+                                                            <li>Hiển thị danh sách sinh viên.</li>
+                                                            <li>Tìm sinh viên theo mã số.</li>
+                                                            <li>Tính điểm trung bình của lớp.</li>
+                                                            <li>Hiển thị danh sách sinh viên xếp loại (giỏi, khá, trung bình, yếu).</li>
+                                                        </ol>
+                                                    </p>                               
+                                                                                          
+                                                        
+                                                       
+                                                
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+    
+
 
                         
                     </div>
