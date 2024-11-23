@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>Dictionaries trong Python</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">Giới thiệu về
+                                                Dictionary trong Python</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Dictionary là một tập hợp các cặp
+                                            key-value không có thứ tự. Các key trong dictionary phải là các đối tượng
+                                            bất biến (immutable) như chuỗi, số hoặc tuple, trong khi các giá trị có thể
+                                            là bất kỳ kiểu dữ liệu nào, bao gồm cả list, tuple, set, hoặc thậm chí là
+                                            dictionary khác.</p>
+                                        <span class="text-danger">Ví dụ: </span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    # Tạo một dictionary
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict)                                                
+                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Output: </span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    {'name': 'John', 'age': 25, 'city': 'New York'}                                                
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <h4 class="text-danger">Tính chất của Dictionary</h4>
+                                        <ul>
+                                            <li>Không có thứ tự: Các phần tử trong dictionary không có thứ tự cụ thể.
+                                            </li>
+                                            <li>Không có phần tử trùng lặp: Key trong dictionary phải là duy nhất.</li>
+                                            <li>Có thể thay đổi: Bạn có thể thêm, xóa, hoặc thay đổi các phần tử trong
+                                                dictionary.</li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Truy cập bằng khóa
+                                                (key)</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Cách phổ biến nhất để truy cập phần tử
+                                            trong dictionary là sử dụng khóa (key). Bạn có thể truy cập giá trị của một
+                                            khóa bằng cách đặt khóa đó trong cặp ngoặc vuông []</p>
+                                        <span class="text-danger">Ví dụ: </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict['name'])  # Kết quả: John
+    print(my_dict['age'])   # Kết quả: 25                                               
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Nếu bạn cố gắng truy cập một khóa
+                                            không tồn tại, Python sẽ gây ra lỗi KeyError.</p>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    print(my_dict['country'])  # KeyError: 'country'                                               
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <br>
+
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sử dụng phương thức
+                                                get()</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Phương thức get() cung cấp một cách an
+                                            toàn hơn để truy cập giá trị của một khóa. Nếu khóa không tồn tại, get() sẽ
+                                            trả về None hoặc một giá trị mặc định mà bạn chỉ định.
+                                        </p>
+                                        <span class="text-danger">Cú pháp: </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    dict.get(key, default=None)                                               
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Ví dụ: </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict.get('name'))        # Kết quả: John
+    print(my_dict.get('country'))     # Kết quả: None
+    print(my_dict.get('country', 'USA'))  # Kết quả: USA                                               
+                                                </code>
+                                        </deckgo-highlight-code>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Truy cập tất cả các
+                                                khóa và giá trị</a></h3>
+                                        <div style="font-size: large; " class="mb-0">Python cung cấp các phương thức
+                                            keys(), values(), và items() để truy cập tất cả các khóa, giá trị, và cặp
+                                            khóa-giá trị trong dictionary.
+
+
+                                            <span class="text-danger">keys(): Trả về một view object chứa tất cả các
+                                                khóa trong dictionary.</span> <br>
+
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict.keys())  # Kết quả: dict_keys(['name', 'age', 'city'])
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <span class="text-danger">values(): Trả về một view object chứa tất cả các
+                                                giá trị trong dictionary.</span> <br>
+
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict.values())  # Kết quả: dict_values(['John', 25, 'New York'])
+                                                </code>
+                                            </deckgo-highlight-code>
+
+                                            <span class="text-danger">items(): Trả về một view object chứa tất cả các
+                                                cặp khóa-giá trị trong dictionary dưới dạng tuple.</span> <br>
+
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    print(my_dict.items())  # Kết quả: dict_items([('name', 'John'), ('age', 25), ('city', 'New York')])
+                                                </code>
+                                            </deckgo-highlight-code>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sử dụng vòng lặp để
+                                                truy cập phần tử</a></h3>
+                                        <div style="font-size: large; " class="mb-0">Bạn có thể sử dụng vòng lặp for để
+                                            duyệt qua các phần tử trong dictionary.
+
+                                        <span class="text-danger">Duyệt qua các khóa: </span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    for key in my_dict:
+        print(key)
+                                                </code>
+                                        </deckgo-highlight-code>
+
+
+
+                                        <span class="text-danger">Kết quả:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    name
+    age
+    city
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Duyệt qua các giá trị: </span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    for value in my_dict.values():
+        print(value)
+                                                </code>
+                                        </deckgo-highlight-code>
+
+
+
+                                        <span class="text-danger">Kết quả:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    John
+    25
+    New York
+                                                </code>
+                                        </deckgo-highlight-code>
+
+
+                                        <span class="text-danger">Duyệt qua các cặp khóa-giá trị: </span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+    for key, value in my_dict.items():
+        print(f"{key}: {value}")
+                                                </code>
+                                        </deckgo-highlight-code>
+
+
+
+                                        <span class="text-danger">Kết quả:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    name: John
+    age: 25
+    city: New York
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="d2c_notification_content d-flex align-items-start">
+                                <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                <div>
+                                    <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Truy cập phần tử trong
+                                            dictionary lồng nhau</a></h3>
+                                    <div style="font-size: large; " class="mb-0">Dictionary trong Python có thể chứa các
+                                        dictionary khác, tạo ra các dictionary lồng nhau. Bạn có thể truy cập các phần
+                                        tử trong dictionary lồng nhau bằng cách sử dụng nhiều chỉ số khóa.
+
+
+                                        <span class="text-danger">Ví dụ:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    nested_dict = {
+        'person1': {'name': 'John', 'age': 25},
+        'person2': {'name': 'Jane', 'age': 30}
+    }
+    print(nested_dict['person1']['name'])  # Kết quả: John
+    print(nested_dict['person2']['age'])   # Kết quả: 30
+                                                </code>
+                                        </deckgo-highlight-code>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="d2c_notification_content d-flex align-items-start">
+                                <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                <div>
+                                    <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các phương thức hữu ích
+                                            khác của Dictionary</a></h3>
+                                    <div style="font-size: large; " class="mb-0">setdefault():
+                                        Phương thức setdefault() trả về giá trị của khóa nếu khóa đó tồn tại, nếu không,
+                                        nó sẽ thêm khóa với giá trị mặc định và trả về giá trị mặc định đó.
+
+                                        <br>
+                                        <span class="text-danger">Cú pháp:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    dict.setdefault(key, default=None)
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <span class="text-danger">Ví dụ:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25}
+    print(my_dict.setdefault('name', 'Doe'))  # Kết quả: John
+    print(my_dict.setdefault('city', 'New York'))  # Kết quả: New York
+    print(my_dict)  # Kết quả: {'name': 'John', 'age': 25, 'city': 'New York'}
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                    </div>
+
+
+                                    <div style="font-size: large; " class="mb-0">update():
+                                        Phương thức update() được sử dụng để cập nhật dictionary với các cặp khóa-giá trị từ một dictionary khác hoặc từ một iterable chứa các cặp khóa-giá trị.
+                                        <br>
+                                        <span class="text-danger">Cú pháp:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    dict.update([other])
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <span class="text-danger">Ví dụ:</span> <br>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    my_dict = {'name': 'John', 'age': 25}
+    my_dict.update({'city': 'New York', 'age': 26})
+    print(my_dict)  # Kết quả: {'name': 'John', 'age': 26, 'city': 'New York'}
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                    </div>  
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End:Title -->
+
+        <!-- copyright -->
+        <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
