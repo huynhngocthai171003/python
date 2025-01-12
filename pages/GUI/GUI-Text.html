@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>GUIZERO trong Python</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="../Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Project.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span> Dự án cuối khóa </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-App.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - App </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./GUI-Text.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - Text </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-Picture.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - Picture </span>
+                        </a>
+                    </li>
+
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - Text</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Text Widget</p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo một Text
+                                                Widget
+                                            </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Để tạo một Text widget, bạn cần sử
+                                            dụng lớp Text và chỉ định một ứng dụng (App) nơi mà văn bản sẽ hiển thị. Bạn
+                                            có thể cấu hình văn bản theo nhiều cách khác nhau, bao gồm việc thay đổi màu
+                                            sắc, font chữ, kích thước, căn chỉnh, v.v.</p>
+                                        <span class="text-danger">Cú pháp: </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from guizero import App, Text
+
+    app = App("Chương trình của tôi")
+    text = Text(app, text="Chào mừng bạn đến với guizero!")
+    app.display()                                
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <br>
+
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các tham số của
+                                                Text Widget</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Khi bạn tạo một đối tượng Văn bản, bạn
+                                            phải chỉ định một đối tượng chính và bạn có thể chỉ định bất kỳ tham số tùy
+                                            chọn nào. Chỉ định các tham số trong ngoặc, như thế này: text = Text(app,
+                                            text="hi")
+                                        </p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <!-- <h5 class="text-capitalize mb-3">Định dạng</h5> -->
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 120px;">Tham số
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 120px;">Kiểu dữ
+                                                                        liệu</th>
+                                                                    <th scope="col" style="min-width: 120px;">Mặc định
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 120px;">Bắt buộc
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 120px;">Mô tả</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">master</th>
+                                                                    <td>App, Window hoặc Box</td>
+                                                                    <td>-</td>
+                                                                    <td>Có</td>
+                                                                    <td>Đối tượng chứa widget này.</td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">align</th>
+                                                                    <td>Chuỗi</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Định vị trí widget trong container. Các giá trị
+                                                                        có thể: "top", "bottom", "left", "right".</td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">color</th>
+                                                                    <td>Màu</td>
+                                                                    <td>black</td>
+                                                                    <td>Không</td>
+                                                                    <td>Màu sắc của văn bản, có thể là tên màu như "red"
+                                                                        hoặc mã màu hex như #0099ff.</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">font</th>
+                                                                    <td>Chuỗi</td>
+                                                                    <td>"Helvetica"</td>
+                                                                    <td>Không</td>
+                                                                    <td>Phông chữ của văn bản.</td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">grid</th>
+                                                                    <td>Danh sách [int, int]</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Tọa độ [x, y] của widget nếu container sử dụng
+                                                                        bố cục "grid".</td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">size</th>
+                                                                    <td>Số nguyên</td>
+                                                                    <td>12</td>
+                                                                    <td>Không</td>
+                                                                    <td>Kích thước phông chữ của văn bản.</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">text</th>
+                                                                    <td>Chuỗi</td>
+                                                                    <td>""</td>
+                                                                    <td>Không</td>
+                                                                    <td>Văn bản sẽ hiển thị trong widget.</td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">visible</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>True</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chỉ ra liệu widget có hiển thị hay không.</td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">enabled</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chỉ ra liệu widget có được kích hoạt hay không.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">width</th>
+                                                                    <td>Số nguyên</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chiều rộng của widget tính theo ký tự hoặc
+                                                                        "fill".</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">height</th>
+                                                                    <td>Số nguyên</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chiều cao của widget tính theo ký tự hoặc
+                                                                        "fill".</td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">bold</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đặt văn bản thành in đậm.</td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">italic</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đặt văn bản thành in nghiêng.</td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">underline</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đặt văn bản có gạch chân.</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">overstrike</th>
+                                                                    <td>Boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đặt văn bản có gạch ngang.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về master:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+from guizero import App, Text
+
+app = App()
+my_text = Text(app, text="Hello, master widget", size=12)
+app.display()
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về align:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Aligned Text", align="center")
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về color:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Red Text", color="red")
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về font:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Custom Font Text", font="Arial")
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về grid:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Grid Position", grid=[0, 0])
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về size:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Large Text", size=20)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về text:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="This is the text content.")
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về visible:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Visible Text", visible=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về enabled:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="This text is enabled", enabled=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về width:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Wide Text", width=15)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về height:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Tall Text", height=5)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về bold:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Bold Text", bold=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về italic:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Italic Text", italic=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về underline:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Underlined Text", underline=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Ví dụ về overstrike:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+my_text = Text(app, text="Struck Through Text", overstrike=True)
+    </code>
+                                        </deckgo-highlight-code>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="d2c_notification_content d-flex align-items-start">
+                                <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                <div>
+                                    <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các phương thức của
+                                            Text
+                                        </a></h3>
+                                    <p style="font-size: large;" class="mb-0">ABạn có thể gọi các phương thức sau trên
+                                        đối tượng Text
+                                        phổ biến:</p>
+                                    <div class="col-xl-12 mb-4">
+                                        <div class="card bg-dark bg-opacity-10">
+                                            <div class="card-body">
+                                                <!-- <h5 class="text-capitalize mb-3">Định dạng</h5> -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr class="table-warning">
+                                                                <th scope="col">Method</th>
+                                                                <th scope="col">Takes</th>
+                                                                <th scope="col">Returns</th>
+                                                                <th scope="col">Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">after</th>
+                                                                <td>time (int), command (function name), args (list)
+                                                                </td>
+                                                                <td>-</td>
+                                                                <td>Lên lịch gọi một lệnh sau một khoảng thời gian (mili
+                                                                    giây).</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">append</th>
+                                                                <td>text (string)</td>
+                                                                <td>-</td>
+                                                                <td>Thêm văn bản vào cuối văn bản hiện tại.</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">cancel</th>
+                                                                <td>command (function name)</td>
+                                                                <td>-</td>
+                                                                <td>Hủy một lệnh đã lên lịch.</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">clear</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Xóa văn bản hiện tại.</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">destroy</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Hủy widget.</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">disable</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Vô hiệu hóa widget.</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">enable</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Kích hoạt lại widget.</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">focus</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Đặt focus vào widget.</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">hide</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Ẩn widget khỏi màn hình.</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">repeat</th>
+                                                                <td>time (int), command (function name), args (list)
+                                                                </td>
+                                                                <td>-</td>
+                                                                <td>Lặp lại lệnh sau mỗi khoảng thời gian.</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">resize</th>
+                                                                <td>width (int), height (int)</td>
+                                                                <td>-</td>
+                                                                <td>Đặt chiều rộng và chiều cao của widget.</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">show</th>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>Hiển thị widget nếu trước đó bị ẩn.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p style="font-size: large;" class="mb-0">1. after: Lên lịch gọi một lệnh sau một
+                                        khoảng thời gian.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+def say_hello():
+    text.value = "Hello!"
+
+app = App("Example: after")
+text = Text(app, text="Waiting...")
+
+app.after(2000, say_hello)  # Executes say_hello after 2 seconds
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">2. append: Thêm văn bản vào cuối văn bản
+                                        hiện tại.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+app = App("Example: append")
+text = Text(app, text="Initial Text")
+
+text.append(" and more text.")  # Adds to the existing text
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">3. cancel: Hủy một lệnh đã lên lịch.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+def say_hello():
+    text.value = "Hello!"
+
+app = App("Example: cancel")
+text = Text(app, text="Waiting...")
+
+call = app.after(2000, say_hello)  # Schedule say_hello
+app.cancel(call)  # Cancels the scheduled call
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">4. clear: Xóa văn bản hiện tại.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+app = App("Example: clear")
+text = Text(app, text="Some text")
+
+text.clear()  # Clears the text
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">5. destroy: Hủy widget.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+app = App("Example: destroy")
+text = Text(app, text="This widget will be destroyed")
+
+text.destroy()  # Destroys the widget
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">6. disable: Vô hiệu hóa widget.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, PushButton
+
+def on_click():
+    print("Button clicked!")
+
+app = App("Example: disable")
+button = PushButton(app, text="Click Me", command=on_click)
+
+button.disable()  # Disables the button
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">7. enable: Kích hoạt lại widget.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, PushButton
+
+def on_click():
+    print("Button clicked!")
+
+app = App("Example: enable")
+button = PushButton(app, text="Click Me", command=on_click)
+
+button.disable()  # Disable the button
+button.enable()  # Enables the button back
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">8. focus: Đặt focus vào widget.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, TextBox
+
+app = App("Example: focus")
+textbox = TextBox(app)
+
+textbox.focus()  # Sets focus on the TextBox
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">9. hide: Ẩn widget khỏi màn hình.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+app = App("Example: hide")
+text = Text(app, text="This text will be hidden")
+
+text.hide()  # Hides the text widget
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">10. repeat: Lặp lại lệnh sau mỗi khoảng
+                                        thời gian.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+def update_text():
+    text.value = "Updated!"
+
+app = App("Example: repeat")
+text = Text(app, text="Initial Text")
+
+app.repeat(2000, update_text)  # Repeats update_text every 2 seconds
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">11. resize: Đặt chiều rộng và chiều cao
+                                        của widget.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Box
+
+app = App("Example: resize")
+box = Box(app)
+
+box.resize(200, 100)  # Resizes the box to 200x100
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+                                    <p style="font-size: large;" class="mb-0">12. show: Hiển thị widget nếu trước đó bị
+                                        ẩn.</p>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+from guizero import App, Text
+
+app = App("Example: show")
+text = Text(app, text="This text is initially hidden")
+
+text.hide()  # Hides the text
+text.show()  # Shows the text again
+
+app.display()
+    </code>
+                                    </deckgo-highlight-code>
+
+
+
+                                    <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các thuộc tính Text
+                                        </a></h3>
+                                    <p style="font-size: large;" class="mb-0">Bạn có thể đặt và nhận các thuộc tính sau:
+                                    </p>
+                                    <div class="col-xl-12 mb-4">
+                                        <div class="card bg-dark bg-opacity-10">
+                                            <div class="card-body">
+                                                <!-- <h5 class="text-capitalize mb-3">Định dạng</h5> -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr class="table-warning">
+                                                                <th scope="col" style="min-width: 150px;">Method</th>
+                                                                <th scope="col" style="min-width: 300px;">Data type</th>
+                                                                <th scope="col" style="min-width: 400px;">Description
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">align</th>
+                                                                <td>string</td>
+                                                                <td>The alignment of this widget within its container
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">bg</th>
+                                                                <td>color</td>
+                                                                <td>The background colour of the widget</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">enabled</th>
+                                                                <td>boolean</td>
+                                                                <td>True if the widget is enabled</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">font</th>
+                                                                <td>string</td>
+                                                                <td>The font of the text</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">grid</th>
+                                                                <td>List</td>
+                                                                <td>[x,y] coordinates of this widget. This parameter is
+                                                                    only required if the master object has a grid</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">height</th>
+                                                                <td>size</td>
+                                                                <td>Set the height of the widget in characters or to
+                                                                    "fill"</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">master</th>
+                                                                <td>App or Box</td>
+                                                                <td>The container to which this widget belongs</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">text_size</th>
+                                                                <td>int</td>
+                                                                <td>The size of the text</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">text_color</th>
+                                                                <td>color</td>
+                                                                <td>The colour of the text</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">text_bold</th>
+                                                                <td>boolean</td>
+                                                                <td>Whether the text is bold</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">text_italic</th>
+                                                                <td>boolean</td>
+                                                                <td>Whether the text is italic</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">text_underline</th>
+                                                                <td>boolean</td>
+                                                                <td>Whether the text is underlined</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">text_overstrike</th>
+                                                                <td>boolean</td>
+                                                                <td>Whether the text is overstruck</td>
+                                                            </tr>
+                                                            <tr class="table-success">
+                                                                <th scope="row">tk</th>
+                                                                <td>tkinter.Label</td>
+                                                                <td>The internal tkinter object, see Using tkinter</td>
+                                                            </tr>
+                                                            <tr class="table-danger">
+                                                                <th scope="row">value</th>
+                                                                <td>string</td>
+                                                                <td>The text</td>
+                                                            </tr>
+                                                            <tr class="table-warning">
+                                                                <th scope="row">visible</th>
+                                                                <td>boolean</td>
+                                                                <td>If this widget is visible</td>
+                                                            </tr>
+                                                            <tr class="table-primary">
+                                                                <th scope="row">width</th>
+                                                                <td>size</td>
+                                                                <td>Set the width of the widget in characters or to
+                                                                    "fill"</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                   <p style="font-size: large;" class="mb-0">1. align: Căn chỉnh của widget trong container.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: align")
+message = Text(app, text="Hello, World!", align="center")
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">2. bg: Màu nền của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App
+
+app = App("Example: bg", bg="lightblue")
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">3. enabled: True nếu widget được kích hoạt.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: enabled")
+message = Text(app, text="Hello, World!", enabled=True)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">4. font: Phông chữ của văn bản.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: font")
+message = Text(app, text="Hello, World!", font="Arial")
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">5. grid: Tọa độ [x, y] của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: grid")
+message = Text(app, text="Hello, World!", grid=[0, 0])
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">6. height: Chiều cao của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: height")
+message = Text(app, text="Hello, World!", height=3)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">7. master: Container của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Box, Text
+
+app = App("Example: master")
+box = Box(app)
+message = Text(box, text="Hello, World!")
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">8. text_size: Kích thước của văn bản.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_size")
+message = Text(app, text="Hello, World!", text_size=20)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">9. text_color: Màu của văn bản.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_color")
+message = Text(app, text="Hello, World!", text_color="blue")
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">10. text_bold: Văn bản có in đậm hay không.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_bold")
+message = Text(app, text="Hello, World!", text_bold=True)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">11. text_italic: Văn bản có in nghiêng hay không.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_italic")
+message = Text(app, text="Hello, World!", text_italic=True)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">12. text_underline: Văn bản có gạch chân hay không.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_underline")
+message = Text(app, text="Hello, World!", text_underline=True)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">13. text_overstrike: Văn bản có gạch ngang hay không.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: text_overstrike")
+message = Text(app, text="Hello, World!", text_overstrike=True)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">14. tk: Đối tượng tkinter nội bộ.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: tk")
+message = Text(app, text="Hello, World!")
+tk_obj = message.tk
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">15. value: Văn bản của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: value")
+message = Text(app, text="Hello, World!")
+print(message.value)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">16. visible: Trạng thái hiển thị của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: visible")
+message = Text(app, text="Hello, World!", visible=False)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+<p style="font-size: large;" class="mb-0">17. width: Chiều rộng của widget.</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+from guizero import App, Text
+
+app = App("Example: width")
+message = Text(app, text="Hello, World!", width=20)
+app.display()
+    </code>
+</deckgo-highlight-code>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+            </div>
+
+            <br>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- End:Title -->
+
+    <!-- copyright -->
+    <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
