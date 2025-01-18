@@ -205,7 +205,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="./GUI-App.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-window-restore"></i>
@@ -248,7 +248,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./GUI_Size.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-arrows-alt"></i>
@@ -302,12 +302,14 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - APP</a>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - Size</a>
                                         </h1>
 
-                                        <p style="font-size: large;" class="mb-0">App là đối tượng cơ bản trong mọi giao
-                                            diện đồ họa (GUI) được tạo bằng thư viện Guizero. Nó là cửa sổ chính chứa
-                                            tất cả các thành phần khác như nút, hộp văn bản, nhãn, v.v.</p>
+                                        <p style="font-size: large;" class="mb-0">Bạn có thể thiết lập chiều rộng và chiều cao cho các widget trong guizero.
+
+                                            Kích thước của các widget có thể được xác định bằng pixel hoặc ký tự, tùy thuộc vào loại widget và nội dung bên trong.
+                                            
+                                            Một số widget cũng có thể được thiết lập để "fill" (lấp đầy), có nghĩa là chúng sẽ sử dụng toàn bộ không gian có sẵn.</p>
 
                                     </div>
 
@@ -323,94 +325,122 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo một đối
-                                                tượng App
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Ví dụ
                                             </a></h3>
-                                        <p style="font-size: large;" class="mb-0">Để tạo một App, bạn sử dụng cú pháp
-                                            sau:</p>
-                                        <span class="text-danger">Cú pháp: </span> <br>
+                                       
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-    from guizero import App
-    app = App()  # Tạo cửa sổ App
-    app.display()  # Hiển thị cửa sổ                              
+    from guizero import App, PushButton, Slider, ListBox
+
+    app = App()
+    
+    # Kích thước của PushButton được tính bằng số ký tự
+    button = PushButton(app, width=30, height=5)
+    
+    # Kích thước của Slider được tính bằng pixel
+    slider = Slider(app, width=300, height=30)
+    
+    # Một số widget như ListBox có thể được thiết lập để lấp đầy toàn bộ không gian có sẵn
+    listbox = ListBox(app, width="fill", height="fill")
+    
+    app.display()                                 
                                                 </code>
                                         </deckgo-highlight-code>
 
                                         <br>
 
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Tham số khởi
-                                                tạo</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Khi tạo một đối tượng Ứng dụng, bạn có thể chỉ định bất kỳ tham số nào sau đây, tất cả đều là tùy chọn. Chỉ định các tham số trong ngoặc như thế này: app = App(bg="red", Height=200)
-                                        </p>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Bảng kích thước các Widget</a></h3>
+                                       
                                         <div class="col-xl-12 mb-4">
                                             <div class="card bg-dark bg-opacity-10">
                                                 <div class="card-body">
-                                                    <h5 class="text-capitalize mb-3">Định dạng</h5>
+                                                    <!-- <h5 class="text-capitalize mb-3">Định dạng</h5> -->
                                                     <div class="table-responsive">
                                                         <table class="table">
                                                             <thead>
                                                                 <tr class="table-warning">
-                                                                    <th scope="col" style="min-width: 120px;">Tham số
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Kiểu dữ
-                                                                        liệu</th>
-                                                                    <th scope="col" style="min-width: 120px;">Mặc định
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Bắt buộc
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Mô tả</th>
+                                                                    <th scope="col" style="min-width: 120px;">Widget</th>
+                                                                    <th scope="col" style="min-width: 120px;">Kiểu dữ liệu</th>
+                                                                    <th scope="col" style="min-width: 120px;">Fill</th>
+                                                                    <th scope="col" style="min-width: 120px;">Ghi chú</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr class="table-primary">
-                                                                    <th scope="row">bg</th>
-                                                                    <td>Màu</td>
-                                                                    <td>None</td>
-                                                                    <td>Không</td>
-                                                                    <td>Màu nền của cửa sổ và các thành phần bên trong.
-                                                                        Ví dụ: "red", "blue".</td>
+                                                                    <th scope="row">Box</th>
+                                                                    <td>Pixel</td>
+                                                                    <td>Có</td>
+                                                                    <td>Nếu Box được thiết lập bằng Pixel, cả chiều rộng và chiều cao phải được chỉ định.</td>
                                                                 </tr>
                                                                 <tr class="table-success">
-                                                                    <th scope="row">width</th>
-                                                                    <td>Số nguyên</td>
-                                                                    <td>500</td>
-                                                                    <td>Không</td>
-                                                                    <td>Chiều rộng của cửa sổ tính theo pixel.</td>
+                                                                    <th scope="row">ButtonGroup</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td>Chiều cao của ButtonGroup phải chia hết cho số nút trong đó.</td>
                                                                 </tr>
                                                                 <tr class="table-danger">
-                                                                    <th scope="row">height</th>
-                                                                    <td>Số nguyên</td>
-                                                                    <td>500</td>
-                                                                    <td>Không</td>
-                                                                    <td>Chiều cao của cửa sổ tính theo pixel.</td>
+                                                                    <th scope="row">CheckBox</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr class="table-warning">
-                                                                    <th scope="row">layout</th>
-                                                                    <td>Chuỗi</td>
-                                                                    <td>"auto"</td>
-                                                                    <td>Không</td>
-                                                                    <td>Kiểu sắp xếp các widget, có thể là "auto" hoặc
-                                                                        "grid".</td>
+                                                                    <th scope="row">Combo</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr class="table-success">
-                                                                    <th scope="row">title</th>
-                                                                    <td>Chuỗi</td>
-                                                                    <td>"guizero"</td>
-                                                                    <td>Không</td>
-                                                                    <td>Tiêu đề hiển thị trên thanh tiêu đề của cửa sổ.
-                                                                    </td>
+                                                                    <th scope="row">ListBox</th>
+                                                                    <td>Pixel</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr class="table-primary">
-                                                                    <th scope="row">visible</th>
-                                                                    <td>Boolean</td>
-                                                                    <td>True</td>
+                                                                    <th scope="row">Picture</th>
+                                                                    <td>Pixel</td>
                                                                     <td>Không</td>
-                                                                    <td>Cửa sổ có hiển thị khi khởi tạo hay không.</td>
+                                                                    <td>Xem phần Hình ảnh để biết thêm thông tin.</td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">PushButton</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">PushButton có hình ảnh</th>
+                                                                    <td>Pixel</td>
+                                                                    <td>Không</td>
+                                                                    <td>PushButton có hình ảnh được xác định bằng pixel.</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">Slider</th>
+                                                                    <td>Pixel</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">Text</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">TextBox</th>
+                                                                    <td>Ký tự</td>
+                                                                    <td>Có</td>
+                                                                    <td>Chỉ chiều rộng của TextBox có thể được thiết lập.</td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">Waffle</th>
+                                                                    <td>Pixel</td>
+                                                                    <td>Không</td>
+                                                                    <td></td>
                                                                 </tr>
                                                             </tbody>
-
                                                         </table>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -418,11 +448,85 @@
 
                                         <p style="font-size: large;" class="mb-0">Ví dụ:</p>
 
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    app = App(bg="red", height=200, width=300, title="Ứng dụng của tôi")                                       
-                                                </code>
-                                        </deckgo-highlight-code>
+<!-- Ví dụ cho App -->
+<deckgo-highlight-code language="python">
+    <code slot="code">
+app = App(bg="red", height=200, width=300, title="Ứng dụng của tôi")
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho PushButton -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho PushButton:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+button = PushButton(app, text="Nhấn tôi", width=30, height=5)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho Slider -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho Slider:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+slider = Slider(app, width=300, height=30)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho ListBox -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho ListBox:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+listbox = ListBox(app, width="fill", height="fill")
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho CheckBox -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho CheckBox:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+checkbox = CheckBox(app, text="Chọn tôi", width=20, height=5)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho Combo -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho Combo:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+combo = Combo(app, options=["Option 1", "Option 2", "Option 3"], width=20, height=5)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho Picture -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho Picture:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+picture = Picture(app, image="image.png", width=200, height=200)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho Text -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho Text:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+text = Text(app, text="Chào mừng bạn đến với ứng dụng của tôi!", width="fill", height="fill")
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho TextBox -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho TextBox:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+textbox = TextBox(app, width=20)
+    </code>
+</deckgo-highlight-code>
+
+<!-- Ví dụ cho Waffle -->
+<p style="font-size: large;" class="mb-0">Ví dụ cho Waffle:</p>
+<deckgo-highlight-code language="python">
+    <code slot="code">
+waffle = Waffle(app, width=100, height=100)
+    </code>
+</deckgo-highlight-code>
+
 
 
                                     </div>

@@ -205,7 +205,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="./GUI-App.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-window-restore"></i>
@@ -257,7 +257,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./GUI-Layout.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-th"></i>
@@ -302,13 +302,14 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - APP</a>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - Layout</a>
                                         </h1>
 
-                                        <p style="font-size: large;" class="mb-0">App là đối tượng cơ bản trong mọi giao
-                                            diện đồ họa (GUI) được tạo bằng thư viện Guizero. Nó là cửa sổ chính chứa
-                                            tất cả các thành phần khác như nút, hộp văn bản, nhãn, v.v.</p>
-
+                                        <p style="font-size: large;" class="mb-0">Bố cục của giao diện đồ họa (GUI) trong guizero là cách bạn sắp xếp các widget (thành phần giao diện) trong cửa sổ. Có hai loại bố cục chính mà bạn có thể sử dụng:</p>
+                                        <ol>
+                                            <li>auto - nơi các widget được sắp xếp tự động.</li>
+                                            <li>grid - bạn chỉ định vị trí của từng widget trong một lưới.</li>
+                                        </ol>
                                     </div>
 
 
@@ -323,104 +324,33 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo một đối
-                                                tượng App
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo bố cục
                                             </a></h3>
-                                        <p style="font-size: large;" class="mb-0">Để tạo một App, bạn sử dụng cú pháp
-                                            sau:</p>
+                                        <p style="font-size: large;" class="mb-0">Cách sử dụng bố cục được xác định thông qua tham số layout của container (thùng chứa):</p>
                                         <span class="text-danger">Cú pháp: </span> <br>
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-    from guizero import App
-    app = App()  # Tạo cửa sổ App
-    app.display()  # Hiển thị cửa sổ                              
+    app = App(layout="auto")
+    app = App(layout="grid")                               
                                                 </code>
                                         </deckgo-highlight-code>
-
+                                        <i>Nếu không chỉ định tham số layout, mặc định sẽ sử dụng bố cục auto.</i>
                                         <br>
 
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Tham số khởi
-                                                tạo</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Khi tạo một đối tượng Ứng dụng, bạn có thể chỉ định bất kỳ tham số nào sau đây, tất cả đều là tùy chọn. Chỉ định các tham số trong ngoặc như thế này: app = App(bg="red", Height=200)
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Bố cục Auto</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Bố cục auto là mặc định khi bạn tạo một container. Các widget sẽ được sắp xếp theo thứ tự tạo và căn giữa trong container. Ví dụ, đoạn mã sau sẽ tạo hai widget Text, một ở trên và một ở dưới:
                                         </p>
-                                        <div class="col-xl-12 mb-4">
-                                            <div class="card bg-dark bg-opacity-10">
-                                                <div class="card-body">
-                                                    <h5 class="text-capitalize mb-3">Định dạng</h5>
-                                                    <div class="table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr class="table-warning">
-                                                                    <th scope="col" style="min-width: 120px;">Tham số
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Kiểu dữ
-                                                                        liệu</th>
-                                                                    <th scope="col" style="min-width: 120px;">Mặc định
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Bắt buộc
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 120px;">Mô tả</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr class="table-primary">
-                                                                    <th scope="row">bg</th>
-                                                                    <td>Màu</td>
-                                                                    <td>None</td>
-                                                                    <td>Không</td>
-                                                                    <td>Màu nền của cửa sổ và các thành phần bên trong.
-                                                                        Ví dụ: "red", "blue".</td>
-                                                                </tr>
-                                                                <tr class="table-success">
-                                                                    <th scope="row">width</th>
-                                                                    <td>Số nguyên</td>
-                                                                    <td>500</td>
-                                                                    <td>Không</td>
-                                                                    <td>Chiều rộng của cửa sổ tính theo pixel.</td>
-                                                                </tr>
-                                                                <tr class="table-danger">
-                                                                    <th scope="row">height</th>
-                                                                    <td>Số nguyên</td>
-                                                                    <td>500</td>
-                                                                    <td>Không</td>
-                                                                    <td>Chiều cao của cửa sổ tính theo pixel.</td>
-                                                                </tr>
-                                                                <tr class="table-warning">
-                                                                    <th scope="row">layout</th>
-                                                                    <td>Chuỗi</td>
-                                                                    <td>"auto"</td>
-                                                                    <td>Không</td>
-                                                                    <td>Kiểu sắp xếp các widget, có thể là "auto" hoặc
-                                                                        "grid".</td>
-                                                                </tr>
-                                                                <tr class="table-success">
-                                                                    <th scope="row">title</th>
-                                                                    <td>Chuỗi</td>
-                                                                    <td>"guizero"</td>
-                                                                    <td>Không</td>
-                                                                    <td>Tiêu đề hiển thị trên thanh tiêu đề của cửa sổ.
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-primary">
-                                                                    <th scope="row">visible</th>
-                                                                    <td>Boolean</td>
-                                                                    <td>True</td>
-                                                                    <td>Không</td>
-                                                                    <td>Cửa sổ có hiển thị khi khởi tạo hay không.</td>
-                                                                </tr>
-                                                            </tbody>
-
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                     
 
                                         <p style="font-size: large;" class="mb-0">Ví dụ:</p>
 
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-    app = App(bg="red", height=200, width=300, title="Ứng dụng của tôi")                                       
+    from guizero import App, Text
+    app = App()
+    text_1 = Text(app, text="on top")
+    text_2 = Text(app, text="below")
+    app.display()                                    
                                                 </code>
                                         </deckgo-highlight-code>
 
