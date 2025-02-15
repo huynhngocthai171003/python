@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>PILLOW trong GUIZERO</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="../Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Project.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span> Dự án cuối khóa </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-App.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - App </span>
+                        </a>
+                    </li>
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Text.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-font"></i>
+                            </span>
+                            <span> GUIZERO - Text </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Picture.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+                            <span> GUIZERO - Picture </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-Colors.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-palette"></i>
+                            </span>
+                            <span> GUIZERO - Colors </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_Size.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-arrows-alt"></i>
+                            </span>
+                            <span> GUIZERO - Size </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th"></i>
+                            </span>
+                            <span> GUIZERO - Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework_Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập Layout </span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../PILLOW/PI_Resize.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </span>
+                            <span> Pillow trong Guizero </span>
+                        </a>
+                    </li>
+
+                    
+                    
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">Giới thiệu Pillow</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Pillow là một thư viện mạnh mẽ để xử lý hình ảnh, cho phép:</p>
+                                        <ul>
+                                            <li>Mở và chỉnh sửa hình ảnh với nhiều định dạng (JPEG, PNG, BMP...).</li>
+                                            <li>Thao tác hình ảnh: thay đổi kích thước, cắt, xoay, áp dụng bộ lọc, vẽ lên hình ảnh...</li>
+                                            <li>Chuyển đổi giữa các định dạng hình ảnh.</li>
+                                            <li>Hỗ trợ xử lý pixel theo từng cấp độ.</li>
+                                        </ul>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cài đặt
+                                            </a></h3>
+                                       
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    pip install pillow                             
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <br>
+
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các thành phần chính của Pillow</a></h3>
+                                       
+
+                                        <p style="font-size: large;" class="mb-0">
+                                            <ol>
+                                                <li>Mở hình ảnh (Image.open): Dùng để mở tệp hình ảnh từ máy tính.</li>
+                                                <li>Hiển thị hình ảnh (Image.show): Xem hình ảnh trực tiếp bằng trình xem ảnh mặc định.</li>
+                                                <li>Thao tác hình ảnh:
+                                                    <ul>
+                                                        <li>Thay đổi kích thước: resize()</li>
+                                                        <li>Cắt (crop): crop()</li>
+                                                        <li>Xoay: rotate()</li>
+                                                        <li>Lật: transpose()</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Vẽ lên hình ảnh (ImageDraw): Dùng để thêm văn bản, hình dạng (hình tròn, hình chữ nhật...).</li>
+                                                <li>Áp dụng bộ lọc (ImageFilter): Làm mờ, làm sắc nét, phát hiện cạnh.</li>
+                                                <li>Lưu hình ảnh (save): Lưu hình ảnh chỉnh sửa về máy.</li>
+                                                
+                                            </ol>
+                                        </p>
+
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Sử dụng Pillow kết hợp guizero</a></h3>
+                                        
+                                        <p style="font-size: large;" class="mb-0">Guizero không hỗ trợ trực tiếp xử lý hình ảnh, nhưng bạn có thể kết hợp nó với Pillow để hiển thị hoặc thao tác hình ảnh trước khi hiển thị trong GUI.</p>
+                                        
+                                        <span class="text-danger " style="font-size: larger;">1. Mở và hiển thị hình ảnh</span> <br>
+                                        <p style="font-size: large;" class="mb-0">Chức năng:</p>
+                                        <ul>
+                                            <li>Mở một hình ảnh từ file.</li>
+                                            <li>Hiển thị hình ảnh trên cửa sổ mặc định.</li>
+                                        </ul>
+                                        <p style="font-size: large;" class="mb-0">Cách thực hiện:</p>
+                                       
+                                        <p style="font-size: medium;" class="mb-0"> Sử dụng các phương pháp cơ bản từ thư viện Pillow (Image).</p>
+                                        <p style="font-size: medium;" class="mb-0"> 1. Ví dụ</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    pip install pillow      
+    from PIL import Image
+
+    # Mở file ảnh
+    image = Image.open("example.jpg")
+    
+    # Hiển thị ảnh
+    image.show()
+    
+    # Lấy thông tin về ảnh
+    print(f"Size: {image.size}, Format: {image.format}, Mode: {image.mode}")
+                           
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger" style="font-size: larger;">2. Thay đổi kích thước ảnh trước khi hiển thị</span> <br>
+                                        <p style="font-size: large;" class="mb-0">Chức năng: </p>
+                                        <ul>
+                                            <li>Thay đổi kích thước hình ảnh bằng cách
+                                                <ol>
+                                                    <li>Giữ nguyên tỷ lệ.</li>
+                                                    <li>Bỏ tỷ lệ và thay đổi kích thước chính xác.</li>
+                                                </ol>
+                                            </li>
+                                            <li>Sử dụng phương pháp resize() hoặc thumbnail().</li>
+                                            
+                                        </ul>
+                                        <p style="font-size: large;" class="mb-0 text-success">Cách 1: Thay đổi kích thước giữ nguyên tỷ lệ (thumbnail)</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from guizero import App, Picture
+    from PIL import Image
+    
+    # Xử lý ảnh với Pillow
+    image = Image.open("GUI/Source code/chuong5/topic_5/image1.png")  # Resize ảnh
+    max_size = (200, 1000) 
+    image.thumbnail(max_size)
+    
+    # Chuyển đổi sang chế độ RGB nếu cần thiết
+    if image.mode == "RGBA":
+        image = image.convert("RGB")
+    
+    # Lưu ảnh đã xử lý
+    image.save("processed_image.jpg")  # Lưu ảnh dưới dạng JPEG
+    
+    # Hiển thị trong guizero
+    app = App("Hiển thị ảnh")
+    picture = Picture(app, image="processed_image.jpg")
+    app.display()                       
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: larger; " class="mb-0 text-success"> Khi bạn sử dụng phương thức thumbnail() trong Pillow và cung cấp một kích thước (chiều rộng và chiều cao) không tỷ lệ với hình ảnh gốc, thì hình ảnh sẽ tự động được thu nhỏ và giữ nguyên tỷ lệ gốc.</p>
+                                        
+                                        <ul>
+                                            <li>Pillow không chỉnh sửa hình ảnh để vừa chính xác với kích thước bạn đưa ra. Thay vào đó, nó thu nhỏ hình ảnh sao cho chiều rộng hoặc chiều cao không vượt quá kích thước tối đa bạn chỉ định.</li>
+                                            <li>Một chiều (chiều rộng hoặc chiều cao) sẽ nhỏ hơn hoặc bằng giá trị tối đa bạn cung cấp, nhưng tỷ lệ ban đầu của hình ảnh sẽ được giữ nguyên.</li>
+                                        </ul>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ</p>
+                                        <p style="font-size: medium;" class="mb-0"> Giả sử bạn có một hình ảnh gốc với kích thước 800x600 (tỷ lệ 4:3) và bạn đặt kích thước thumbnail là (200, 200).</p>
+                                      
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from PIL import Image
+
+    # Mở hình ảnh gốc
+    img = Image.open("input.jpg")
+    
+    # Kích thước thumbnail
+    thumbnail_size = (200, 200)
+    
+    # Tạo thumbnail (giữ nguyên tỷ lệ)
+    img.thumbnail(thumbnail_size)
+    
+    # Hiển thị kích thước mới
+    print("Kích thước gốc:", img.size)  # Output: (200, 150)                           
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: large;" class="mb-0"> Giải thích:</p>
+                                        
+                                        <ul>
+                                            <li>Tỷ lệ gốc của hình ảnh là 4:3</li>
+                                            <li>Khi thu nhỏ hình ảnh để vừa với (200, 200), Pillow tự động tính toán:
+                                                <ol>
+                                                    <li>Chiều rộng được thu nhỏ xuống 200px.</li>
+                                                    <li>Chiều cao được tính theo tỷ lệ và trở thành 150px.</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                        <p style="font-size: medium;" class="mb-0"> Kết quả: Hình ảnh mới có kích thước 200x150, vì nếu thay đổi chiều cao thành 200px thì chiều rộng sẽ vượt quá giới hạn.</p>
+                                        
+
+                                        <br>
+                                        <p style="font-size: larger; " class="mb-0 text-success"> Trường hợp nếu cung cấp chiều cao và chiều rộng lệch</p>
+                                        
+                                        
+                                        <p style="font-size: medium;" class="mb-0">Nếu bạn cung cấp một giá trị lệch hẳn so với tỷ lệ ảnh gốc, Pillow vẫn giữ nguyên tỷ lệ gốc và chỉ giảm kích thước đến mức vừa nhất.</p>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ</p>
+                                        <p style="font-size: medium;" class="mb-0">Giả sử hình ảnh gốc là 1000x500 (tỷ lệ 2:1) và bạn đặt thumbnail_size = (300, 400).</p>
+                                      
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    img = Image.open("input.jpg")
+    img.thumbnail((300, 400))
+    print("Kích thước sau khi thu nhỏ:", img.size)                           
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: large;" class="mb-0"> Kết quả:</p>
+                                        
+                                        <ul>
+                                            <li>Pillow sẽ giảm chiều rộng xuống 300px (giới hạn tối đa).</li>
+                                            <li>Chiều cao sẽ tự động điều chỉnh theo tỷ lệ gốc (2:1), nên trở thành 150px.
+                                            </li>
+                                            <li>Kết quả cuối cùng là hình ảnh có kích thước 300x150.</li>
+                                        </ul>
+
+                                        <br>
+                                        <p style="font-size: larger; " class="mb-0 text-success">Quy tắc hoạt động của thumbnail():</p>
+                                        <ol>
+                                            <li>Giữ nguyên tỷ lệ gốc của hình ảnh.</li>
+                                            <li>Giảm kích thước đến mức tối đa sao cho hình ảnh vừa với chiều rộng và chiều cao mà bạn cung cấp.</li>
+                                            <li>Không bao giờ làm méo hình ảnh, vì vậy, nếu tỷ lệ không khớp với kích thước bạn đặt, kích thước cuối cùng sẽ nhỏ hơn giới hạn ở ít nhất một chiều.</li>
+                                        </ol>  
+                                        <p style="font-size: medium;" class="mb-0">Nếu bạn muốn hình ảnh bị bóp méo để vừa chính xác với kích thước bạn đưa ra, bạn cần sử dụng resize() thay vì thumbnail():</p>                                   
+                                    
+                                    <br>
+                                    
+                                        <p style="font-size: large;" class="mb-0 text-success">Cách 2: Thay đổi kích thước chính xác (resize)</p>
+                                       
+                                        <p style="font-size: medium;" class="mb-0">Phương thức resize() trong Pillow được sử dụng để thay đổi kích thước hình ảnh một cách chính xác, không giữ nguyên tỷ lệ gốc trừ khi bạn xử lý riêng.</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from PIL import Image
+    from guizero import App, Picture
+    
+    # Mở hình ảnh
+    img = Image.open("GUI/Source code/chuong5/topic_5/image1.png")
+    
+    # Kích thước mới
+    new_size = (200, 300)
+    
+    # Thay đổi kích thước
+    resized_img = img.resize(new_size, Image.Resampling.LANCZOS)
+    
+    # Kiểm tra mode và chuyển đổi nếu cần
+    if resized_img.mode == "RGBA":
+        resized_img = resized_img.convert("RGB")  # Chuyển đổi sang RGB để lưu dưới dạng JPEG
+    
+    # Lưu hình ảnh sau khi resize
+    resized_img.save("output_resized.jpg", format="JPEG")
+    
+    # Hiển thị kích thước mới
+    app = App("Hiển thị ảnh")
+    picture = Picture(app, image="output_resized.jpg")
+    app.display()                      
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        
+                                        <p style="font-size: larger; " class="mb-0 text-success">Hoạt động của resize()</p>
+                                        <ol>
+                                            <li>resize() ép hình ảnh về kích thước bạn cung cấp, bất kể tỷ lệ gốc. Điều này có thể làm méo hoặc kéo dài hình ảnh nếu tỷ lệ mới không khớp với tỷ lệ ban đầu.</li>
+                                            <li>Bạn có thể sử dụng tham số Image.Resampling (trước đây là Image.ANTIALIAS) để đảm bảo chất lượng hình ảnh sau khi thay đổi kích thước.
+                                            </li>
+                                            
+                                        </ol>  
+
+                                        <p style="font-size: medium;" class="mb-0">Cú pháp</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    resize(size, resample=Image.Resampling.LANCZOS)               
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <ul>
+                                            <li>size: Một tuple (width, height) với chiều rộng (width) và chiều cao (height) mới.</li>
+                                            <li>resample: Thuật toán nội suy được sử dụng để thay đổi kích thước. Một số tùy chọn:
+                                                <ol>
+                                                    <li>Image.Resampling.NEAREST: Nội suy gần nhất (chất lượng thấp, nhanh).</li>
+                                                    <li>Image.Resampling.BOX: Nội suy hộp (chất lượng trung bình).</li>
+                                                    <li>Image.Resampling.BILINEAR: Nội suy tuyến tính (chất lượng trung bình).</li>
+                                                    <li>Image.Resampling.HAMMING: Nội suy Hamming (chất lượng cao).</li>
+                                                    <li>Image.Resampling.BICUBIC: Nội suy bicubic (chất lượng cao hơn).</li>
+                                                    <li>Image.Resampling.LANCZOS: Nội suy Lanczos (chất lượng tốt nhất, thường dùng).</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from PIL import Image
+    from guizero import App, Picture
+    
+    # Mở hình ảnh gốc
+    img = Image.open("GUI/Source code/chuong5/topic_5/image1.png")
+    
+    # Kích thước mới
+    new_size = (200, 200)
+    
+    # Tạo các phiên bản của hình ảnh với các phương pháp nội suy khác nhau
+    resized_nearest = img.resize(new_size, resample=Image.Resampling.NEAREST)
+    resized_box = img.resize(new_size, resample=Image.Resampling.BOX)
+    resized_bilinear = img.resize(new_size, resample=Image.Resampling.BILINEAR)
+    resized_hamming = img.resize(new_size, resample=Image.Resampling.HAMMING)
+    resized_bicubic = img.resize(new_size, resample=Image.Resampling.BICUBIC)
+    resized_lanczos = img.resize(new_size, resample=Image.Resampling.LANCZOS)
+    
+    if resized_nearest.mode == "RGBA" and resized_box.mode == "RGBA"  and resized_bilinear.mode == "RGBA" and resized_hamming.mode == "RGBA" and resized_bicubic.mode == "RGBA" and resized_lanczos.mode == "RGBA":
+        resized_nearest = resized_nearest.convert("RGB")
+        resized_box = resized_box.convert("RGB")
+        resized_bilinear = resized_bilinear.convert("RGB")
+        resized_hamming = resized_hamming.convert("RGB")
+        resized_bicubic = resized_bicubic.convert("RGB")
+        resized_lanczos = resized_lanczos.convert("RGB")
+    
+    # Lưu các hình ảnh để so sánh
+    resized_nearest.save("output_nearest.jpg", format="JPEG")
+    resized_box.save("output_box.jpg", format="JPEG")
+    resized_bilinear.save("output_bilinear.jpg", format="JPEG")
+    resized_hamming.save("output_hamming.jpg", format="JPEG")
+    resized_bicubic.save("output_bicubic.jpg", format="JPEG")
+    resized_lanczos.save("output_lanczos.jpg", format="JPEG")
+    
+    app = App("Hiển thị ảnh")
+    picture = Picture(app, image="output_nearest.jpg")
+    picture = Picture(app, image="output_box.jpg")
+    picture = Picture(app, image="output_bilinear.jpg")
+    picture = Picture(app, image="output_hamming.jpg")
+    picture = Picture(app, image="output_bicubic.jpg")
+    picture = Picture(app, image="output_lanczos.jpg")
+    
+    app.display()                 
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <ol>
+                                            <li>Image.Resampling.NEAREST:
+                                                <ul>
+                                                    <li>Nội suy gần nhất, chọn giá trị màu từ pixel gần nhất mà không cần tính toán trung gian.</li>
+                                                    <li>Chất lượng thấp, nhanh nhất. Có thể xuất hiện răng cưa, phù hợp với hình ảnh dạng pixel art hoặc khi cần tốc độ cao.</li>
+                                                    <li>Ứng dụng: Hình ảnh không quan trọng về chất lượng, tốc độ ưu tiên.</li>
+                                                    <p>Kết quả: Hình ảnh có thể xuất hiện khối màu cứng, không mượt.</p>
+                                                </ul>
+                                            </li>
+                                            <li>Image.Resampling.BOX:
+                                                <ul>
+                                                    <li>Tính trung bình giá trị pixel trong một hộp (box) xung quanh mỗi pixel.</li>
+                                                    <li>Chất lượng trung bình, nhanh hơn các thuật toán cao cấp.</li>
+                                                    <li>Ứng dụng: Hình ảnh kích thước nhỏ hoặc vừa, không yêu cầu độ chi tiết cao.</li>
+                                                    <p>Kết quả: Hình ảnh tương đối mượt nhưng không sắc nét.</p>
+                                                </ul>
+                                            </li>
+                                            <li>Image.Resampling.BILINEAR:
+                                                <ul>
+                                                    <li>Tính trung bình hai chiều (x và y) giữa các pixel gần nhất.</li>
+                                                    <li>Chất lượng trung bình, mượt hơn NEAREST, nhưng chi tiết có thể bị mất.</li>
+                                                    <li>Ứng dụng: Hình ảnh nhỏ gọn cần sự mượt mà mà không đòi hỏi chi tiết cao.</li>
+                                                    <p>Kết quả: Hình ảnh mượt mà hơn BOX, nhưng thiếu sắc nét.</p>
+                                                </ul>
+                                            </li>
+                                            <li>Image.Resampling.HAMMING:
+                                                <ul>
+                                                    <li>Một phương pháp mượt hóa cao hơn, giảm độ nhiễu trong khi giữ được chi tiết.</li>
+                                                    <li>Chất lượng tốt, phù hợp với ảnh nhỏ hoặc trung bình.</li>
+                                                    <li>Ứng dụng: Khi cần chất lượng tốt cho ảnh nhỏ hoặc trung bình.</li>
+                                                    <p>Kết quả: Hình ảnh chất lượng cao, mượt và giảm nhiễu.</p>
+                                                </ul>
+                                            </li>
+                                            <li>Image.Resampling.BICUBIC:
+                                                <ul>
+                                                    <li>Tính toán dựa trên 16 pixel xung quanh mỗi pixel mới, cho phép chi tiết tốt hơn.</li>
+                                                    <li>Chất lượng cao hơn BILINEAR.</li>
+                                                    <li>Ứng dụng: Thay đổi kích thước hình ảnh chất lượng cao.</li>
+                                                    <p>Kết quả: Hình ảnh sắc nét, mượt, phù hợp với nội dung chi tiết.</p>
+                                                </ul>
+                                            </li>
+                                            <li>Image.Resampling.LANCZOS:
+                                                <ul>
+                                                    <li>Sử dụng một hàm sinc để lấy mẫu lại, mang lại chất lượng tốt nhất.</li>
+                                                    <li>Tốn tài nguyên tính toán nhất.</li>
+                                                    <li>Ứng dụng: Khi cần chất lượng tốt nhất cho hình ảnh lớn hoặc cần giữ lại nhiều chi tiết.</li>
+                                                    <p>Kết quả: Hình ảnh mượt và chi tiết nhất, lý tưởng cho ảnh lớn.</p>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <span class="text-danger" style="font-size: larger;">3. Áp dụng bộ lọc lên ảnh</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Trong thư viện Pillow, bộ lọc ảnh (ImageFilter) cung cấp nhiều tùy chọn để xử lý và cải thiện hình ảnh. Dưới đây là toàn bộ các bộ lọc ảnh phổ biến trong Pillow, kèm ví dụ chi tiết.</p>
+                                        <p style="font-size: large;" class="mb-0 text-success">Danh sách các bộ lọc trong Pillow</p>
+                                        <p style="font-size: medium;" class="mb-0">1. Làm mờ</p>
+                                        <ul>
+                                            <li>Chức năng: Làm mờ toàn bộ hình ảnh.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.BLUR</li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc làm mờ
+        blurred_image = image.filter(ImageFilter.BLUR)
+        
+        # Lưu ảnh làm mờ
+        blurred_image.save("blurred_image.jpg")
+        blurred_image.show()               
+                                                    </code>
+                                            </deckgo-highlight-code>
+
+                                        </ul>
+                                            <p style="font-size: medium;" class="mb-0">2. Làm sắc nét (SHARPEN)</p>
+                                        <ul>
+                                            <li>Chức năng: Tăng độ sắc nét của hình ảnh.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.SHARPEN
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc làm sắc nét
+        sharpened_image = image.filter(ImageFilter.SHARPEN)
+        
+        # Lưu ảnh sau khi làm sắc nét
+        sharpened_image.save("sharpened_image.jpg")
+        sharpened_image.show()                 
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul>
+                                        
+                                        <p style="font-size: medium;" class="mb-0">3. Làm mờ Gaussian (GAUSSIANBLUR)</p>
+                                        <ul>
+                                            <li>Chức năng: Làm mờ hình ảnh bằng phương pháp Gaussian.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.GaussianBlur(radius - độ mạnh của hiệu ứng mờ (mặc định là 2.0).
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc làm mờ Gaussian với bán kính 5
+        gaussian_blur = image.filter(ImageFilter.GaussianBlur(5))
+        
+        # Lưu ảnh làm mờ Gaussian
+        gaussian_blur.save("gaussian_blur_image.jpg")
+        gaussian_blur.show()                   
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul>
+                                            <p style="font-size: medium;" class="mb-0">4. Làm mịn (SMOOTH)</p>
+                                        <ul>
+                                            <li>Chức năng: Làm mịn hình ảnh bằng cách giảm nhiễu hoặc giảm chi tiết sắc nét.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.SMOOTH
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc làm mịn
+        smoothed_image = image.filter(ImageFilter.SMOOTH)
+        
+        # Lưu ảnh làm mịn
+        smoothed_image.save("smoothed_image.jpg")
+        smoothed_image.show()                       
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul>
+                                            <p style="font-size: medium;" class="mb-0">5. Làm mịn hơn (SMOOTH_MORE)</p>
+                                        <ul>
+                                            <li>Chức năng: Làm mịn mạnh hơn so với SMOOTH.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.SMOOTH_MORE
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc làm mịn mạnh hơn
+        smoothed_more_image = image.filter(ImageFilter.SMOOTH_MORE)
+        
+        # Lưu ảnh
+        smoothed_more_image.save("smoothed_more_image.jpg")
+        smoothed_more_image.show()                             
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul> 
+
+
+                                        <p style="font-size: medium;" class="mb-0">6. Phát hiện cạnh (FIND_EDGES)</p>
+                                        <ul>
+                                            <li>Chức năng: Chuyển đổi ảnh thành dạng phát hiện cạnh (đường viền nổi bật).
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.FIND_EDGES
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc phát hiện cạnh
+        edges_image = image.filter(ImageFilter.FIND_EDGES)
+        
+        # Lưu ảnh
+        edges_image.save("edges_image.jpg")
+        edges_image.show()                              
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul> 
+
+                                        <p style="font-size: medium;" class="mb-0">7. Tăng cường chi tiết (DETAIL)</p>
+                                        <ul>
+                                            <li>Chức năng: Tăng chi tiết của hình ảnh, làm rõ các đường nét nhỏ.
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.DETAIL
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc tăng cường chi tiết
+        detailed_image = image.filter(ImageFilter.DETAIL)
+        
+        # Lưu ảnh
+        detailed_image.save("detailed_image.jpg")
+        detailed_image.show()                                  
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul> 
+
+                                        <p style="font-size: medium;" class="mb-0">8. Chuyển đổi thành đường nét nổi bật (CONTOUR)</p>
+                                        <ul>
+                                            <li>Chức năng: Tạo đường nét nổi bật (hình ảnh giống tranh vẽ).
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.CONTOUR
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc Contour
+        contour_image = image.filter(ImageFilter.CONTOUR)
+        
+        # Lưu ảnh
+        contour_image.save("contour_image.jpg")
+        contour_image.show()                                        
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                        </ul> 
+
+                                        <p style="font-size: medium;" class="mb-0">9. Tạo ảnh nổi (EMBOSS)</p>
+                                        <ul>
+                                            <li>Chức năng: Chuyển đổi ảnh thành dạng nổi 3D (giống khắc trên đá).
+                                               </li>
+                                            <li> Sử dụng: ImageFilter.EMBOSS
+                                            
+                                            </li>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Áp dụng bộ lọc Emboss
+        embossed_image = image.filter(ImageFilter.EMBOSS)
+        
+        # Lưu ảnh
+        embossed_image.save("embossed_image.jpg")
+        embossed_image.show()                                          
+                                                  </code>
+                                            </deckgo-highlight-code>
+                                        </ul> 
+
+                                        <p style="font-size: medium;" class="mb-0">10. Tùy chỉnh bộ lọc với Kernel</p>
+                                        <ul>
+                                            <li>Chức năng: Tạo bộ lọc tùy chỉnh bằng ma trận (Kernel). Thường dùng để làm mờ, làm sắc nét hoặc phát hiện cạnh.
+                                               </li>
+                                          
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageFilter
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Tạo kernel tùy chỉnh (làm sắc nét)
+        kernel = ImageFilter.Kernel((3, 3), [-1, -1, -1, -1, 9, -1, -1, -1, -1], scale=None)
+        
+        # Áp dụng kernel tùy chỉnh
+        custom_filtered_image = image.filter(kernel)
+        
+        # Lưu ảnh
+        custom_filtered_image.save("custom_filtered_image.jpg")
+        custom_filtered_image.show()                                               
+                                                  </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Các tham số của ImageFilter.Kernel:</p>
+                                            <ul>
+                                                <li>(3, 3): Kích thước kernel (3×3).</li>
+                                                <li>[-1, -1, -1, -1, 9, -1, -1, -1, -1]: Ma trận giá trị ảnh hưởng đến pixel.</li>
+                                                <li>scale=None: Khi để None, Pillow sẽ tự động chuẩn hóa giá trị pixel để không bị quá sáng hoặc tối.</li>
+                                               
+                                            </ul>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích giá trị kernel:</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        -1  -1  -1
+        -1   9  -1
+        -1  -1  -1                                                     
+                                                  </code>
+                                            </deckgo-highlight-code>
+                                            <ul>
+                                                <li>Tổng các giá trị trong kernel là 1, nghĩa là ảnh không bị thay đổi độ sáng trung bình.</li>
+                                                <li>Giá trị 9 tại trung tâm làm nổi bật pixel trung tâm.</li>
+                                                <li>Các giá trị -1 xung quanh giúp tăng độ tương phản, tạo hiệu ứng làm sắc nét (sharpen).</li>
+                                               
+                                            </ul>
+                                        </ul> 
+
+
+                                        <span class="text-danger" style="font-size: larger;">4. Vẽ lên ảnh bằng Pillow</span> <br>
+                                      
+                                  
+                                        <p style="font-size: medium;" class="mb-0">1. Khởi tạo ảnh và công cụ vẽ</p>
+                                        
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image, ImageDraw
+        from guizero import App, Picture
+        
+        # Tạo ảnh mới kích thước 500x400, nền trắng
+        img = Image.new("RGB", (500, 400), "white")
+        
+        # Tạo công cụ vẽ
+        draw = ImageDraw.Draw(img)
+        
+        # Lưu ảnh
+        img.save("blank_image.png")
+        
+        # Hiển thị ảnh với guizero
+        app = App("Xem ảnh")
+        picture = Picture(app, image="blank_image.png")
+        app.display()              
+                                                      </code>
+                                            </deckgo-highlight-code>
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>Image.new("RGB", (500, 400), "white"): Tạo một ảnh mới với kích thước 500x400 pixel, nền trắng.</li>
+                                                <li>ImageDraw.Draw(img): Tạo công cụ vẽ lên ảnh.</li>
+                                            </ul>
+                                            
+                                            
+                                        <p style="font-size: medium;" class="mb-0">2. Vẽ các hình cơ bản</p>
+                                        <p style="font-size: medium;" class="mb-0">Vẽ đường thẳng</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        # Ví dụ
+        draw.line((50, 50, 300, 50), fill="red", width=5)  # Đường ngang
+        
+        draw.line((50, 50, 50, 300), fill="blue", width=5)  # Đường dọc
+        
+        img.save("lines.png")
+        
+        # Hiển thị ảnh
+        app = App("Vẽ đường thẳng")
+        picture = Picture(app, image="lines.png")
+        app.display()              
+                                                      </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>(x1, y1, x2, y2): Tọa độ điểm đầu (x1, y1) và điểm cuối (x2, y2).
+                                                    <ol>
+                                                        Tọa độ trong hệ trục đồ họa của Pillow bắt đầu từ góc trên bên trái của ảnh:
+                                                        <li>(0,0) là góc trên bên trái.</li>
+                                                        <li>X tăng từ trái sang phải.</li>
+                                                        <li>Y tăng từ trên xuống dưới.</li>
+                                                    </ol>
+                                                </li>
+                                                <li>fill="màu_sắc": Màu của đường kẻ.</li>
+                                                <li>width=độ_rộng: Độ rộng của đường kẻ (mặc định là 1 pixel).</li>
+                                            </ul>
+
+
+                                            <p style="font-size: medium;" class="mb-0">Vẽ hình chữ nhật</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        draw.rectangle((100, 100, 300, 200), outline="black", width=3)  # Chỉ có viền
+        draw.rectangle((320, 100, 450, 200), fill="yellow")  # Có màu nền
+        img.save("rectangles.png")
+        
+        app = App("Vẽ hình chữ nhật")
+        picture = Picture(app, image="rectangles.png")
+        app.display()              
+                                                      </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>(x1, y1, x2, y2): Góc trên bên trái của hình chữ nhật (x1, y1) và góc dưới bên phải của hình chữ nhật (x2, y2).
+                                                   
+                                                </li>
+                                                <li>outline="màu_viền": Màu viền của hình chữ nhật.
+                                                </li>
+                                                <li>width=độ_rộng_viền: Độ rộng của viền (mặc định là 1 pixel).</li>
+                                                <li>fill="màu_nền": Màu nền bên trong hình chữ nhật</li>
+                                            </ul>
+
+
+                                            <p style="font-size: medium;" class="mb-0">Vẽ hình tròn (ellipse)</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        draw.ellipse((150, 100, 250, 200), outline="green", width=3)
+        draw.ellipse((270, 100, 370, 200), fill="pink")
+        img.save("ellipses.png")
+        
+        app = App("Vẽ hình ellipse")
+        picture = Picture(app, image="ellipses.png")
+        app.display()              
+                                                      </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>(x1, y1, x2, y2): Góc trên bên trái của hình chữ nhật bao quanh ellipse (x1, y1) và góc dưới bên phải của hình chữ nhật bao quanh ellipse. (x2, y2).
+                                                   
+                                                </li>
+                                                
+                                            </ul>
+
+
+
+                                            <p style="font-size: medium;" class="mb-0">Vẽ hình đa giác</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        draw.polygon([(200, 50), (250, 100), (150, 100)], outline="purple", width=3)
+        draw.polygon([(50, 250), (100, 350), (150, 250), (200, 350)], fill="cyan")
+        img.save("polygons.png")
+        
+        app = App("Vẽ hình đa giác")
+        picture = Picture(app, image="polygons.png")
+        app.display()            
+                                                      </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>Danh sách các tọa độ (x, y) xác định các đỉnh của hình đa giác.
+                                                </li>
+                                                
+                                            </ul>
+
+
+                                            <p style="font-size: medium;" class="mb-0">Vẽ điểm (pixel)</p>
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        draw.point((50, 50), fill="black")
+        draw.point([(60, 60), (70, 70), (80, 80)], fill="blue")
+        img.save("points.png")
+        
+        app = App("Vẽ điểm")
+        picture = Picture(app, image="points.png")
+        app.display()            
+                                                      </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Giải thích</p>
+                                            <ul>
+                                                <li>(x, y): Tọa độ của điểm cần vẽ
+                                                </li>
+                                                
+                                            </ul>
+
+
+                                            <span class="text-danger" style="font-size: larger;">5. Vẽ văn bản lên ảnh</span> <br>
+                                      
+                                  
+                                    
+                                            
+                                                <deckgo-highlight-code language="python">
+                                                    <code slot="code">
+        from PIL import Image, ImageDraw, ImageFont
+        from guizero import App, Picture
+            
+        # Mở ảnh có sẵn
+        img = Image.open("GUI/Source code/chuong5/topic_5/image1.png")
+            
+        # Tạo công cụ vẽ
+        draw = ImageDraw.Draw(img)
+            
+        # Thiết lập font chữ
+        try:
+            font = ImageFont.truetype("arial.ttf", 40)
+        except:
+            font = ImageFont.load_default()
+            
+        # Vẽ văn bản lên ảnh
+        draw.text((50, 50), "Hello, Guizero!", fill="red", font=font)
+            
+        # Lưu ảnh mới
+        img.save("text_on_image.png")
+            
+        # Hiển thị ảnh đã chỉnh sửa
+        app = App("Vẽ văn bản lên ảnh tải lên")
+        picture = Picture(app, image="text_on_image.png")
+        app.display()                        
+                                                          </code>
+                                                </deckgo-highlight-code>
+
+
+                                                <span class="text-danger" style="font-size: larger;">6. Tùy chỉnh màu sắc</span> <br>
+                                      
+                                  
+                                    
+                                            
+                                                <deckgo-highlight-code language="python">
+                                                    <code slot="code">
+        draw.rectangle((100, 100, 300, 200), fill=(255, 255, 0))  # Màu vàng (RGB)
+        draw.ellipse((150, 100, 250, 200), fill="#FF5733")  # Màu cam (HEX)
+        draw.rectangle((50, 50, 150, 150), fill=(0, 255, 0, 128))  # Màu xanh lá với độ trong suốt (Alpha=128)
+        img.save("colors.png")                        
+                                                          </code>
+                                                </deckgo-highlight-code>
+                                                <p style="font-size: medium;" class="mb-0">Định dạng màu sắc:</p>
+                                            <ul>
+                                                <li>Tên màu: fill="red", fill="blue".
+                                                </li>
+                                                <li>Mã HEX: fill="#00FF00" (màu xanh lá cây).
+                                                </li>
+                                                <li>RGB tuple: fill=(255, 0, 0) (màu đỏ).
+                                                </li>
+                                                <li>RGBA (hỗ trợ độ trong suốt): fill=(255, 0, 0, 128) (đỏ, Alpha=128).
+                                                </li>
+                                               
+                                                
+                                            </ul>
+
+                                               
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+
+                   
+
+                </div>
+                <br>
+
+            </div>
+
+            <br>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- End:Title -->
+
+    <!-- copyright -->
+    <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
