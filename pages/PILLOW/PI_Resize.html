@@ -675,6 +675,209 @@
                                                 </ul>
                                             </li>
                                         </ol>
+
+                                        <p style="font-size: larger; " class="mb-0 text-success">Cắt ảnh (crop)</p>
+                                        <ol>
+                                            <li>Cắt một phần hình ảnh bằng cách cung cấp tọa độ (x, y) của vùng cần cắt.</li>
+                                            <li>Dữ liệu đầu vào là một hình chữ nhật với 4 tọa độ: (left, top, right, bottom).
+                                            </li>
+                                            <li>Trả về một ảnh mới chứa phần đã cắt.</li>
+                                            
+                                        </ol>  
+
+                                        <p style="font-size: medium;" class="mb-0">Cú pháp</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    cropped_image = image.crop((x1, y1, x2, y2))               
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from PIL import Image, ImageDraw
+    from guizero import App, Picture, Text
+    
+    # Mở ảnh có sẵn
+    img = Image.open("GUI/Source code/chuong5/topic_5/image1.png")
+    
+    # Lấy kích thước ban đầu của ảnh
+    original_size = img.size  # (width, height)
+    
+    # Xác định vùng cắt
+    crop_area = (50, 50, 300, 300)  # (left, top, right, bottom)
+    
+    # Cắt ảnh
+    cropped_image = img.crop(crop_area)
+    
+    # Lấy kích thước sau khi cắt
+    cropped_size = cropped_image.size  # (width, height)
+    
+    # Tạo ứng dụng guizero
+    app = App("Vẽ văn bản lên ảnh tải lên")
+    
+    # Hiển thị kích thước trước khi cắt
+    Text(app, text=f"Kích thước ban đầu: {original_size[0]} x {original_size[1]}", size=14)
+    
+    # Hiển thị kích thước sau khi cắt
+    Text(app, text=f"Kích thước sau khi cắt: {cropped_size[0]} x {cropped_size[1]}", size=14)
+    
+    # Hiển thị ảnh đã cắt
+    picture = Picture(app, image=cropped_image)
+    
+    app.display()                     
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: larger; " class="mb-0 text-success">Xoay ảnh (rotate)</p>
+                                        <ol>
+                                            <li>Xoay ảnh theo góc độ bất kỳ (đơn vị: độ).</li>
+                                            <li>Mặc định, Pillow xoay ảnh theo ngược chiều kim đồng hồ.
+                                            </li>
+                                           
+                                        </ol>  
+
+                                        <p style="font-size: medium;" class="mb-0">Cú pháp</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    rotated_image = image.rotate(angle, expand=True)                  
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <ul>
+                                            <li>angle: Góc xoay (độ). Dương = ngược chiều kim đồng hồ, âm = xuôi chiều kim đồng hồ.</li>
+                                            <li>expand=True: Tự động mở rộng ảnh nếu bị cắt khi xoay.</li>
+                                        </ul>
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 1: Xoay ảnh 45 độ</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from PIL import Image
+
+    # Mở ảnh
+    image = Image.open("example.jpg")
+    
+    # Xoay ảnh 45 độ
+    rotated_image = image.rotate(45, expand=True)
+    
+    # Hiển thị ảnh sau khi xoay
+    rotated_image.show()
+    
+    # Lưu ảnh đã xoay
+    rotated_image.save("rotated_45.jpg")                   
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 2: Xoay ảnh 90 độ và giữ nguyên kích thước</p>                                   
+                                    
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    rotated_image = image.rotate(90, expand=False)
+    rotated_image.show()                      
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: larger; " class="mb-0 text-success"> Lật ảnh (transpose)</p>
+                                        <ol>
+                                            <li>Lật ảnh theo nhiều hướng khác nhau: lật ngang, lật dọc, xoay 90 độ, 180 độ, 270 độ.</li>
+                                            <li>Sử dụng phương thức transpose().
+                                            </li>
+                                 
+                                            
+                                        </ol>  
+
+                                        <p style="font-size: medium;" class="mb-0">Các kiểu lật ảnh</p>                                   
+                                    
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <!-- <h5 class="text-capitalize mb-3">Định dạng</h5> -->
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 120px;">Phương thức
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 120px;">Mô tả</th>
+                                                                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">Image.FLIP_LEFT_RIGHT</th>
+                                                                    <td>Lật ngang (phản chiếu gương)</td>
+                                                                    
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">Image.FLIP_TOP_BOTTOM</th>
+                                                                    <td>Lật dọc</td>
+                                                                    
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">Image.ROTATE_90</th>
+                                                                    <td>Xoay 90 độ</td>
+                                                                    
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">Image.ROTATE_180</th>
+                                                                    <td>Xoay 180 độ</td>
+                                                                    
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">Image.ROTATE_270</th>
+                                                                    <td>Xoay 270 độ</td>
+                                                                    
+                                                                </tr>
+                                                               
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <p style="font-size: medium;" class="mb-0">Ví dụ 1: Lật ảnh ngang (gương phản chiếu)</p>
+                                        
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        from PIL import Image
+
+        # Mở ảnh
+        image = Image.open("example.jpg")
+        
+        # Lật ảnh ngang
+        flipped_image = image.transpose(Image.FLIP_LEFT_RIGHT)
+        
+        # Hiển thị ảnh đã lật
+        flipped_image.show()
+        
+        # Lưu ảnh
+        flipped_image.save("flipped_horizontal.jpg")                       
+                                                    </code>
+                                            </deckgo-highlight-code>
+
+
+                                            <p style="font-size: medium;" class="mb-0">Ví dụ 2: Lật ảnh dọc</p>
+                                        
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        flipped_image = image.transpose(Image.FLIP_TOP_BOTTOM)
+        flipped_image.show()                            
+                                                    </code>
+                                            </deckgo-highlight-code>
+
+                                            <p style="font-size: medium;" class="mb-0">Ví dụ 3: Xoay ảnh 90, 180, 270 độ</p>
+                                        
+                                            <deckgo-highlight-code language="python">
+                                                <code slot="code">
+        rotated_90 = image.transpose(Image.ROTATE_90)
+        rotated_180 = image.transpose(Image.ROTATE_180)
+        rotated_270 = image.transpose(Image.ROTATE_270)
+        
+        rotated_90.show()
+        rotated_180.show()
+        rotated_270.show()                                   
+                                                    </code>
+                                            </deckgo-highlight-code>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <span class="text-danger" style="font-size: larger;">3. Áp dụng bộ lọc lên ảnh</span> <br>
                                         <p style="font-size: medium;" class="mb-0">Trong thư viện Pillow, bộ lọc ảnh (ImageFilter) cung cấp nhiều tùy chọn để xử lý và cải thiện hình ảnh. Dưới đây là toàn bộ các bộ lọc ảnh phổ biến trong Pillow, kèm ví dụ chi tiết.</p>
                                         <p style="font-size: large;" class="mb-0 text-success">Danh sách các bộ lọc trong Pillow</p>
