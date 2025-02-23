@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>GUIZERO trong Python</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <style>
+.custom-table-modern {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.custom-table-modern th {
+    background: linear-gradient(135deg, #009688, #4CAF50);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+}
+.custom-table-modern td {
+    background: #ffffff;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.custom-table-modern tr:nth-child(even) td {
+    background: #f9f9f9;
+}
+.custom-table-modern tr:hover td {
+    background: #e0f7fa;
+    cursor: pointer;
+}
+.custom-table-modern .code-example {
+    color: #e53935;
+    background: #fce4ec;
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    white-space: pre-line;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="../Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Project.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span> Dự án cuối khóa </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-App.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - App </span>
+                        </a>
+                    </li>
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Text.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-font"></i>
+                            </span>
+                            <span> GUIZERO - Text </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Picture.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+                            <span> GUIZERO - Picture </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-Colors.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-palette"></i>
+                            </span>
+                            <span> GUIZERO - Colors </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_Size.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-arrows-alt"></i>
+                            </span>
+                            <span> GUIZERO - Size </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th"></i>
+                            </span>
+                            <span> GUIZERO - Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework_Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./GUI_Button.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-hand-pointer"></i>
+                            </span>
+                            <span> GUIZERO - Button </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PILLOW/PI_Resize.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </span>
+                            <span> Pillow trong Guizero </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">PushButton</a></h1>
+                                        <p style="font-size: large;" class="mb-0">Phương thức __init__(self, master, command=None, args=None, text="Button", image=None, pady=10, padx=10, grid=None, align=None, icon=None, visible=True, enabled=None, width=None, height=None)</p>
+                                        <p style="font-size: large;" class="mb-0">PushButton hiển thị một nút với văn bản hoặc hình ảnh và sẽ gọi một hàm khi được nhấn.</p>
+                                        <br>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo một PushButton</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Tạo một đối tượng PushButton như sau:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+            from guizero import App, PushButton
+            def do_nothing():
+                print("Button was pressed")
+            
+            app = App()
+            button = PushButton(app, command=do_nothing)
+            app.display()
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: large;" class="mb-0">Tạo PushButton hình ảnh với ảnh như sau:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+            from guizero import App, PushButton
+            def do_nothing():
+                print("A picture button was pressed")
+            
+            app = App()
+            button = PushButton(app, image="button.gif", command=do_nothing)
+            app.display()
+                                            </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: large;" class="mb-0">Tùy thuộc vào hệ điều hành của bạn và việc bạn đã cài đặt các tính năng hình ảnh bổ sung của guizero sẽ xác định loại hình ảnh bạn có thể sử dụng cho PushButton. Mặc định hỗ trợ GIF và PNG, ngoại trừ macOS chỉ hỗ trợ GIF.</p>
+                                        <br>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các tham số khi tạo</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Khi bạn tạo một đối tượng PushButton, bạn phải xác định master và có thể xác định bất kỳ tham số tùy chọn nào. Xác định các tham số trong dấu ngoặc, như thế này: button = PushButton(app)</p>
+                                        <table class="custom-table-modern">
+                                            <thead>
+                                                <tr>
+                                                    <th>Tham số</th>
+                                                    <th>Giá trị</th>
+                                                    <th>Mặc định</th>
+                                                    <th>Bắt buộc</th>
+                                                    <th>Mô tả</th>
+                                                    <th>Ví dụ Code</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>master</td>
+                                                    <td>App, Window hoặc Box</td>
+                                                    <td>-</td>
+                                                    <td>Có</td>
+                                                    <td>Container mà widget này thuộc về</td>
+                                                    <td><span class="code-example">app = App() <br> button = PushButton(app)</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>command</td>
+                                                    <td>Tên hàm</td>
+                                                    <td>None</td>
+                                                    <td>-</td>
+                                                    <td>Tên của hàm được gọi khi nút được nhấn</td>
+                                                    <td><span class="code-example">def say_hello(): <br> &nbsp;&nbsp;print("Hello") <br> button = PushButton(app, command=say_hello)</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>align</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>None</td>
+                                                    <td>-</td>
+                                                    <td>Căn chỉnh trong container. Các giá trị: "top", "bottom", "left", "right"</td>
+                                                    <td><span class="code-example">button = PushButton(app, align="top")</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>args</td>
+                                                    <td>Danh sách</td>
+                                                    <td>None</td>
+                                                    <td>-</td>
+                                                    <td>Truyền tham số cho hàm command</td>
+                                                    <td><span class="code-example">def show_number(n): <br> &nbsp;&nbsp;print(n) <br> button = PushButton(app, command=show_number, args=[5])</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>grid</td>
+                                                    <td>List [int, int]</td>
+                                                    <td>None</td>
+                                                    <td>-</td>
+                                                    <td>Tọa độ [x, y] của widget nếu master có layout grid</td>
+                                                    <td><span class="code-example">button = PushButton(app, grid=[0, 1])</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>image</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>None</td>
+                                                    <td>-</td>
+                                                    <td>Đường dẫn hình ảnh. Nếu có image thì text bị ghi đè</td>
+                                                    <td><span class="code-example">button = PushButton(app, image="button.gif")</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>padx</td>
+                                                    <td>int</td>
+                                                    <td>10</td>
+                                                    <td>-</td>
+                                                    <td>Đệm ngang giữa văn bản/biểu tượng và cạnh của nút</td>
+                                                    <td><span class="code-example">button = PushButton(app, padx=20)</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>pady</td>
+                                                    <td>int</td>
+                                                    <td>10</td>
+                                                    <td>-</td>
+                                                    <td>Đệm dọc giữa văn bản/biểu tượng và cạnh của nút</td>
+                                                    <td><span class="code-example">button = PushButton(app, pady=15)</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>"Button"</td>
+                                                    <td>-</td>
+                                                    <td>Văn bản hiển thị trên nút</td>
+                                                    <td><span class="code-example">button = PushButton(app, text="Click Me")</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>visible</td>
+                                                    <td>boolean</td>
+                                                    <td>True</td>
+                                                    <td>Không</td>
+                                                    <td>Nếu widget nên hiển thị</td>
+                                                    <td><span class="code-example">button.visible = False</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enabled</td>
+                                                    <td>boolean</td>
+                                                    <td>None</td>
+                                                    <td>Không</td>
+                                                    <td>Nếu widget nên được kích hoạt. Nếu None thì kế thừa từ master</td>
+                                                    <td><span class="code-example">button.enabled = True</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>width</td>
+                                                    <td>Kích thước</td>
+                                                    <td>None</td>
+                                                    <td>Không</td>
+                                                    <td>Chiều rộng của widget bằng ký tự hoặc pixel nếu là hình ảnh</td>
+                                                    <td><span class="code-example">button = PushButton(app, width=100)</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>height</td>
+                                                    <td>Kích thước</td>
+                                                    <td>None</td>
+                                                    <td>Không</td>
+                                                    <td>Chiều cao của widget bằng ký tự hoặc pixel nếu là hình ảnh</td>
+                                                    <td><span class="code-example">button = PushButton(app, height=50)</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        
+                                        
+                                        <br>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các phương thức</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Bạn có thể gọi các phương thức sau trên đối tượng PushButton.</p>
+                                        <table class="custom-table-modern">
+                                            <thead>
+                                                <tr>
+                                                    <th>Phương thức</th>
+                                                    <th>Giá trị</th>
+                                                    <th>Trả về</th>
+                                                    <th>Mô tả</th>
+                                                    <th>Ví dụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>after</td>
+                                                    <td>thời gian (int), command (tên hàm), args (danh sách tham số)</td>
+                                                    <td>-</td>
+                                                    <td>Lập lịch một lần gọi đến command sau thời gian (ms). (Để gọi lại command, sử dụng <span class="code-inline">repeat()</span>)</td>
+                                                    <td><span class="code-example">button.after(1000, show_message)</span><br>
+                                                        <em>// Gọi hàm <b>show_message</b> sau 1 giây</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>cancel</td>
+                                                    <td>command (tên hàm)</td>
+                                                    <td>-</td>
+                                                    <td>Hủy lịch một cuộc gọi đã lên lịch tới command</td>
+                                                    <td><span class="code-example">button.cancel(show_message)</span><br>
+                                                        <em>// Hủy lịch gọi của <b>show_message</b></em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>destroy</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Hủy widget</td>
+                                                    <td><span class="code-example">button.destroy()</span><br>
+                                                        <em>// Xóa nút khỏi giao diện</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>disable</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Vô hiệu hóa widget để nó bị "mờ" và không thể tương tác</td>
+                                                    <td><span class="code-example">button.disable()</span><br>
+                                                        <em>// Làm nút mờ đi và không nhấn được</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enable</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Kích hoạt widget</td>
+                                                    <td><span class="code-example">button.enable()</span><br>
+                                                        <em>// Kích hoạt lại nút sau khi disable</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>focus</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Đặt trọng tâm cho widget</td>
+                                                    <td><span class="code-example">button.focus()</span><br>
+                                                        <em>// Đặt con trỏ chuột vào nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>hide</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Ẩn widget khỏi tầm nhìn. Phương pháp này sẽ tách widget khỏi bộ quản lý bố cục.</td>
+                                                    <td><span class="code-example">button.hide()</span><br>
+                                                        <em>// Ẩn nút khỏi giao diện</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>padding</td>
+                                                    <td>padx (int), pady (int)</td>
+                                                    <td>-</td>
+                                                    <td>Đặt lượng đệm ngang (x) và đệm dọc (y) giữa văn bản/biểu tượng và cạnh của nút.</td>
+                                                    <td><span class="code-example">button.padding(20, 10)</span><br>
+                                                        <em>// Đệm ngang 20px, đệm dọc 10px</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>repeat</td>
+                                                    <td>thời gian (int), command (tên hàm), args (danh sách tham số)</td>
+                                                    <td>-</td>
+                                                    <td>Gọi lại command sau khoảng thời gian (ms). Điều này hữu ích để lên lịch một hàm được gọi thường xuyên, ví dụ như cập nhật giá trị đọc từ cảm biến.</td>
+                                                    <td><span class="code-example">button.repeat(1000, update_time)</span><br>
+                                                        <em>// Cập nhật thời gian mỗi 1 giây</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>resize</td>
+                                                    <td>chiều rộng (int), chiều cao (int)</td>
+                                                    <td>-</td>
+                                                    <td>Đặt chiều rộng và chiều cao của widget</td>
+                                                    <td><span class="code-example">button.resize(100, 50)</span><br>
+                                                        <em>// Đặt kích thước nút 100x50 px</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>show</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Hiển thị widget nếu nó đã bị ẩn trước đó</td>
+                                                    <td><span class="code-example">button.show()</span><br>
+                                                        <em>// Hiển thị lại nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>toggle</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>Thay đổi trạng thái của nút thành trạng thái ngược lại - nếu hiện tại được kích hoạt thì vô hiệu hóa và ngược lại.</td>
+                                                    <td><span class="code-example">button.toggle()</span><br>
+                                                        <em>// Chuyển đổi trạng thái nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>update_command</td>
+                                                    <td>command (tên hàm), args (Danh sách tùy chọn các tham số sẽ được truyền đến command)</td>
+                                                    <td>-</td>
+                                                    <td>Cập nhật hàm để gọi khi nút được nhấn</td>
+                                                    <td><span class="code-example">button.update_command(new_function)</span><br>
+                                                        <em>// Thay đổi hàm khi nhấn nút</em>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <br>    
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các thuộc tính</a></h3>
+                                        <p style="font-size: large;" class="mb-0">Bạn có thể đặt và nhận các thuộc tính sau:</p>
+                                        <table class="custom-table-modern">
+                                            <thead>
+                                                <tr>
+                                                    <th>Phương thức</th>
+                                                    <th>Kiểu dữ liệu</th>
+                                                    <th>Mô tả</th>
+                                                    <th>Ví dụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>align</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>Căn chỉnh của widget này trong container của nó</td>
+                                                    <td><span class="code-example">button.align = "left"</span><br>
+                                                        <em>// Căn nút về bên trái trong Box</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>bg</td>
+                                                    <td>Màu</td>
+                                                    <td>Màu nền của widget</td>
+                                                    <td><span class="code-example">button.bg = "red"</span><br>
+                                                        <em>// Đặt màu nền của nút thành màu đỏ</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enabled</td>
+                                                    <td>boolean</td>
+                                                    <td>True nếu widget được kích hoạt</td>
+                                                    <td><span class="code-example">button.enabled = False</span><br>
+                                                        <em>// Vô hiệu hóa nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>font</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>Phông chữ của văn bản trên nút</td>
+                                                    <td><span class="code-example">button.font = "Arial"</span><br>
+                                                        <em>// Đổi phông chữ của nút thành Arial</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>grid</td>
+                                                    <td>Danh sách</td>
+                                                    <td>Tọa độ [x,y] của widget. Tham số này chỉ được yêu cầu nếu đối tượng master có layout grid</td>
+                                                    <td><span class="code-example">button.grid = [0, 1]</span><br>
+                                                        <em>// Đặt nút tại dòng 0, cột 1</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>height</td>
+                                                    <td>Kích thước</td>
+                                                    <td>Đặt chiều cao của widget bằng ký tự hoặc pixel nếu là nút hình ảnh hoặc "fill"</td>
+                                                    <td><span class="code-example">button.height = 50</span><br>
+                                                        <em>// Đặt chiều cao nút là 50px</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>image</td>
+                                                    <td>Chuỗi nguồn hình ảnh</td>
+                                                    <td>Đường dẫn tệp, tkinter.PhotoImage hoặc PIL.Image mà bạn muốn hiển thị</td>
+                                                    <td><span class="code-example">button.image = "path/to/image.png"</span><br>
+                                                        <em>// Thêm hình ảnh vào nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>master</td>
+                                                    <td>App hoặc Box</td>
+                                                    <td>Container mà widget này thuộc về</td>
+                                                    <td><span class="code-example">button.master = box</span><br>
+                                                        <em>// Đặt Box làm container cho nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text</td>
+                                                    <td>Chuỗi</td>
+                                                    <td>Văn bản trên nút</td>
+                                                    <td><span class="code-example">button.text = "Nhấn vào đây"</span><br>
+                                                        <em>// Đổi nội dung nút thành "Nhấn vào đây"</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_color</td>
+                                                    <td>Màu</td>
+                                                    <td>Màu của văn bản trên nút</td>
+                                                    <td><span class="code-example">button.text_color = "blue"</span><br>
+                                                        <em>// Đổi màu chữ của nút thành xanh dương</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_size</td>
+                                                    <td>int</td>
+                                                    <td>Kích thước của văn bản trên nút</td>
+                                                    <td><span class="code-example">button.text_size = 20</span><br>
+                                                        <em>// Đặt kích thước chữ là 20px</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_bold</td>
+                                                    <td>boolean</td>
+                                                    <td>Văn bản có đậm không</td>
+                                                    <td><span class="code-example">button.text_bold = True</span><br>
+                                                        <em>// Làm chữ trên nút đậm hơn</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_italic</td>
+                                                    <td>boolean</td>
+                                                    <td>Văn bản có in nghiêng không</td>
+                                                    <td><span class="code-example">button.text_italic = True</span><br>
+                                                        <em>// Làm chữ trên nút nghiêng đi</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_underline</td>
+                                                    <td>boolean</td>
+                                                    <td>Văn bản có gạch dưới không</td>
+                                                    <td><span class="code-example">button.text_underline = True</span><br>
+                                                        <em>// Gạch chân chữ trên nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text_overstrike</td>
+                                                    <td>boolean</td>
+                                                    <td>Văn bản có gạch ngang không</td>
+                                                    <td><span class="code-example">button.text_overstrike = True</span><br>
+                                                        <em>// Gạch ngang chữ trên nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tk</td>
+                                                    <td>tkinter.Button</td>
+                                                    <td>Đối tượng tkinter nội bộ, xem Using tkinter</td>
+                                                    <td><span class="code-example">print(button.tk)</span><br>
+                                                        <em>// In đối tượng tkinter.Button của nút</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>value</td>
+                                                    <td>int</td>
+                                                    <td>Trả về 1 khi nút được nhấn, 0 nếu nút được thả ra</td>
+                                                    <td><span class="code-example">print(button.value)</span><br>
+                                                        <em>// In trạng thái của nút (1 hoặc 0)</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>visible</td>
+                                                    <td>boolean</td>
+                                                    <td>Nếu widget này hiển thị</td>
+                                                    <td><span class="code-example">button.visible = False</span><br>
+                                                        <em>// Ẩn nút khỏi giao diện</em>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>width</td>
+                                                    <td>Kích thước</td>
+                                                    <td>Đặt chiều rộng của widget bằng ký tự hoặc pixel nếu là nút hình ảnh hoặc "fill"</td>
+                                                    <td><span class="code-example">button.width = 100</span><br>
+                                                        <em>// Đặt chiều rộng của nút là 100px</em>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <p style="font-size: large;" class="mb-0">Tham chiếu đến thuộc tính như &lt;tên của widget&gt;.property. Ví dụ: nếu đối tượng PushButton của bạn được gọi là button, bạn có thể viết button.value.</p>
+                                        <p style="font-size: large;" class="mb-0">Bạn có thể đặt thuộc tính (ví dụ button.bg = "red") hoặc nhận giá trị của thuộc tính để sử dụng (ví dụ print(button.bg)).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            </div>
+            
+            <br>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- End:Title -->
+
+    <!-- copyright -->
+    <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
