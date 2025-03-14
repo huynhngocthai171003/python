@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>GUIZERO trong Python</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="../Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Project.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span> Dự án cuối khóa </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-App.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - App </span>
+                        </a>
+                    </li>
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Text.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-font"></i>
+                            </span>
+                            <span> GUIZERO - Text </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Picture.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+                            <span> GUIZERO - Picture </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-Colors.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-palette"></i>
+                            </span>
+                            <span> GUIZERO - Colors </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_Size.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-arrows-alt"></i>
+                            </span>
+                            <span> GUIZERO - Size </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th"></i>
+                            </span>
+                            <span> GUIZERO - Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework_Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập lớn </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Button.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-hand-pointer"></i>
+                            </span>
+                            <span> GUIZERO - Button </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./GUI_ListBox.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-list-ul"></i>
+                            </span>
+                            <span> GUIZERO - ListBox </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_TextBox.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-keyboard"></i>
+                            </span>
+                            <span> GUIZERO - TextBox </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PILLOW/PI_Resize.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </span>
+                            <span> Pillow trong Guizero </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - ListBox</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Đối tượng ListBox hiển thị một danh sách các mục mà từ đó có thể chọn một hoặc nhiều mục.</p>
+                                       <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    ___init__(
+        self,
+        master,
+        items=None,
+        selected=None,
+        command=None,
+        grid=None,
+        align=None,
+        visible=True,
+        enabled=None,
+        multiselect=False,
+        scrollbar=False,
+        width=None,
+        height=None)                              
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Làm thế nào để tạo một cái? Tạo một đối tượng ListBox như sau:
+                                            </a></h3>
+                                        
+                                        <span class="text-danger">Ví dụ: </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from guizero import App, ListBox
+    app = App()
+    listbox = ListBox(app, items=["Thịt bò", "Thịt gà", "Cá", "Chay"])
+    app.display()                              
+                                                </code>
+                                        </deckgo-highlight-code>
+
+                                        <br>
+                                        <p style="font-size: large;" class="mb-0">Các tham số khởi tạo Khi bạn tạo một đối tượng ListBox, bạn phải chỉ định master và có thể chỉ định bất kỳ tham số tùy chọn nào. Chỉ định các tham số trong dấu ngoặc, như sau: listbox = ListBox(app, items=["Thịt bò", "Thịt gà", "Cá", "Chay"])</p>
+
+                                        <p style="font-size: large;" class="mb-0">Nếu bạn muốn ListBox cho phép chọn nhiều mục, bạn phải đặt tham số tùy chọn multiselect thành True: listbox = ListBox(app, multiselect=True)</p>
+                                        <!-- <span class="text-danger">Cú pháp: </span> <br> -->
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    from guizero import App, ListBox, Text
+
+    # Hàm để hiển thị các mục đã chọn
+    def show_selected_items():
+        selected_items = listbox.value  # Lấy các mục đã chọn
+        selected_text.value = f"Bạn đã chọn: {', '.join(selected_items)}"  # Cập nhật văn bản hiển thị
+    
+    # Tạo ứng dụng
+    app = App(title="Ví dụ ListBox đa chọn")
+    
+    # Tạo một ListBox cho phép chọn nhiều mục
+    listbox = ListBox(
+        app,
+        items=["Thịt bò", "Thịt gà", "Cá", "Chay", "Tôm", "Mực"],
+        multiselect=True,  # Cho phép chọn nhiều mục
+        command=show_selected_items  # Gọi hàm khi có sự thay đổi
+    )
+    
+    # Tạo một Text để hiển thị các mục đã chọn
+    selected_text = Text(app, text="Bạn chưa chọn mục nào", size=14)
+    
+    # Hiển thị ứng dụng
+    app.display()                                
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 150px;">Tham số</th>
+                                                                    <th scope="col" style="min-width: 200px;">Nhận vào</th>
+                                                                    <th scope="col" style="min-width: 100px;">Mặc định</th>
+                                                                    <th scope="col" style="min-width: 100px;">Bắt buộc</th>
+                                                                    <th scope="col" style="min-width: 400px;">Mô tả</th>
+                                                                    <th scope="col" style="min-width: 300px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">master</th>
+                                                                    <td>App, Window hoặc Box</td>
+                                                                    <td>Không</td>
+                                                                    <td>Có</td>
+                                                                    <td>Bộ chứa mà widget này thuộc về.</td>
+                                                                    <td><code>ListBox(app)</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">selected</th>
+                                                                    <td>chuỗi hoặc Danh sách</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Mục hoặc các mục được chọn mặc định khi ListBox hiển thị.</td>
+                                                                    <td><code>ListBox(app, selected="Mục 1")</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">items</th>
+                                                                    <td>Danh sách</td>
+                                                                    <td>Không</td>
+                                                                    <td>Có</td>
+                                                                    <td>Danh sách các mục được hiển thị trong ListBox.</td>
+                                                                    <td><code>ListBox(app, items=["Mục 1", "Mục 2", "Mục 3"])</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">align</th>
+                                                                    <td>chuỗi</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Căn chỉnh widget này trong bộ chứa của nó. Các giá trị hợp lệ: "top", "bottom", "left", "right".</td>
+                                                                    <td><code>ListBox(app, align="left")</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">command</th>
+                                                                    <td>tên hàm</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Tên hàm được gọi khi một tùy chọn khác được chọn. Hàm phải nhận một hoặc không có tham số.</td>
+                                                                    <td><code>ListBox(app, command=my_function)</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">grid</th>
+                                                                    <td>Danh sách [int, int]</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Tọa độ [x, y] của widget này trong lưới. Chỉ cần thiết nếu bố cục của master là lưới.</td>
+                                                                    <td><code>ListBox(app, grid=[1,2])</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">visible</th>
+                                                                    <td>boolean</td>
+                                                                    <td>True</td>
+                                                                    <td>Không</td>
+                                                                    <td>Xác định widget có hiển thị hay không.</td>
+                                                                    <td><code>ListBox(app, visible=False)</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">enabled</th>
+                                                                    <td>boolean</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Xác định widget có thể được kích hoạt hay không. Nếu None, kế thừa từ master.</td>
+                                                                    <td><code>ListBox(app, enabled=True)</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">multiselect</th>
+                                                                    <td>boolean</td>
+                                                                    <td>False</td>
+                                                                    <td>Không</td>
+                                                                    <td>Xác định liệu có cho phép chọn nhiều mục hay không.</td>
+                                                                    <td><code>ListBox(app, multiselect=True)</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">scrollbar</th>
+                                                                    <td>boolean</td>
+                                                                    <td>False</td>
+                                                                    <td>Không</td>
+                                                                    <td>Thêm thanh cuộn dọc nếu có nhiều mục hơn không gian hiển thị.</td>
+                                                                    <td><code>ListBox(app, scrollbar=True)</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">width</th>
+                                                                    <td>kích thước</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chiều rộng của widget theo pixel hoặc "fill".</td>
+                                                                    <td><code>ListBox(app, width=200)</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">height</th>
+                                                                    <td>kích thước</td>
+                                                                    <td>None</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chiều cao của widget theo pixel hoặc "fill".</td>
+                                                                    <td><code>ListBox(app, height=150)</code></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <br>
+                                        
+                                        <p style="font-size: large;" class="mb-0">Các phương thức Bạn có thể gọi các phương thức sau trên đối tượng ListBox của bạn.
+                                        </p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 150px;">Phương thức</th>
+                                                                    <th scope="col" style="min-width: 200px;">Nhận vào</th>
+                                                                    <th scope="col" style="min-width: 100px;">Trả về</th>
+                                                                    <th scope="col" style="min-width: 400px;">Mô tả</th>
+                                                                    <th scope="col" style="min-width: 300px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">after</th>
+                                                                    <td>time (int), command (tên hàm), args (danh sách tham số)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Lên lịch một lần gọi đến command sau time mili giây.</td>
+                                                                    <td><code>ListBox.after(1000, my_function)</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">append</th>
+                                                                    <td>item (chuỗi)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Thêm một mục mới vào cuối ListBox.</td>
+                                                                    <td><code>ListBox.append("Mục mới")</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">cancel</th>
+                                                                    <td>command (tên hàm)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Hủy một cuộc gọi đã lên lịch đến command.</td>
+                                                                    <td><code>ListBox.cancel(my_function)</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">clear</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Xóa tất cả các mục trong ListBox.</td>
+                                                                    <td><code>ListBox.clear()</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">destroy</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Hủy widget.</td>
+                                                                    <td><code>ListBox.destroy()</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">disable</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Vô hiệu hóa widget để nó "xám xịt" và không thể tương tác.</td>
+                                                                    <td><code>ListBox.disable()</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">enable</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Kích hoạt widget.</td>
+                                                                    <td><code>ListBox.enable()</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">focus</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đưa tiêu điểm vào widget.</td>
+                                                                    <td><code>ListBox.focus()</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">hide</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Ẩn widget khỏi tầm nhìn.</td>
+                                                                    <td><code>ListBox.hide()</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">insert</th>
+                                                                    <td>index (int), item (chuỗi)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Chèn một mục mới vào ListBox tại chỉ số index.</td>
+                                                                    <td><code>ListBox.insert(1, "Mục mới")</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">remove</th>
+                                                                    <td>item (chuỗi)</td>
+                                                                    <td>Boolean</td>
+                                                                    <td>Xóa mục đầu tiên khỏi ListBox. Trả về True nếu một mục đã được xóa.</td>
+                                                                    <td><code>ListBox.remove("Mục 1")</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">repeat</th>
+                                                                    <td>time (int), command (tên hàm), args (danh sách tham số)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Lặp lại command mỗi time mili giây.</td>
+                                                                    <td><code>ListBox.repeat(2000, my_function)</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">resize</th>
+                                                                    <td>width (int), height (int)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Đặt chiều rộng và chiều cao của widget.</td>
+                                                                    <td><code>ListBox.resize(300, 200)</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">show</th>
+                                                                    <td>Không</td>
+                                                                    <td>Không</td>
+                                                                    <td>Hiển thị widget nếu nó đã bị ẩn trước đó.</td>
+                                                                    <td><code>ListBox.show()</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">update_command</th>
+                                                                    <td>command (tên hàm)</td>
+                                                                    <td>Không</td>
+                                                                    <td>Cập nhật hàm để gọi khi một tùy chọn khác được chọn.</td>
+                                                                    <td><code>ListBox.update_command(new_function)</code></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+
+                                        <p style="font-size: large;" class="mb-0">Các thuộc tính Bạn có thể thiết lập và lấy các thuộc tính sau:
+
+                                        </p>
+
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 150px;">Phương thức</th>
+                                                                    <th scope="col" style="min-width: 200px;">Kiểu dữ liệu</th>
+                                                                    <th scope="col" style="min-width: 400px;">Mô tả</th>
+                                                                    <th scope="col" style="min-width: 300px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">align</th>
+                                                                    <td>chuỗi</td>
+                                                                    <td>Căn chỉnh của widget này trong bộ chứa</td>
+                                                                    <td><code>widget.align = "left"</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">bg</th>
+                                                                    <td>màu sắc</td>
+                                                                    <td>Màu nền của widget</td>
+                                                                    <td><code>widget.bg = "red"</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">children</th>
+                                                                    <td>Danh sách</td>
+                                                                    <td>Danh sách các widget trong bộ chứa này. [ListBoxWidget, ListBoxScrollbar]</td>
+                                                                    <td><code>widget.children</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">enabled</th>
+                                                                    <td>boolean</td>
+                                                                    <td>True nếu widget được kích hoạt</td>
+                                                                    <td><code>widget.enabled = True</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">font</th>
+                                                                    <td>chuỗi</td>
+                                                                    <td>Phông chữ của văn bản</td>
+                                                                    <td><code>widget.font = "Arial"</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">grid</th>
+                                                                    <td>Danh sách</td>
+                                                                    <td>Tọa độ [x,y] của widget này</td>
+                                                                    <td><code>widget.grid = [1, 2]</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">height</th>
+                                                                    <td>kích thước</td>
+                                                                    <td>Đặt chiều cao của widget theo pixel hoặc "fill"</td>
+                                                                    <td><code>widget.height = 150</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">items</th>
+                                                                    <td>Danh sách</td>
+                                                                    <td>Trả về danh sách các mục trong ListBox</td>
+                                                                    <td><code>widget.items = ["Mục 1", "Mục 2"]</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">master</th>
+                                                                    <td>App hoặc Box</td>
+                                                                    <td>Bộ chứa mà widget này thuộc về</td>
+                                                                    <td><code>widget.master</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">value</th>
+                                                                    <td>chuỗi</td>
+                                                                    <td>Thiết lập hoặc trả về các mục được chọn trong ListBox</td>
+                                                                    <td><code>widget.value = "Mục 1"</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">visible</th>
+                                                                    <td>boolean</td>
+                                                                    <td>Nếu widget này có hiển thị</td>
+                                                                    <td><code>widget.visible = False</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">width</th>
+                                                                    <td>kích thước</td>
+                                                                    <td>Đặt chiều rộng của widget theo pixel hoặc "fill"</td>
+                                                                    <td><code>widget.width = 200</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">text_size</th>
+                                                                    <td>int</td>
+                                                                    <td>Kích thước của văn bản</td>
+                                                                    <td><code>widget.text_size = 14</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">text_color</th>
+                                                                    <td>màu sắc</td>
+                                                                    <td>Màu của văn bản</td>
+                                                                    <td><code>widget.text_color = "blue"</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">text_bold</th>
+                                                                    <td>boolean</td>
+                                                                    <td>Liệu văn bản có đậm hay không</td>
+                                                                    <td><code>widget.text_bold = True</code></td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">text_italic</th>
+                                                                    <td>boolean</td>
+                                                                    <td>Liệu văn bản có nghiêng hay không</td>
+                                                                    <td><code>widget.text_italic = True</code></td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">text_underline</th>
+                                                                    <td>boolean</td>
+                                                                    <td>Liệu văn bản có gạch chân hay không</td>
+                                                                    <td><code>widget.text_underline = True</code></td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">text_overstrike</th>
+                                                                    <td>boolean</td>
+                                                                    <td>Liệu văn bản có bị gạch chéo hay không</td>
+                                                                    <td><code>widget.text_overstrike = True</code></td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">tk</th>
+                                                                    <td>tkinter.Frame</td>
+                                                                    <td>Đối tượng tkinter nội bộ, xem Sử dụng tkinter</td>
+                                                                    <td><code>widget.tk</code></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="">Tham chiếu đến một thuộc tính dưới dạng <tên widget>.property. Ví dụ, nếu đối tượng ListBox của bạn được gọi là listbox, bạn sẽ viết listbox.value. </i> <br>
+                                        <i class="">Bạn có thể thiết lập thuộc tính (ví dụ listbox.value = "Thịt gà") hoặc lấy giá trị của thuộc tính để sử dụng (ví dụ print(listbox.value)).
+
+                                        </i> <br>
+                                        
+                                        <br>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Ví dụ Chọn màu văn bản từ một ListBox
+                                        </a></h3>
+                                    
+                                    <span class="text-danger">Khi một mục trong ListBox được chọn, một hàm sẽ được gọi để thay đổi màu của văn bản.</span> <br>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+    from guizero import App, ListBox, Text
+
+    # Hàm để thay đổi màu văn bản
+    def change_color(value):
+        t.text_color = value  # Cập nhật màu văn bản theo màu đã chọn
+    
+    # Tạo ứng dụng
+    a = App(title="Chọn màu văn bản")
+    
+    # Tạo một Text để hiển thị
+    t = Text(a, text="Đây là một ListBox", color="black")
+    
+    # Tạo một ListBox với các màu
+    listbox = ListBox(
+        a, 
+        items=["red", "green", "blue", "yellow", "purple", "turquoise", "pink", "orange", "black", "brown", "cyan"], 
+        selected="black",  # Màu mặc định được chọn
+        command=change_color,  # Gọi hàm khi có sự thay đổi
+        scrollbar=True  # Thêm thanh cuộn
+    )
+    
+    # Hiển thị ứng dụng
+    a.display()                             
+                                            </code>
+                                    </deckgo-highlight-code>
+
+                                   
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+
+                 
+
+                </div>
+                <br>
+
+            </div>
+
+            <br>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- End:Title -->
+
+    <!-- copyright -->
+    <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
