@@ -816,13 +816,160 @@
             print(file.read())             
                                                                                  </code>
                                         </deckgo-highlight-code>
+                                        <br>
 
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Xử lý ngoại lệ với try-except trong Python kết hợp với guizero
+                                        </a></h3>
+                                    <p style="font-size: large;" class="mb-0">Trong Python, try-except được sử dụng để xử lý ngoại lệ (lỗi) khi chạy chương trình. Khi kết hợp với thư viện guizero, ta có thể hiển thị thông báo lỗi trực tiếp trên giao diện thay vì chỉ in ra màn hình console.</p>
+                                   
+                                                <h4 class="mt-4">Cấu trúc try-except cơ bản trong Python</h4>
+                                             
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+    try:
+        # Đoạn code có thể gây lỗi
+        x = int(input("Nhập một số: "))
+        print(f"Số bạn vừa nhập là: {x}")
+    except ValueError:
+        # Xử lý khi xảy ra lỗi
+        print("Lỗi: Bạn phải nhập một số nguyên!")
+                                                                             </code>
+                                    </deckgo-highlight-code>
 
+                                    <h4 class="mt-4">Kết hợp try-except với guizero</h4>
+                                    <span class="text-danger">Ví dụ 1: Bắt lỗi nhập sai dữ liệu trong guizero
+                                       
+                                        </span> <br>
+                                    <deckgo-highlight-code language="python">
+                                        <code slot="code">
+    from guizero import App, TextBox, PushButton, Text, info, error
 
+    def check_number():
+        try:
+            num = int(input_box.value)  # Chuyển đổi giá trị nhập vào thành số nguyên
+            info("Kết quả", f"Số bạn vừa nhập là: {num}")  # Hiển thị thông báo thành công
+        except ValueError:
+            error("Lỗi", "Vui lòng nhập một số nguyên!")  # Hiển thị hộp thoại lỗi
+    
+    # Tạo giao diện
+    app = App(title="Nhập số", width=300, height=200)
+    
+    Text(app, text="Nhập một số nguyên:")
+    input_box = TextBox(app)
+    button = PushButton(app, text="Kiểm tra", command=check_number)
+    
+    app.display()
+                                                                             </code>
+                                    </deckgo-highlight-code>
 
+                                    <span class="text-danger">Ví dụ 2: Xử lý lỗi khi mở file trong guizero
+                                       
+                                    </span> <br>
+                                <deckgo-highlight-code language="python">
+                                    <code slot="code">
+    from guizero import App, Text, TextBox, PushButton, error
+
+    def open_file():
+        try:
+            with open(filename_box.value, "r", encoding="utf-8") as file:
+                content = file.read()
+                result.value = content  # Hiển thị nội dung file
+        except FileNotFoundError:
+            error("Lỗi", "File không tồn tại! Vui lòng nhập lại.")
+        except Exception as e:
+            error("Lỗi", f"Lỗi khác: {str(e)}")
+
+    # Giao diện chính
+    app = App(title="Đọc file", width=400, height=300)
+
+    Text(app, text="Nhập tên file cần mở:")
+    filename_box = TextBox(app)
+    button = PushButton(app, text="Mở file", command=open_file)
+    result = Text(app, text="")
+
+    app.display()
+
+                                                                         </code>
+                                </deckgo-highlight-code>
+
+                                
                                     </div>
                                 </div>
-
+                                <div class="col-xl-12 mb-4">
+                                    <div class="card bg-dark bg-opacity-10">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr class="table-info">
+                                                            <th scope="col" style="min-width: 200px;">Loại lỗi</th>
+                                                            <th scope="col" style="min-width: 300px;">Mô tả</th>
+                                                            <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>Exception</code></th>
+                                                            <td>Lớp cha của mọi lỗi trong Python.</td>
+                                                            <td><code>try: 1/0 except Exception as e: print(e)</code></td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>SyntaxError</code></th>
+                                                            <td>Lỗi cú pháp khi code sai.</td>
+                                                            <td><code>print("Hello"</code> (Thiếu dấu ngoặc đóng)</td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>IndentationError</code></th>
+                                                            <td>Lỗi thụt lề không đúng.</td>
+                                                            <td><code>def func():</code> (Thiếu thụt lề)</td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>NameError</code></th>
+                                                            <td>Biến chưa được định nghĩa.</td>
+                                                            <td><code>print(x)</code> (x chưa khai báo)</td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>TypeError</code></th>
+                                                            <td>Dùng sai kiểu dữ liệu trong phép toán.</td>
+                                                            <td><code>"3" + 5</code> (Cộng chuỗi với số)</td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>ValueError</code></th>
+                                                            <td>Giá trị sai nhưng đúng kiểu dữ liệu.</td>
+                                                            <td><code>int("abc")</code> (Không thể ép "abc" thành số)</td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>IndexError</code></th>
+                                                            <td>Truy cập phần tử vượt quá danh sách.</td>
+                                                            <td><code>lst = [1,2,3]; print(lst[5])</code></td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>KeyError</code></th>
+                                                            <td>Truy cập key không tồn tại trong dictionary.</td>
+                                                            <td><code>d = {"a": 1}; print(d["b"])</code></td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>FileNotFoundError</code></th>
+                                                            <td>Cố mở file không tồn tại.</td>
+                                                            <td><code>open("no_file.txt")</code></td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>ZeroDivisionError</code></th>
+                                                            <td>Chia số cho 0.</td>
+                                                            <td><code>5 / 0</code></td>
+                                                        </tr>
+                                                        <tr class="table-light">
+                                                            <th scope="row"><code>AttributeError</code></th>
+                                                            <td>Thuộc tính không tồn tại trong object.</td>
+                                                            <td><code>None.length</code> (None không có `length`)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
 
                             </div>
                         </div>
