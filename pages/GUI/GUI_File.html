@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/logo/logo.png" type="image/gif" sizes="16x16">
+    <title>GUIZERO trong Python</title>
+    <meta name="og:description"
+        content="Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="FundRows – Free Bootstrap Crypto Dashboard Template">
+    <meta property="og:image"
+        content="https://www.designtocodes.com/wp-content/uploads/2023/10/FundRows-%E2%80%93-Free-Bootstrap-Crypto-Dashboard-Template-Thumbnail.jpg">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="../../lib/bootstrap_5/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <img src="../../assets/images/logo/logo.png" alt="DesignToCodes">
+    </div>
+    <!-- Preloader End -->
+    <div class="d2c_wrapper" style="line-height: 2.2 !important;">
+        <!-- Main sidebar -->
+        <div class="d2c_sidebar offcanvas-lg offcanvas-start px-2 py-4" tabindex="-1" id="d2c_sidebar">
+            <div class="d-flex flex-column">
+                <!-- Logo -->
+                <a href="../../index.html" class="brand-icon">
+                    <img class="navbar-brand" src="../../assets/images/logo/logo.png" alt="logo">
+                </a>
+                <!-- End:Logo -->
+
+                <!-- Menu -->
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span> Giới thiệu Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+                    <!-- Menu Item -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../Funtion.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                            <span> Funtions trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th-list"></i>
+                            </span>
+                            <span> List trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown">
+                            <!-- Child Menu Item -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../List.html">
+                                    <span> Truy cập phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_List.html">
+                                    <span> Thay đổi phần tử của List </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+
+                            <!-- Child Menu Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Add_List.html">
+                                    <span> Thêm phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_List.html">
+                                    <span> Xóa phần tử vào List </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Built-in_Funtion.html">
+                                    <span> Built-in Funciton </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Match-Case.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </span>
+                            <span> Match-case trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Module.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <span> Module trong Python </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Clean_Code.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <span> Clean code trong Python </span>
+                        </a>
+                    </li>
+                    <!-- End:Child Sub Menu -->
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#form_dropdown1"
+                            aria-expanded="false" href="#">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> Dictionary trong Python </span>
+                            <span class="fas fa-chevron-right ms-auto text-end"></span>
+                        </a>
+                        <!-- Child Sub Menu -->
+                        <ul class="sub-menu collapse" id="form_dropdown1">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Dic.html">
+                                    <span> Truy cập phần tử của Dic </span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Modifying_Dic.html">
+                                    <span> Thay đổi phần tử của Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="../Add_Dic.html">
+                                    <span> Thêm phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Remove_Dic.html">
+                                    <span> Xóa phần tử vào Dic </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../Loop_Dic.html">
+                                    <span> Vòng lặp trong Dic </span>
+                                </a>
+                            </li>
+                            <!-- End:Child Menu Item -->
+                        </ul>
+
+
+
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Project.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span> Dự án cuối khóa </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-App.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-window-restore"></i>
+                            </span>
+                            <span> GUIZERO - App </span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Text.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-font"></i>
+                            </span>
+                            <span> GUIZERO - Text </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Picture.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+                            <span> GUIZERO - Picture </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI-Colors.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-palette"></i>
+                            </span>
+                            <span> GUIZERO - Colors </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_Size.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-arrows-alt"></i>
+                            </span>
+                            <span> GUIZERO - Size </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI-Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-th"></i>
+                            </span>
+                            <span> GUIZERO - Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework_Layout.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập Layout </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Homework.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span> GUIZERO - Bài tập lớn </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./GUI_Button.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-hand-pointer"></i>
+                            </span>
+                            <span> GUIZERO - Button </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_ListBox.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-list-ul"></i>
+                            </span>
+                            <span> GUIZERO - ListBox </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./GUI_TextBox.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-keyboard"></i>
+                            </span>
+                            <span> GUIZERO - TextBox </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./GUI_File.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-file"></i>
+                            </span>
+                            <span> GUIZERO - File </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PILLOW/PI_Resize.html">
+                            <span class="d2c_icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </span>
+                            <span> Pillow trong Guizero </span>
+                        </a>
+                    </li>
+                    <!-- End:Menu Item -->
+
+
+                    <!-- End:Menu -->
+            </div>
+        </div>
+        <!-- End:Sidebar -->
+
+        <!-- Main Body-->
+        <div class="d2c_main p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-block d-lg-none">
+                    <!-- Offcanvas Toggler -->
+                    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#d2c_sidebar" aria-controls="d2c_sidebar">
+                        <i class="fa fa-bars p-0"></i>
+                    </button>
+                    <!-- End:Offcanvas Toggler -->
+                </div>
+                <div class="col">
+                    <p class="mb-0">Chào mừng bạn đến với</p>
+                    <h4 class="text-capitalize fw-bold">Python Programming Language</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body d2c_notification p-0">
+                    <!-- notification item -->
+                    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - File</a>
+                                        </h1>
+
+                                        <p style="font-size: large;" class="mb-0">Các Chế Độ Mở File (File Modes)</p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 150px;">Chế độ
+                                                                        (mode)</th>
+                                                                    <th scope="col" style="min-width: 200px;">Ý nghĩa
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 300px;">Hành động
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 300px;">Ghi chú
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">"r"</th>
+                                                                    <td>Read (Chỉ đọc)</td>
+                                                                    <td>Mở file để đọc, lỗi nếu file không tồn tại</td>
+                                                                    <td>Mặc định khi dùng <code>open()</code></td>
+                                                                    <td><code>with open("file.txt", "r") as f: data = f.read()</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">"w"</th>
+                                                                    <td>Write (Ghi mới)</td>
+                                                                    <td>Ghi đè nội dung, tạo file nếu chưa tồn tại</td>
+                                                                    <td>Xóa toàn bộ nội dung cũ</td>
+                                                                    <td><code>with open("file.txt", "w") as f: f.write("Hello!")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">"a"</th>
+                                                                    <td>Append (Ghi thêm)</td>
+                                                                    <td>Thêm nội dung vào cuối file, tạo file nếu chưa
+                                                                        có</td>
+                                                                    <td>Không xóa nội dung cũ</td>
+                                                                    <td><code>with open("file.txt", "a") as f: f.write("\nNew line")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">"x"</th>
+                                                                    <td>Exclusive create</td>
+                                                                    <td>Tạo file mới, lỗi nếu file đã tồn tại</td>
+                                                                    <td>Dùng để tránh ghi đè file quan trọng</td>
+                                                                    <td><code>with open("file.txt", "x") as f: f.write("New file")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">"rb"</th>
+                                                                    <td>Read binary</td>
+                                                                    <td>Đọc file ở chế độ nhị phân (hình ảnh, video,
+                                                                        v.v.)</td>
+                                                                    <td>Không cần <code>encoding="utf-8"</code></td>
+                                                                    <td><code>with open("image.jpg", "rb") as f: data = f.read()</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">"wb"</th>
+                                                                    <td>Write binary</td>
+                                                                    <td>Ghi đè file nhị phân, tạo file nếu chưa có</td>
+                                                                    <td>Thường dùng cho ảnh, âm thanh, video</td>
+                                                                    <td><code>with open("image.jpg", "wb") as f: f.write(binary_data)</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">"ab"</th>
+                                                                    <td>Append binary</td>
+                                                                    <td>Ghi thêm vào file nhị phân</td>
+                                                                    <td>Giữ lại nội dung cũ</td>
+                                                                    <td><code>with open("sound.mp3", "ab") as f: f.write(more_data)</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <span class="text-danger">Sử dụng with open(...) trong Python có nhiều lợi ích
+                                            so với việc chỉ dùng open(...), đặc biệt là khi làm việc với tệp tin.</span>
+                                        <br>
+                                        <ol>
+                                            <li>Tự động đóng file sau khi hoàn thành
+                                                <ul>
+                                                    <li>Khi dùng with open(...), Python tự động đóng file sau khi thoát
+                                                        khỏi khối lệnh with, ngay cả khi có lỗi xảy ra.</li>
+                                                    <li>Điều này giúp tránh rò rỉ tài nguyên và giảm nguy cơ lỗi khi
+                                                        quên gọi close().</li>
+                                                </ul>
+                                            </li>
+                                            <li>Mã ngắn gọn, dễ đọc
+                                                <ul>
+                                                    <li>Không cần gọi f.close() thủ công.</li>
+                                                    <li>Giúp code gọn hơn và ít lỗi hơn.</li>
+                                                </ul>
+                                            </li>
+                                            <li>Bảo vệ khỏi lỗi khi đọc/ghi file
+                                                <ul>
+                                                    <li>Nếu có lỗi xảy ra trong quá trình đọc hoặc ghi file, Python vẫn
+                                                        đảm bảo file được đóng đúng cách.</li>
+
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <span class="text-danger">Không dùng with (có thể gây lỗi nếu quên
+                                            close())</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+   f = open("file.txt", "r")
+   data = f.read()
+   f.close()  # Nếu quên gọi dòng này, file sẽ không được đóng                            
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Dùng with open(...) (an toàn hơn)</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+   with open("file.txt", "r") as f:
+   data = f.read()  # File tự động đóng khi thoát khỏi khối with                                                                              </code>
+                                        </deckgo-highlight-code>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+                                <div class="d2c_notification_content d-flex align-items-start">
+                                    <!-- <div>
+                                        <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
+                                    </div> -->
+                                    <div>
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Các Hàm Làm Việc
+                                                Với File
+                                            </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Mở File</p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-warning">
+                                                                    <th scope="col" style="min-width: 150px;">Chế độ
+                                                                        (mode)</th>
+                                                                    <th scope="col" style="min-width: 200px;">Ý nghĩa
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 300px;">Hành động
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 300px;">Ghi chú
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">"r"</th>
+                                                                    <td>Read (Chỉ đọc)</td>
+                                                                    <td>Mở file để đọc, lỗi nếu file không tồn tại</td>
+                                                                    <td>Mặc định khi dùng <code>open()</code></td>
+                                                                    <td><code>with open("file.txt", "r") as f: data = f.read()</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">"w"</th>
+                                                                    <td>Write (Ghi mới)</td>
+                                                                    <td>Ghi đè nội dung, tạo file nếu chưa tồn tại</td>
+                                                                    <td>Xóa toàn bộ nội dung cũ</td>
+                                                                    <td><code>with open("file.txt", "w") as f: f.write("Hello!")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">"a"</th>
+                                                                    <td>Append (Ghi thêm)</td>
+                                                                    <td>Thêm nội dung vào cuối file, tạo file nếu chưa
+                                                                        có</td>
+                                                                    <td>Không xóa nội dung cũ</td>
+                                                                    <td><code>with open("file.txt", "a") as f: f.write("\nNew line")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-warning">
+                                                                    <th scope="row">"x"</th>
+                                                                    <td>Exclusive create</td>
+                                                                    <td>Tạo file mới, lỗi nếu file đã tồn tại</td>
+                                                                    <td>Dùng để tránh ghi đè file quan trọng</td>
+                                                                    <td><code>with open("file.txt", "x") as f: f.write("New file")</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-primary">
+                                                                    <th scope="row">"rb"</th>
+                                                                    <td>Read binary</td>
+                                                                    <td>Đọc file ở chế độ nhị phân (hình ảnh, video,
+                                                                        v.v.)</td>
+                                                                    <td>Không cần <code>encoding="utf-8"</code></td>
+                                                                    <td><code>with open("image.jpg", "rb") as f: data = f.read()</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-success">
+                                                                    <th scope="row">"wb"</th>
+                                                                    <td>Write binary</td>
+                                                                    <td>Ghi đè file nhị phân, tạo file nếu chưa có</td>
+                                                                    <td>Thường dùng cho ảnh, âm thanh, video</td>
+                                                                    <td><code>with open("image.jpg", "wb") as f: f.write(binary_data)</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="table-danger">
+                                                                    <th scope="row">"ab"</th>
+                                                                    <td>Append binary</td>
+                                                                    <td>Ghi thêm vào file nhị phân</td>
+                                                                    <td>Giữ lại nội dung cũ</td>
+                                                                    <td><code>with open("sound.mp3", "ab") as f: f.write(more_data)</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <h4 class="mt-4">Hàm mở file</h4>
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-info">
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>open("file.txt", "r")</code>
+                                                                    </th>
+                                                                    <td>Mở file để đọc</td>
+                                                                    <td><code>file = open("data.txt", "r")</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>open("file.txt", "w")</code>
+                                                                    </th>
+                                                                    <td>Mở file để ghi (xóa nội dung cũ)</td>
+                                                                    <td><code>file = open("data.txt", "w")</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>open("file.txt", "a")</code>
+                                                                    </th>
+                                                                    <td>Mở file để ghi thêm</td>
+                                                                    <td><code>file = open("data.txt", "a")</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row">
+                                                                        <code>with open("file.txt", "r") as f</code>
+                                                                    </th>
+                                                                    <td>Mở file với cú pháp with open()</td>
+                                                                    <td>Tránh quên <code>file.close()</code></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("data.txt", "r", encoding="utf-8") as file:
+        content = file.read()
+        print(content)  # In nội dung file
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Đọc File</p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-info">
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.read()</code></th>
+                                                                    <td>Đọc toàn bộ nội dung file</td>
+                                                                    <td><code>content = file.read()</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.readline()</code></th>
+                                                                    <td>Đọc 1 dòng từ file</td>
+                                                                    <td><code>line = file.readline()</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.readlines()</code></th>
+                                                                    <td>Đọc tất cả các dòng, trả về danh sách</td>
+                                                                    <td><code>lines = file.readlines()</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>for line in file</code></th>
+                                                                    <td>Đọc từng dòng trong vòng lặp</td>
+                                                                    <td><code>for line in file: print(line.strip())</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("data.txt", "r", encoding="utf-8") as file:
+        for line in file:
+        print(line.strip())  # Loại bỏ khoảng trắng và in ra từng dòng   
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+
+
+
+                                        <p style="font-size: large;" class="mb-0">Ghi File</p>
+                                        <div class="col-xl-12 mb-4">  
+                                            <div class="card bg-dark bg-opacity-10">  
+                                                <div class="card-body">  
+                                                    <div class="table-responsive">  
+                                                        <table class="table">  
+                                                            <thead>  
+                                                                <tr class="table-info">  
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>  
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng</th>  
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>  
+                                                                </tr>  
+                                                            </thead>  
+                                                            <tbody>  
+                                                               
+                                                                <tr class="table-light">  
+                                                                    <th scope="row"><code>file.write("text")</code></th>  
+                                                                    <td>Ghi nội dung vào file (ghi đè)</td>  
+                                                                    <td><code>file.write("Xin chào!")</code></td>  
+                                                                </tr>  
+                                                                <tr class="table-light">  
+                                                                    <th scope="row"><code>file.writelines([...])</code></th>  
+                                                                    <td>Ghi danh sách dòng vào file</td>  
+                                                                    <td><code>file.writelines(["Dòng 1\n", "Dòng 2\n"])</code></td>  
+                                                                </tr>  
+                                                            </tbody>  
+                                                        </table>  
+                                                    </div>  
+                                                </div>  
+                                            </div>  
+                                        </div>
+                                        
+
+                                        <span class="text-danger">Ví dụ ghi file:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("data.txt", "w", encoding="utf-8") as file:
+        file.write("Xin chào! Đây là dòng đầu tiên.\n")
+        file.write("Học lập trình Python thật thú vị!\n")     
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        <i class="text-danger">Nếu mở file với "w", nội dung cũ sẽ bị xóa.</i> <br>
+
+
+                                        <span class="text-danger">Ví dụ ghi thêm vào file:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("data.txt", "a", encoding="utf-8") as file:
+        file.write("Thêm dòng mới vào cuối file.\n")        
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+                                        <i class="text-danger">Mở file với "a" để giữ nguyên nội dung cũ và chỉ thêm vào
+                                            cuối.</i> <br>
+
+                                            <p style="font-size: large;" class="mb-0">Đóng File</p>
+                                        <div class="col-xl-12 mb-4">  
+                                            <div class="card bg-dark bg-opacity-10">  
+                                                <div class="card-body">  
+                                                    <div class="table-responsive">  
+                                                        <table class="table">  
+                                                            <thead>  
+                                                                <tr class="table-info">  
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>  
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng</th>  
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>  
+                                                                </tr>  
+                                                            </thead>  
+                                                            <tbody>  
+                                                               
+                                                                <tr class="table-light">  
+                                                                    <th scope="row"><code>file.close()</code></th>  
+                                                                    <td>Đóng file sau khi đọc hoặc ghi</td>  
+                                                                    <td><code>file.close()</code></td>  
+                                                                </tr>  
+                                                                  
+                                                            </tbody>  
+                                                        </table>  
+                                                    </div>  
+                                                </div>  
+                                            </div>  
+                                        </div>
+                                        
+
+                                        <span class="text-danger">Ví dụ đóng file thủ công:</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        file = open("data.txt", "r", encoding="utf-8")
+        content = file.read()
+        file.close()  # Đóng file để giải phóng tài nguyên            
+                                                </code>
+                                        </deckgo-highlight-code>
+                                       
+
+                                        <span class="text-danger">Sử dụng with open() để tự động đóng file (khuyên dùng):</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("data.txt", "r", encoding="utf-8") as file:
+        content = file.read()       
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+                                        <i class="text-danger">Ưu điểm: Không cần gọi file.close(), giúp tránh lỗi quên đóng file.</i> <br>
+
+                                        <span class="text-danger">Ví dụ tổng quát</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        # Bước 1: Mở file để ghi với UTF-8
+        with open("example.txt", "w", encoding="utf-8") as file:
+            file.write("Xin chào! Đây là dòng đầu tiên.\n")
+            file.write("Học lập trình Python thật thú vị!\n")
+        
+        # Bước 2: Mở file để đọc với UTF-8
+        with open("example.txt", "r", encoding="utf-8") as file:
+            content = file.read()
+            print("Nội dung trong file:")
+            print(content)
+        
+        # Bước 3: Mở file để ghi thêm nội dung mới với UTF-8
+        with open("example.txt", "a", encoding="utf-8") as file:
+            file.write("Chúng ta có thể thêm nội dung vào file mà không mất dữ liệu cũ.\n")
+        
+        # Bước 4: Đọc lại file sau khi thêm nội dung với UTF-8
+        with open("example.txt", "r", encoding="utf-8") as file:
+            print("Nội dung sau khi cập nhật:")
+            print(file.read())             
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+
+
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+
+
+
+                </div>
+                <br>
+
+            </div>
+
+            <br>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- End:Title -->
+
+    <!-- copyright -->
+    <!-- <div class="d2c_copyright bg-success bg-opacity-10 p-3 text-center mt-4">
+                <p class="mb-0 fw-semibold">© 2023 <a href="https://www.designtocodes.com/" target="_blank" class="fw-bold">DesignToCodes</a>, All rights Reserved</p>
+            </div> -->
+
+    </div>
+    <!-- End:Main Body -->
+
+
+
+    </div>
+
+    <button class="d2c_offcanvas_toggle position-fixed top-50 end-0 translate-middle-y d-block d-xl-none" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#d2c_sidebar_right" aria-controls="d2c_sidebar_right">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Initial  Javascript -->
+    <script src="../../lib/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/bootstrap_5/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+    Template Name: {{FundRows – Free Bootstrap Crypto Dashboard Template}}
+    Template URL: {{https://www.designtocodes.com/product/fundrows-free-crypto-dashboard-template/}}
+    Description: {{Build a user-friendly crypto dashboard with FundRows free crypto dashboard template. Enjoy full responsiveness, and customizable for your crypto projects. With FundRows, developers can create a unique crypto admin dashboard that is visually impressive.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ FundRows }}
+ -->
