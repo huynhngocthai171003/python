@@ -361,133 +361,9 @@
                                         <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - File</a>
                                         </h1>
 
-                                        <p style="font-size: large;" class="mb-0">Các Chế Độ Mở File (File Modes)</p>
-                                        <div class="col-xl-12 mb-4">
-                                            <div class="card bg-dark bg-opacity-10">
-                                                <div class="card-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr class="table-warning">
-                                                                    <th scope="col" style="min-width: 150px;">Chế độ
-                                                                        (mode)</th>
-                                                                    <th scope="col" style="min-width: 200px;">Ý nghĩa
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 300px;">Hành động
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 300px;">Ghi chú
-                                                                    </th>
-                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr class="table-primary">
-                                                                    <th scope="row">"r"</th>
-                                                                    <td>Read (Chỉ đọc)</td>
-                                                                    <td>Mở file để đọc, lỗi nếu file không tồn tại</td>
-                                                                    <td>Mặc định khi dùng <code>open()</code></td>
-                                                                    <td><code>with open("file.txt", "r") as f: data = f.read()</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-success">
-                                                                    <th scope="row">"w"</th>
-                                                                    <td>Write (Ghi mới)</td>
-                                                                    <td>Ghi đè nội dung, tạo file nếu chưa tồn tại</td>
-                                                                    <td>Xóa toàn bộ nội dung cũ</td>
-                                                                    <td><code>with open("file.txt", "w") as f: f.write("Hello!")</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-danger">
-                                                                    <th scope="row">"a"</th>
-                                                                    <td>Append (Ghi thêm)</td>
-                                                                    <td>Thêm nội dung vào cuối file, tạo file nếu chưa
-                                                                        có</td>
-                                                                    <td>Không xóa nội dung cũ</td>
-                                                                    <td><code>with open("file.txt", "a") as f: f.write("\nNew line")</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-warning">
-                                                                    <th scope="row">"x"</th>
-                                                                    <td>Exclusive create</td>
-                                                                    <td>Tạo file mới, lỗi nếu file đã tồn tại</td>
-                                                                    <td>Dùng để tránh ghi đè file quan trọng</td>
-                                                                    <td><code>with open("file.txt", "x") as f: f.write("New file")</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-primary">
-                                                                    <th scope="row">"rb"</th>
-                                                                    <td>Read binary</td>
-                                                                    <td>Đọc file ở chế độ nhị phân (hình ảnh, video,
-                                                                        v.v.)</td>
-                                                                    <td>Không cần <code>encoding="utf-8"</code></td>
-                                                                    <td><code>with open("image.jpg", "rb") as f: data = f.read()</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-success">
-                                                                    <th scope="row">"wb"</th>
-                                                                    <td>Write binary</td>
-                                                                    <td>Ghi đè file nhị phân, tạo file nếu chưa có</td>
-                                                                    <td>Thường dùng cho ảnh, âm thanh, video</td>
-                                                                    <td><code>with open("image.jpg", "wb") as f: f.write(binary_data)</code>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-danger">
-                                                                    <th scope="row">"ab"</th>
-                                                                    <td>Append binary</td>
-                                                                    <td>Ghi thêm vào file nhị phân</td>
-                                                                    <td>Giữ lại nội dung cũ</td>
-                                                                    <td><code>with open("sound.mp3", "ab") as f: f.write(more_data)</code>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
 
-                                        <span class="text-danger">Sử dụng with open(...) trong Python có nhiều lợi ích
-                                            so với việc chỉ dùng open(...), đặc biệt là khi làm việc với tệp tin.</span>
-                                        <br>
-                                        <ol>
-                                            <li>Tự động đóng file sau khi hoàn thành
-                                                <ul>
-                                                    <li>Khi dùng with open(...), Python tự động đóng file sau khi thoát
-                                                        khỏi khối lệnh with, ngay cả khi có lỗi xảy ra.</li>
-                                                    <li>Điều này giúp tránh rò rỉ tài nguyên và giảm nguy cơ lỗi khi
-                                                        quên gọi close().</li>
-                                                </ul>
-                                            </li>
-                                            <li>Mã ngắn gọn, dễ đọc
-                                                <ul>
-                                                    <li>Không cần gọi f.close() thủ công.</li>
-                                                    <li>Giúp code gọn hơn và ít lỗi hơn.</li>
-                                                </ul>
-                                            </li>
-                                            <li>Bảo vệ khỏi lỗi khi đọc/ghi file
-                                                <ul>
-                                                    <li>Nếu có lỗi xảy ra trong quá trình đọc hoặc ghi file, Python vẫn
-                                                        đảm bảo file được đóng đúng cách.</li>
-
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <span class="text-danger">Không dùng with (có thể gây lỗi nếu quên
-                                            close())</span> <br>
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-   f = open("file.txt", "r")
-   data = f.read()
-   f.close()  # Nếu quên gọi dòng này, file sẽ không được đóng                            
-                                               </code>
-                                        </deckgo-highlight-code>
-
-                                        <span class="text-danger">Dùng with open(...) (an toàn hơn)</span> <br>
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-   with open("file.txt", "r") as f:
-   data = f.read()  # File tự động đóng khi thoát khỏi khối with                                                                              </code>
-                                        </deckgo-highlight-code>
+                                       
 
                                     </div>
 
@@ -522,7 +398,7 @@
                                                                     </th>
                                                                     <th scope="col" style="min-width: 300px;">Ghi chú
                                                                     </th>
-                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                   
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -531,7 +407,7 @@
                                                                     <td>Read (Chỉ đọc)</td>
                                                                     <td>Mở file để đọc, lỗi nếu file không tồn tại</td>
                                                                     <td>Mặc định khi dùng <code>open()</code></td>
-                                                                    <td><code>with open("file.txt", "r") as f: data = f.read()</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-success">
@@ -539,7 +415,7 @@
                                                                     <td>Write (Ghi mới)</td>
                                                                     <td>Ghi đè nội dung, tạo file nếu chưa tồn tại</td>
                                                                     <td>Xóa toàn bộ nội dung cũ</td>
-                                                                    <td><code>with open("file.txt", "w") as f: f.write("Hello!")</code>
+                                                                   
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-danger">
@@ -548,7 +424,7 @@
                                                                     <td>Thêm nội dung vào cuối file, tạo file nếu chưa
                                                                         có</td>
                                                                     <td>Không xóa nội dung cũ</td>
-                                                                    <td><code>with open("file.txt", "a") as f: f.write("\nNew line")</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-warning">
@@ -556,7 +432,7 @@
                                                                     <td>Exclusive create</td>
                                                                     <td>Tạo file mới, lỗi nếu file đã tồn tại</td>
                                                                     <td>Dùng để tránh ghi đè file quan trọng</td>
-                                                                    <td><code>with open("file.txt", "x") as f: f.write("New file")</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-primary">
@@ -565,7 +441,7 @@
                                                                     <td>Đọc file ở chế độ nhị phân (hình ảnh, video,
                                                                         v.v.)</td>
                                                                     <td>Không cần <code>encoding="utf-8"</code></td>
-                                                                    <td><code>with open("image.jpg", "rb") as f: data = f.read()</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-success">
@@ -573,7 +449,7 @@
                                                                     <td>Write binary</td>
                                                                     <td>Ghi đè file nhị phân, tạo file nếu chưa có</td>
                                                                     <td>Thường dùng cho ảnh, âm thanh, video</td>
-                                                                    <td><code>with open("image.jpg", "wb") as f: f.write(binary_data)</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                                 <tr class="table-danger">
@@ -581,7 +457,7 @@
                                                                     <td>Append binary</td>
                                                                     <td>Ghi thêm vào file nhị phân</td>
                                                                     <td>Giữ lại nội dung cũ</td>
-                                                                    <td><code>with open("sound.mp3", "ab") as f: f.write(more_data)</code>
+                                                                    
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -630,14 +506,98 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <span class="text-danger">Sử dụng with open(...) trong Python có nhiều lợi ích
+                                            so với việc chỉ dùng open(...), đặc biệt là khi làm việc với tệp tin.</span>
+                                        <br>
+                                        <ol>
+                                            <li>Tự động đóng file sau khi hoàn thành
+                                                <ul>
+                                                    <li>Khi dùng with open(...), Python tự động đóng file sau khi thoát
+                                                        khỏi khối lệnh with, ngay cả khi có lỗi xảy ra.</li>
+                                                    <li>Điều này giúp tránh rò rỉ tài nguyên và giảm nguy cơ lỗi khi
+                                                        quên gọi close().</li>
+                                                </ul>
+                                            </li>
+                                            <li>Mã ngắn gọn, dễ đọc
+                                                <ul>
+                                                    <li>Không cần gọi f.close() thủ công.</li>
+                                                    <li>Giúp code gọn hơn và ít lỗi hơn.</li>
+                                                </ul>
+                                            </li>
+                                            <li>Bảo vệ khỏi lỗi khi đọc/ghi file
+                                                <ul>
+                                                    <li>Nếu có lỗi xảy ra trong quá trình đọc hoặc ghi file, Python vẫn
+                                                        đảm bảo file được đóng đúng cách.</li>
+
+                                                </ul>
+                                            </li>
+                                        </ol>
+
+                                        <p style="font-size: medium;" class="mb-0 text-success">ĐỌC FILE VỚI "R"</p>
+                                        <span class="text-danger">Không dùng with (có thể gây lỗi nếu quên
+                                            close())</span> <br>
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-        with open("data.txt", "r", encoding="utf-8") as file:
-        content = file.read()
-        print(content)  # In nội dung file
+    f = open("file.txt", "r", encoding="utf-8")
+    data = f.read()
+    print(data)
+    f.close()  # Nếu quên gọi dòng này, file sẽ không được đóng                            
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Dùng with open(...) (an toàn hơn)</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("file.txt", "r", encoding="utf-8") as f:
+    data = f.read()  # File tự động đóng khi thoát khỏi khối with  
+    print(data)                                                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Đọc theo từng dòng</span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("example.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        print(line.strip())                                                                            </code>
+                                        </deckgo-highlight-code>
+
+                                        <span class="text-danger">Sự khác nhau giữa read() và for line in file:</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Cách đọc file bằng .read()</p>
+                                        <ul>
+                                            <li>f.read() sẽ đọc toàn bộ nội dung file một lần, lưu vào biến data dưới dạng một chuỗi (string).</li>
+                                            <li>Khi print(data), nội dung được in ra giữ nguyên định dạng xuống dòng như trong file gốc.</li>
+                                        </ul>
+                                        <p style="font-size: medium;" class="mb-0">Cách đọc file bằng for line in file:</p>
+                                        <ul>
+                                            <li>for line in f: sẽ đọc từng dòng một, mỗi lần lấy một dòng và gán vào biến line.</li>
+                                            <li>Mỗi line vẫn chứa dấu xuống dòng \n ở cuối nếu không dùng .strip().</li>
+                                            <li>Khi in print(line), nó sẽ thêm một \n mặc định, làm xuất hiện dòng trống giữa các dòng.</li>
+
+                                        </ul>
+                                        <p style="font-size: medium;" class="mb-0">Dùng .read() nếu muốn tìm một từ khóa trong toàn bộ văn bản:</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        with open("file.txt", "r", encoding="utf-8") as f:
+        data = f.read()
+        if "Python" in data:
+            print("Có chữ Python trong file!")  
                                                                                  </code>
                                         </deckgo-highlight-code>
 
+                                        <p style="font-size: medium;" class="mb-0">Dùng for line in file: nếu muốn đếm số dòng chứa chữ "Python"</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+        count = 0
+        with open("file.txt", "r", encoding="utf-8") as f:
+            for line in f:
+                if "Python" in line:
+                    count += 1
+        print(f"Số dòng chứa 'Python': {count}")           
+                                                                                 </code>
+                                        </deckgo-highlight-code>
+
+                                        
+                                        
                                         <p style="font-size: large;" class="mb-0">Đọc File</p>
                                         <div class="col-xl-12 mb-4">
                                             <div class="card bg-dark bg-opacity-10">
@@ -680,98 +640,252 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <p style="font-size: medium;" class="mb-0 text-success">VÍ DỤ VỚI FILE EXAMPLE.TXT</p>
+                                       
+                                    
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-        with open("data.txt", "r", encoding="utf-8") as file:
-        for line in file:
-        print(line.strip())  # Loại bỏ khoảng trắng và in ra từng dòng   
-                                                                                 </code>
+    Học Python rất thú vị!
+    Chúc bạn học tốt.
+    Lập trình giúp bạn phát triển tư duy.                           
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                       
+                                        <span class="text-danger">file.read() – Đọc toàn bộ nội dung file</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Code</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("example.txt", "r", encoding="utf-8") as file:
+    content = file.read()
+    print(content)                         
+                                             </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Output</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    Học Python rất thú vị!
+    Chúc bạn học tốt.
+    Lập trình giúp bạn phát triển tư duy.                            
+                                             </code>
                                         </deckgo-highlight-code>
 
 
+                                        <span class="text-danger">file.readline() – Đọc 1 dòng từ file</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Code</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("example.txt", "r", encoding="utf-8") as file:
+    line1 = file.readline()
+    print(f"Dòng 1: {line1.strip()}")
+
+    line2 = file.readline()
+    print(f"Dòng 2: {line2.strip()}")                        
+                                             </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Output</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    Dòng 1: Học Python rất thú vị!
+    Dòng 2: Chúc bạn học tốt.                             
+                                             </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: medium;" class="mb-0">Lưu ý</p>
+                                        <ul>
+                                            <li><i>readline() chỉ đọc 1 dòng mỗi lần gọi.
+                                                </i></li>
+                                                <li><i>
+                                                    Dùng .strip() để loại bỏ ký tự \n.</i></li>
+                                        </ul>
+
+
+                                        <span class="text-danger">file.readlines() – Đọc tất cả các dòng, trả về danh sách</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Code</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("example.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+    print(lines)                     
+                                             </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Output</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    ['Học Python rất thú vị!\n', 'Chúc bạn học tốt.\n', 'Lập trình giúp bạn phát triển tư duy.\n']                          
+                                             </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: medium;" class="mb-0">Lưu ý</p>
+                                        <ul>
+                                            <li><i>File được đọc dưới dạng danh sách các dòng.
+                                                </i></li>
+                                                <li><i>
+                                                    Các phần tử của danh sách vẫn chứa \n.</i></li>
+                                        </ul>
+
+
+                                        
+                                        <span class="text-danger">Cách xóa \n khi đọc file:</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Code</p>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    lines = []  # Tạo danh sách rỗng để lưu các dòng đã xử lý
+
+    with open("example.txt", "r", encoding="utf-8") as file:
+        for line in file:  # Đọc từng dòng trong file
+            lines.append(line.strip())  # Loại bỏ khoảng trắng/thừa và thêm vào danh sách
+    
+    print(lines)                           
+                                             </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Output</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    ['Học Python rất thú vị!', 'Chúc bạn học tốt.', 'Lập trình giúp bạn phát triển tư duy.']                      
+                                             </code>
+                                        </deckgo-highlight-code>
 
                                         <p style="font-size: large;" class="mb-0">Ghi File</p>
-                                        <div class="col-xl-12 mb-4">  
-                                            <div class="card bg-dark bg-opacity-10">  
-                                                <div class="card-body">  
-                                                    <div class="table-responsive">  
-                                                        <table class="table">  
-                                                            <thead>  
-                                                                <tr class="table-info">  
-                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>  
-                                                                    <th scope="col" style="min-width: 300px;">Chức năng</th>  
-                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>  
-                                                                </tr>  
-                                                            </thead>  
-                                                            <tbody>  
-                                                               
-                                                                <tr class="table-light">  
-                                                                    <th scope="row"><code>file.write("text")</code></th>  
-                                                                    <td>Ghi nội dung vào file (ghi đè)</td>  
-                                                                    <td><code>file.write("Xin chào!")</code></td>  
-                                                                </tr>  
-                                                                <tr class="table-light">  
-                                                                    <th scope="row"><code>file.writelines([...])</code></th>  
-                                                                    <td>Ghi danh sách dòng vào file</td>  
-                                                                    <td><code>file.writelines(["Dòng 1\n", "Dòng 2\n"])</code></td>  
-                                                                </tr>  
-                                                            </tbody>  
-                                                        </table>  
-                                                    </div>  
-                                                </div>  
-                                            </div>  
-                                        </div>
-                                        
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-info">
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
 
-                                        <span class="text-danger">Ví dụ ghi file:</span> <br>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.write("text")</code></th>
+                                                                    <td>Ghi nội dung vào file (ghi đè)</td>
+                                                                    <td><code>file.write("Xin chào!")</code></td>
+                                                                </tr>
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.writelines([...])</code>
+                                                                    </th>
+                                                                    <td>Ghi danh sách dòng vào file</td>
+                                                                    <td><code>file.writelines(["Dòng 1\n", "Dòng 2\n"])</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <p style="font-size: medium;" class="mb-0 text-success">GHI FILE MỚI VỚI "W"</p>
+                                        <span class="text-danger">Khi mở file với "w", nếu file đã tồn tại, nội dung cũ sẽ bị xóa và ghi mới từ đầu. Nếu file chưa tồn tại, Python sẽ tạo file mới.</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 1: Ghi nội dung mới vào file</p>
+                                        
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-        with open("data.txt", "w", encoding="utf-8") as file:
-        file.write("Xin chào! Đây là dòng đầu tiên.\n")
-        file.write("Học lập trình Python thật thú vị!\n")     
-                                                </code>
+    with open("file.txt", "w", encoding="utf-8") as f:
+    f.write("Học Python rất thú vị!\n")
+    f.write("Chúc bạn học tốt.\n")                           
+                                               </code>
                                         </deckgo-highlight-code>
-                                        <i class="text-danger">Nếu mở file với "w", nội dung cũ sẽ bị xóa.</i> <br>
 
-
-                                        <span class="text-danger">Ví dụ ghi thêm vào file:</span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 2: Ghi một danh sách xuống file</p>
+                                       
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-        with open("data.txt", "a", encoding="utf-8") as file:
-        file.write("Thêm dòng mới vào cuối file.\n")        
-                                                                                 </code>
-                                        </deckgo-highlight-code>
-                                        <i class="text-danger">Mở file với "a" để giữ nguyên nội dung cũ và chỉ thêm vào
-                                            cuối.</i> <br>
+    lines = ["Dòng 1\n", "Dòng 2\n", "Dòng 3\n"]
 
-                                            <p style="font-size: large;" class="mb-0">Đóng File</p>
-                                        <div class="col-xl-12 mb-4">  
-                                            <div class="card bg-dark bg-opacity-10">  
-                                                <div class="card-body">  
-                                                    <div class="table-responsive">  
-                                                        <table class="table">  
-                                                            <thead>  
-                                                                <tr class="table-info">  
-                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>  
-                                                                    <th scope="col" style="min-width: 300px;">Chức năng</th>  
-                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>  
-                                                                </tr>  
-                                                            </thead>  
-                                                            <tbody>  
-                                                               
-                                                                <tr class="table-light">  
-                                                                    <th scope="row"><code>file.close()</code></th>  
-                                                                    <td>Đóng file sau khi đọc hoặc ghi</td>  
-                                                                    <td><code>file.close()</code></td>  
-                                                                </tr>  
-                                                                  
-                                                            </tbody>  
-                                                        </table>  
-                                                    </div>  
-                                                </div>  
-                                            </div>  
-                                        </div>
+    with open("file.txt", "w", encoding="utf-8") as f:
+        f.writelines(lines)  # Ghi từng dòng trong danh sách vào file                             
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 3: Ghi file với for</p>
+                                       
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("file.txt", "w", encoding="utf-8") as f:
+    for i in range(1, 6):
+        f.write(f"Dòng số {i}\n")                           
+                                               </code>
+                                        </deckgo-highlight-code>
+                                        <p style="font-size: medium;" class="mb-0 text-success">GHI FILE MỚI VỚI "A"</p>
+                                        <span class="text-danger">Chế độ "a" (append) không xóa nội dung cũ mà chỉ ghi thêm vào cuối file. Nếu file chưa tồn tại, Python sẽ tạo file mới.
+
+                                        </span> <br>
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 1: Ghi thêm nội dung vào file</p>
                                         
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("file.txt", "a", encoding="utf-8") as f:
+    f.write("\nChúc bạn học tốt!")                        
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 2: Ghi thêm nhiều dòng bằng writelines()</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    lines = ["\nDòng 1 mới", "\nDòng 2 mới", "\nDòng 3 mới"]
+
+    with open("file.txt", "a", encoding="utf-8") as f:
+        f.writelines(lines)                           
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: medium;" class="mb-0">Ví dụ 3: Ghi thêm dữ liệu theo vòng lặp</p>
+                                        
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
+    with open("file.txt", "a", encoding="utf-8") as f:
+    for i in range(4, 7):
+        f.write(f"\nDòng số {i}")                       
+                                               </code>
+                                        </deckgo-highlight-code>
+
+                                        <p style="font-size: large;" class="mb-0">Đóng File</p>
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="card bg-dark bg-opacity-10">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr class="table-info">
+                                                                    <th scope="col" style="min-width: 200px;">Hàm</th>
+                                                                    <th scope="col" style="min-width: 300px;">Chức năng
+                                                                    </th>
+                                                                    <th scope="col" style="min-width: 350px;">Ví dụ</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                                <tr class="table-light">
+                                                                    <th scope="row"><code>file.close()</code></th>
+                                                                    <td>Đóng file sau khi đọc hoặc ghi</td>
+                                                                    <td><code>file.close()</code></td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
 
                                         <span class="text-danger">Ví dụ đóng file thủ công:</span> <br>
                                         <deckgo-highlight-code language="python">
@@ -781,16 +895,18 @@
         file.close()  # Đóng file để giải phóng tài nguyên            
                                                 </code>
                                         </deckgo-highlight-code>
-                                       
 
-                                        <span class="text-danger">Sử dụng with open() để tự động đóng file (khuyên dùng):</span> <br>
+
+                                        <span class="text-danger">Sử dụng with open() để tự động đóng file (khuyên
+                                            dùng):</span> <br>
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
         with open("data.txt", "r", encoding="utf-8") as file:
         content = file.read()       
                                                                                  </code>
                                         </deckgo-highlight-code>
-                                        <i class="text-danger">Ưu điểm: Không cần gọi file.close(), giúp tránh lỗi quên đóng file.</i> <br>
+                                        <i class="text-danger">Ưu điểm: Không cần gọi file.close(), giúp tránh lỗi quên
+                                            đóng file.</i> <br>
 
                                         <span class="text-danger">Ví dụ tổng quát</span> <br>
                                         <deckgo-highlight-code language="python">
@@ -818,14 +934,18 @@
                                         </deckgo-highlight-code>
                                         <br>
 
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Xử lý ngoại lệ với try-except trong Python kết hợp với guizero
-                                        </a></h3>
-                                    <p style="font-size: large;" class="mb-0">Trong Python, try-except được sử dụng để xử lý ngoại lệ (lỗi) khi chạy chương trình. Khi kết hợp với thư viện guizero, ta có thể hiển thị thông báo lỗi trực tiếp trên giao diện thay vì chỉ in ra màn hình console.</p>
-                                   
-                                                <h4 class="mt-4">Cấu trúc try-except cơ bản trong Python</h4>
-                                             
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Xử lý ngoại lệ với
+                                                try-except trong Python kết hợp với guizero
+                                            </a></h3>
+                                        <p style="font-size: large;" class="mb-0">Trong Python, try-except được sử dụng
+                                            để xử lý ngoại lệ (lỗi) khi chạy chương trình. Khi kết hợp với thư viện
+                                            guizero, ta có thể hiển thị thông báo lỗi trực tiếp trên giao diện thay vì
+                                            chỉ in ra màn hình console.</p>
+
+                                        <h4 class="mt-4">Cấu trúc try-except cơ bản trong Python</h4>
+
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
     try:
         # Đoạn code có thể gây lỗi
         x = int(input("Nhập một số: "))
@@ -834,14 +954,14 @@
         # Xử lý khi xảy ra lỗi
         print("Lỗi: Bạn phải nhập một số nguyên!")
                                                                              </code>
-                                    </deckgo-highlight-code>
+                                        </deckgo-highlight-code>
 
-                                    <h4 class="mt-4">Kết hợp try-except với guizero</h4>
-                                    <span class="text-danger">Ví dụ 1: Bắt lỗi nhập sai dữ liệu trong guizero
-                                       
+                                        <h4 class="mt-4">Kết hợp try-except với guizero</h4>
+                                        <span class="text-danger">Ví dụ 1: Bắt lỗi nhập sai dữ liệu trong guizero
+
                                         </span> <br>
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
     from guizero import App, TextBox, PushButton, Text, info, error
 
     def check_number():
@@ -860,13 +980,13 @@
     
     app.display()
                                                                              </code>
-                                    </deckgo-highlight-code>
+                                        </deckgo-highlight-code>
 
-                                    <span class="text-danger">Ví dụ 2: Xử lý lỗi khi mở file trong guizero
-                                       
-                                    </span> <br>
-                                <deckgo-highlight-code language="python">
-                                    <code slot="code">
+                                        <span class="text-danger">Ví dụ 2: Xử lý lỗi khi mở file trong guizero
+
+                                        </span> <br>
+                                        <deckgo-highlight-code language="python">
+                                            <code slot="code">
     from guizero import App, Text, TextBox, PushButton, error
 
     def open_file():
@@ -890,9 +1010,9 @@
     app.display()
 
                                                                          </code>
-                                </deckgo-highlight-code>
+                                        </deckgo-highlight-code>
 
-                                
+
                                     </div>
                                 </div>
                                 <div class="col-xl-12 mb-4">
@@ -911,7 +1031,8 @@
                                                         <tr class="table-light">
                                                             <th scope="row"><code>Exception</code></th>
                                                             <td>Lớp cha của mọi lỗi trong Python.</td>
-                                                            <td><code>try: 1/0 except Exception as e: print(e)</code></td>
+                                                            <td><code>try: 1/0 except Exception as e: print(e)</code>
+                                                            </td>
                                                         </tr>
                                                         <tr class="table-light">
                                                             <th scope="row"><code>SyntaxError</code></th>
@@ -936,7 +1057,8 @@
                                                         <tr class="table-light">
                                                             <th scope="row"><code>ValueError</code></th>
                                                             <td>Giá trị sai nhưng đúng kiểu dữ liệu.</td>
-                                                            <td><code>int("abc")</code> (Không thể ép "abc" thành số)</td>
+                                                            <td><code>int("abc")</code> (Không thể ép "abc" thành số)
+                                                            </td>
                                                         </tr>
                                                         <tr class="table-light">
                                                             <th scope="row"><code>IndexError</code></th>
@@ -969,7 +1091,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
 
                             </div>
                         </div>
