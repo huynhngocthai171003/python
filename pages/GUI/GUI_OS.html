@@ -250,7 +250,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="./GUI-Layout.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-th"></i>
@@ -258,7 +258,7 @@
                             <span> GUIZERO - Layout </span>
                         </a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="./GUI_Homework_Layout.html">
                             <span class="d2c_icon">
@@ -295,7 +295,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="./GUI_TextBox.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-keyboard"></i>
@@ -303,6 +303,7 @@
                             <span> GUIZERO - TextBox </span>
                         </a>
                     </li>
+
                     <li class="nav-item ">
                         <a class="nav-link" href="./GUI_File.html">
                             <span class="d2c_icon">
@@ -312,7 +313,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./GUI_OS.html">
                             <span class="d2c_icon">
                                 <i class="fas fa-folder"></i>
@@ -320,6 +321,7 @@
                             <span> GUIZERO - Thư viện OS </span>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="../PILLOW/PI_Resize.html">
                             <span class="d2c_icon">
@@ -365,14 +367,12 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - Layout</a>
+                                        <h1><a style="color: #FA3D3B; font-weight: bolder;" href="#">GUI - Thư viện OS</a>
                                         </h1>
 
-                                        <p style="font-size: large;" class="mb-0">Bố cục của giao diện đồ họa (GUI) trong guizero là cách bạn sắp xếp các widget (thành phần giao diện) trong cửa sổ. Có hai loại bố cục chính mà bạn có thể sử dụng:</p>
-                                        <ol>
-                                            <li>auto - nơi các widget được sắp xếp tự động.</li>
-                                            <li>grid - bạn chỉ định vị trí của từng widget trong một lưới.</li>
-                                        </ol>
+                                        <p style="font-size: large;" class="mb-0">Thư viện os trong Python dùng để làm việc với hệ điều hành, cho phép quản lý file, thư mục, biến môi trường, và nhiều thao tác khác.</p>
+                                      
+
                                     </div>
 
 
@@ -387,286 +387,337 @@
                                         <p class="d2c_notification_first_letter bg-info text-info fw-bold bg-opacity-10 d-flex align-items-center justify-content-center fs-6 fs-md-5 me-2 me-md-3 text-uppercase">w</p>
                                     </div> -->
                                     <div>
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Cách tạo bố cục
+                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">1. Quản lý thư mục
                                             </a></h3>
-                                        <p style="font-size: large;" class="mb-0">Cách sử dụng bố cục được xác định thông qua tham số layout của container (thùng chứa):</p>
-                                        <span class="text-danger">Cú pháp: </span> <br>
+                                        
+                                            <p style="font-size: large;" class="mb-0">Tạo thư mục </p>
+                                            <ul>
+                                                <li>Hàm: os.mkdir(path) </li>
+                                                <li>Mô tả: Tạo một thư mục mới tại đường dẫn chỉ định.</li>
+                                            </ul>
+                                         
                                         <deckgo-highlight-code language="python">
                                             <code slot="code">
-    app = App(layout="auto")
-    app = App(layout="grid")                               
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <i>Nếu không chỉ định tham số layout, mặc định sẽ sử dụng bố cục auto.</i>
-                                        <br><br>
+    import os
 
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Auto Layout</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Bố cục auto là mặc định khi bạn tạo một container. Các widget sẽ được sắp xếp theo thứ tự tạo và căn giữa trong container. Ví dụ, đoạn mã sau sẽ tạo hai widget Text, một ở trên và một ở dưới:
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ:</p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    from guizero import App, Text
-    app = App()
-    text_1 = Text(app, text="on top")
-    text_2 = Text(app, text="below")
-    app.display()                                    
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <img src="../../img/autolayout.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-                                        <br><br>
-
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Aligning</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Các widget có thể được căn chỉnh theo các vị trí trên, dưới, trái hoặc phải thông qua thuộc tính align khi tạo. Căn chỉnh một widget sẽ khiến nó "dính" vào phía bên đó của container.
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ:</p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    from guizero import App, Text
-    app = App()
-    top_text = Text(app, text="at the top", align="top")
-    bottom_text = Text(app, text="at the bottom", align="bottom")
-    left_text = Text(app, text="to the left", align="left")
-    right_text = Text(app, text="to the right", align="right")
-    app.display()                                    
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <img src="../../img/autolayoutalign.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-                                        <br><br>
-
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Xếp chồng Widget</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Khi bạn căn chỉnh nhiều widget về cùng một phía của container, các widget sẽ xếp chồng lên nhau. Các widget sẽ được xếp theo thứ tự tạo ra, widget nào được tạo trước sẽ ở gần mép nhất trong hướng đã chỉ định.
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ:</p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    from guizero import App, Text, TextBox, PushButton
-    app = App()
-    text = Text(app, text="label", align="left")
-    text_box = TextBox(app, text="enter text", align="left")
-    button = PushButton(app, text="submit", align="left")
-    app.display()                                      
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <img src="../../img/autolayout_xepxhong.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-                                        <br><br>
-
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Filling</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Các widget cũng có thể lấp đầy toàn bộ không gian có sẵn trong container bằng cách đặt tham số width và height thành fill. 
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">1. Một TextBox có thể chiếm toàn bộ chiều rộng của container:
-                                            </p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    from guizero import App, TextBox
-    app = App()
-    text_box = TextBox(app, text="enter text", width="fill")
-    app.display()                                        
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <img src="../../img/autolayout_xepxhong.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-                                        <p style="font-size: large;" class="mb-0">2. Một ListBox có thể chiếm toàn bộ chiều cao của bên trái:
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, ListBox
-    app = App()
-    list_box = ListBox(app, items=["a list"], height="fill", align="left")
-    app.display()
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/listbox_fill.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-                                         <p style="font-size: large;" class="mb-0">3. Hoặc một widget có thể chiếm toàn bộ không gian của cửa sổ bằng cách sử dụng fill cho cả chiều rộng và chiều cao:
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, PushButton
-    app = App()
-    button = PushButton(app, width="fill", height="fill")
-    app.display()  
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/button_fill.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-                                     <p style="font-size: large;" class="mb-0">4. Khi nhiều tiện ích sử dụng tính năng điền, Trình quản lý cửa sổ (hệ điều hành) sẽ phân bổ không gian tương ứng giữa tất cả các tiện ích đã yêu cầu điền vào.
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, ListBox, PushButton
-    app = App()
-    list_box = ListBox(app, items=["a list", "of items", "yay"], height="fill", align="left")
-    button = PushButton(app, width="fill", height="fill", align="right")
-    app.display()  
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/multi_fill.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-
-                                        <br><br>
-
-
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Grid Layout</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Bố cục lưới cho phép bạn sắp xếp các widget vào một lưới ảo. Khi tạo một widget, bạn sẽ cần chỉ định một tham số grid là danh sách chứa tọa độ [x, y] nơi widget sẽ xuất hiện.
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ:</p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    app = App(layout="grid")
-    text = Text(app, text="Hello world", grid=[0, 1])                                  
-                                                </code>
-                                        </deckgo-highlight-code>
-                                        <i>Không cần chỉ định chiều rộng hoặc chiều cao của lưới, nó sẽ tự động mở rộng dựa trên các tọa độ bạn cung cấp cho từng widget.</i>
-                                    
-                                        <p style="font-size: large;" class="mb-0">Ví dụ, bạn có thể tạo một bàn phím số:
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, PushButton
-
-    app = App(layout="grid")
-    
-    button1 = PushButton(app, text="1", grid=[0,0])
-    button2 = PushButton(app, text="2", grid=[1,0])
-    button3 = PushButton(app, text="3", grid=[2,0])
-    button4 = PushButton(app, text="4", grid=[0,1])
-    button5 = PushButton(app, text="5", grid=[1,1])
-    button6 = PushButton(app, text="6", grid=[2,1])
-    button7 = PushButton(app, text="7", grid=[0,2])
-    button8 = PushButton(app, text="8", grid=[1,2])
-    button9 = PushButton(app, text="9", grid=[2,2])
-    button0 = PushButton(app, text="0", grid=[1,3])
-    
-    app.display()    
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/gridlayout.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-
-                                        <br><br>
-
-                                        <p style="font-size: large;" class="mb-0">Bạn cũng có thể căn chỉnh các widget trong lưới, điều này rất hữu ích khi tạo các biểu mẫu.
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, Text, TextBox
-
-    app = App(layout="grid")
-    
-    name_label = Text(app, text="Họ và tên", grid=[0,0], align="left")
-    name = TextBox(app, grid=[1,0])
-    surname_label = Text(app, text="Họ", grid=[0,1], align="left")
-    surname = TextBox(app, grid=[1,1])
-    dob_label = Text(app, text="Ngày sinh", grid=[0,2], align="left")
-    dob = TextBox(app, grid=[1,2])
-    
-    app.display()      
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/gridlayout1.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-
-                                        <br><br>
-
-
-                                        <!-- ------------------------------------------------------------------ -->
-                                        <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Mở rộng cột hoặc hàng (Spanning columns or rows)</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Widget có thể chiếm nhiều hơn một cột hoặc hàng bằng cách chỉ định số lượng cột hoặc hàng cần mở rộng trong tham số grid. Định dạng: [x, y, xspan, yspan].
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ dưới đây cho thấy widget Text nằm ở tọa độ [0, 1], mở rộng hai cột và một hàng:</p>
-
-                                        <deckgo-highlight-code language="python">
-                                            <code slot="code">
-    text = Text(app, text="Xin chào thế giới", grid=[0,1,2,1])                                 
+    os.mkdir("new_directory")  # Tạo thư mục mới có tên "new_directory"                               
                                                 </code>
                                         </deckgo-highlight-code>
                                         
-                                        <p style="font-size: large;" class="mb-0">Bạn có thể sắp xếp các widget có kích thước khác nhau bằng cách này.  
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
-                                        <code slot="code">
-    from guizero import App, Picture
-
-    app = App(layout="grid")
-    
-    picture1 = Picture(app, image="img/cat1.png", grid=[0,0], width=200, height=100)
-    picture2 = Picture(app, image="img/cat2.png", grid=[1,0], width=200, height=100)
-    picture3 = Picture(app, image="img/cat3.png", grid=[2,0,1,2], width=200, height=200)
-    picture4 = Picture(app, image="img/cat4.png", grid=[0,1,2,1], width=400, height=100)
-    
-    app.display()   
-                                            </code>
-                                    </deckgo-highlight-code>
-                                    <img src="../../img/gridlayout2.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
-
-
-                                        <br><br>
-                                    <!-- ----------------------------------------------------------------------------- -->
-                                       <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">Hộp (Boxes)</a></h3>
-                                        <p style="font-size: large;" class="mb-0">Sử dụng widget Box để chia giao diện người dùng (GUI) thành các phần riêng biệt, giúp bạn dễ dàng sắp xếp bố cục.
-                                        </p>
-                                     
-
-                                        <p style="font-size: large;" class="mb-0">Ví dụ bố cục với nhiều hộp: Nếu bạn muốn tạo tiêu đề ở góc trên bên trái của GUI, bạn có thể sử dụng một hộp (Box) nằm ở phần trên của ứng dụng và đặt một widget Text căn chỉnh sang trái.</p>
-
-                                        <deckgo-highlight-code language="python">
+                                        <p style="font-size: large;" class="mb-0">Tạo nhiều thư mục lồng nhau </p>
+                                            <ul>
+                                                <li>Hàm: os.makedirs(path)</li>
+                                                <li>Mô tả: Tạo nhiều thư mục lồng nhau.</li>
+                                            </ul>
+<deckgo-highlight-code language="python">
                                             <code slot="code">
-    from guizero import App, Box, Text
-
-    app = App()
-    
-    title_box = Box(app, width="fill", align="top")
-    title = Text(title_box, text="Tiêu đề", align="left")
-    
-    app.display()                                  
+    os.makedirs("parent_directory/child_directory")  # Tạo thư mục cha và thư mục con                               
                                                 </code>
                                         </deckgo-highlight-code>
-                                        <img src="../../img/box.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
+                                        
+                                        <p style="font-size: large;" class="mb-0">Xóa thư mục</p>
+                                            <ul>
+                                                <li>Hàm: os.rmdir(path)</li>
+                                                <li>Mô tả: Xóa một thư mục rỗng.</li>
+                                            </ul>
+<deckgo-highlight-code language="python">
+                                            <code slot="code">
+    os.rmdir("new_directory")  # Xóa thư mục "new_directory" nếu nó rỗng                           
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        
+                                        <p style="font-size: large;" class="mb-0">Xóa nhiều thư mục lồng nhau</p>
+                                            <ul>
+                                                <li>Hàm: os.removedirs(path)</li>
+                                                <li>Mô tả: Xóa nhiều thư mục lồng nhau.</li>
+                                            </ul>
+<deckgo-highlight-code language="python">
+                                            <code slot="code">
+    os.removedirs("parent_directory/child_directory")  # Xóa thư mục con và thư mục cha nếu rỗng                          
+                                                </code>
+                                        </deckgo-highlight-code>
 
 
-                                        <p style="font-size: large;" class="mb-0">Cách tương tự có thể được sử dụng để đặt nút "OK" và "Cancel" ở góc dưới bên phải của GUI. Các widget sẽ được xếp theo thứ tự tạo, do đó nút "Cancel" được tạo trước.
-                                        </p>
-
-                                    <deckgo-highlight-code language="python">
+                                        <p style="font-size: large;" class="mb-0"> Thay đổi thư mục làm việc</p>
+                                            <ul>
+                                                <li>Hàm: os.chdir(path)</li>
+                                                <li>Mô tả: Thay đổi thư mục làm việc hiện tại.</li>
+                                            </ul>
+<deckgo-highlight-code language="python">
+                                            <code slot="code">
+    os.chdir("new_directory")  # Thay đổi thư mục làm việc hiện tại sang "new_directory"                         
+                                                </code>
+                                        </deckgo-highlight-code>
+                                        
+                                        <p style="font-size: large;" class="mb-0"> Lấy đường dẫn thư mục làm việc hiện tại</p>
+                                        <ul>
+                                            <li>Hàm: os.getcwd()</li>
+                                            <li>Mô tả: Lấy đường dẫn thư mục làm việc hiện tại.</li>
+                                        </ul>
+<deckgo-highlight-code language="python">
                                         <code slot="code">
-    from guizero import App, Box, PushButton
-
-    app = App()
-    
-    buttons_box = Box(app, width="fill", align="bottom")
-    cancel = PushButton(buttons_box, text="Hủy", align="right")
-    ok = PushButton(buttons_box, text="OK", align="right")
-    
-    app.display()      
+    current_directory = os.getcwd()
+    print(current_directory)  # In ra đường dẫn thư mục làm việc hiện tại                         
                                             </code>
                                     </deckgo-highlight-code>
-                                    <img src="../../img/box1.png" alt="" width="400px" height="auto" style="border: solid 2px black;">
+
+                                    
+
+                                    <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">2. Quản lý tệp
+                                    </a></h3>
+                                
+                                    <p style="font-size: large;" class="mb-0">Liệt kê tệp trong thư mục </p>
+                                    <ul>
+                                        <li>Hàm: os.listdir(path) </li>
+                                        <li>Mô tả: Liệt kê các tệp và thư mục trong một thư mục.</li>
+                                    </ul>
+                                 
+                                <deckgo-highlight-code language="python">
+                                    <code slot="code">
+    files = os.listdir(".")  # Liệt kê các tệp trong thư mục hiện tại
+    print(files)                          
+                                        </code>
+                                </deckgo-highlight-code>
+
+                                <p style="font-size: large;" class="mb-0"> Xóa tệp </p>
+                                    <ul>
+                                        <li>Hàm: os.remove(path)</li>
+                                        <li>Mô tả: Xóa một tệp.</li>
+                                    </ul>
+                                 
+                                <deckgo-highlight-code language="python">
+                                    <code slot="code">
+    os.remove("file.txt")  # Xóa tệp "file.txt"                          
+                                        </code>
+                                </deckgo-highlight-code>
+
+                                <p style="font-size: large;" class="mb-0"> Đổi tên tệp hoặc thư mục</p>
+                                    <ul>
+                                        <li>Hàm: os.rename(src, dst)</li>
+                                        <li>Mô tả: Đổi tên một tệp hoặc thư mục.</li>
+                                    </ul>
+                                 
+                                <deckgo-highlight-code language="python">
+                                    <code slot="code">
+    os.rename("old_name.txt", "new_name.txt")  # Đổi tên tệp từ "old_name.txt" sang "new_name.txt"                          
+                                        </code>
+                                </deckgo-highlight-code>
+
+                                
+                                <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">3. Thông tin hệ thống
+                                </a></h3>
+                            
+                                <p style="font-size: large;" class="mb-0">Truy cập biến môi trường </p>
+                                <ul>
+                                    <li>Biến: os.environ</li>
+                                    <li>Mô tả: Truy cập và thay đổi biến môi trường.</li>
+                                </ul>
+                             
+                            <deckgo-highlight-code language="python">
+                                <code slot="code">
+    print(os.environ['HOME'])  # In ra đường dẫn thư mục chính của người dùng                                
+                                    </code>
+                            </deckgo-highlight-code>
+
+                             <h3><a style="color: #FA3D3B; font-weight: bolder;" href="#">4. Làm việc với đường dẫn
+                                </a></h3>
+                                <p style="font-size: larger;" class="mb-0">Thư viện os.path cung cấp các hàm hữu ích để làm việc với đường dẫn tệp và thư mục. </p>
+                            
+                                <p style="font-size: large;" class="mb-0">os.path.join() </p>
+                                <ul>
+                                
+                                    <li>Mô tả: Kết hợp các phần của đường dẫn thành một đường dẫn hợp lệ.</li>
+                                    <li>Cú pháp: os.path.join(path, *paths)</li>
+
+                                </ul>
+                             
+                            <deckgo-highlight-code language="python">
+                                <code slot="code">
+    import os
+
+    path = os.path.join("folder", "subfolder", "file.txt")
+    print(path)  # Kết quả có thể là "folder/subfolder/file.txt" trên Unix hoặc "folder\subfolder\file.txt" trên Windows                                
+                                    </code>
+                            </deckgo-highlight-code>
+
+
+                            <p style="font-size: large;" class="mb-0">os.path.exists() </p>
+                                <ul>
+                                
+                                    <li>Mô tả: Kiểm tra xem một đường dẫn có tồn tại hay không.</li>
+                                    <li>Cú pháp: os.path.exists(path)</li>
+
+                                </ul>
+                             
+                            <deckgo-highlight-code language="python">
+                                <code slot="code">
+    import os
+
+    if os.path.exists("file.txt"):
+        print("Tệp tồn tại.")
+    else:
+        print("Tệp không tồn tại.")                                
+                                    </code>
+                            </deckgo-highlight-code>
+
+
+                            <p style="font-size: large;" class="mb-0">os.path.isfile()</p>
+                                <ul>
+                                
+                                    <li>Mô tả: Kiểm tra xem một đường dẫn có phải là tệp hay không.</li>
+                                    <li>Cú pháp: os.path.isfile(path)</li>
+
+                                </ul>
+                             
+                            <deckgo-highlight-code language="python">
+                                <code slot="code">
+    import os
+
+    if os.path.isfile("file.txt"):
+        print("Đây là một tệp.")
+    else:
+        print("Đây không phải là một tệp.")                                
+                                    </code>
+                            </deckgo-highlight-code>
+
+
+                            <p style="font-size: large;" class="mb-0">os.path.isdir()</p>
+                            <ul>
+                            
+                                <li>Mô tả: Kiểm tra xem một đường dẫn có phải là thư mục hay không.</li>
+                                <li>Cú pháp: os.path.isdir(path)</li>
+
+                            </ul>
+                         
+                        <deckgo-highlight-code language="python">
+                            <code slot="code">
+    import os
+
+    if os.path.isdir("folder"):
+        print("Đây là một thư mục.")
+    else:
+        print("Đây không phải là một thư mục.")                           
+                                </code>
+                        </deckgo-highlight-code>
+
+
+                        <p style="font-size: large;" class="mb-0">os.path.abspath()</p>
+                            <ul>
+                            
+                                <li>Mô tả: Trả về đường dẫn tuyệt đối của một đường dẫn tương đối.</li>
+                                <li>Cú pháp: os.path.abspath(path)</li>
+
+                            </ul>
+                         
+                        <deckgo-highlight-code language="python">
+                            <code slot="code">
+    import os
+
+    relative_path = "file.txt"
+    absolute_path = os.path.abspath(relative_path)
+    print("Đường dẫn tuyệt đối:", absolute_path)                           
+                                </code>
+                        </deckgo-highlight-code>
+
+
+                         <p style="font-size: large;" class="mb-0">os.path.basename()</p>
+                            <ul>
+                            
+                                <li>Mô tả: Trả về tên tệp hoặc thư mục từ một đường dẫn.</li>
+                                <li>Cú pháp: os.path.basename(path)</li>
+
+                            </ul>
+                         
+                        <deckgo-highlight-code language="python">
+                            <code slot="code">
+    import os
+
+    path = "/home/user/file.txt"
+    filename = os.path.basename(path)
+    print("Tên tệp:", filename)  # Kết quả: "file.txt"                          
+                                </code>
+                        </deckgo-highlight-code>
+
+
+                        <p style="font-size: large;" class="mb-0">os.path.dirname()</p>
+                        <ul>
+                        
+                            <li>Mô tả: Trả về thư mục chứa tệp từ một đường dẫn.</li>
+                            <li>Cú pháp: os.path.dirname(path)</li>
+
+                        </ul>
+                     
+                    <deckgo-highlight-code language="python">
+                        <code slot="code">
+    import os
+
+    path = "/home/user/file.txt"
+    directory = os.path.dirname(path)
+    pint("Thư mục chứa:", directory)  # Kết quả: "/home/user"                     
+                            </code>
+                    </deckgo-highlight-code>
+
+
+                    <p style="font-size: large;" class="mb-0">os.path.split()</p>
+                        <ul>
+                        
+                            <li>Mô tả: Tách đường dẫn thành thư mục và tên tệp.</li>
+                            <li>Cú pháp: os.path.split(path)</li>
+
+                        </ul>
+                     
+                    <deckgo-highlight-code language="python">
+                        <code slot="code">
+    import os
+
+    path = "/home/user/file.txt"
+    directory, filename = os.path.split(path)
+    print("Thư mục:", directory)  # Kết quả: "/home/user"
+    print("Tên tệp:", filename)    # Kết quả: "file.txt"                     
+                            </code>
+                    </deckgo-highlight-code>
+
+
+                    <p style="font-size: large;" class="mb-0">os.path.splitext()</p>
+                        <ul>
+                        
+                            <li>Mô tả: Tách tên tệp thành tên và phần mở rộng.</li>
+                            <li>Cú pháp: os.path.splitext(path)</li>
+
+                        </ul>
+                     
+                    <deckgo-highlight-code language="python">
+                        <code slot="code">
+    import os
+
+    path = "example.txt"
+    name, extension = os.path.splitext(path)
+    print("Tên tệp:", name)        # Kết quả: "example"
+    print("Phần mở rộng:", extension)  # Kết quả: ".txt"                     
+                            </code>
+                    </deckgo-highlight-code>
+
+
+                     <p style="font-size: large;" class="mb-0">os.path.splitext()</p>
+                        <ul>
+                        
+                            <li>Mô tả: Tách tên tệp thành tên và phần mở rộng.</li>
+                            <li>Cú pháp: os.path.splitext(path)</li>
+
+                        </ul>
+                     
+                    <deckgo-highlight-code language="python">
+                        <code slot="code">
+    import os
+
+    path = "example.txt"
+    name, extension = os.path.splitext(path)
+    print("Tên tệp:", name)        # Kết quả: "example"
+    print("Phần mở rộng:", extension)  # Kết quả: ".txt"                     
+                            </code>
+                    </deckgo-highlight-code>
+
+                                   
                                     </div>
                                 </div>
 
@@ -674,14 +725,19 @@
                             </div>
                         </div>
 
-                        
-
                     </div>
+                    <br>
 
-                  
+                 
+
                 </div>
+                <br>
 
             </div>
+
+            <br>
+
+
 
         </div>
     </div>
