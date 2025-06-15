@@ -361,166 +361,471 @@
   </div>
 
   <div class="card">
-    <div class="card-body p-4">
-      <h1 class="fw-bold">Biến trong Python (Variables)</h1>
-      <p class="fs-5">
-        Biến lưu trữ dữ liệu trong bộ nhớ máy tính. Việc sử dụng tên biến gợi nhớ được khuyến khích trong nhiều ngôn ngữ lập trình. Biến là một tên đại diện cho địa chỉ bộ nhớ nơi dữ liệu được lưu.
-        <br><br>
-        Tên biến không được bắt đầu bằng số, ký tự đặc biệt hoặc dấu gạch ngang. Một biến có thể có tên ngắn (x, y, z), nhưng nên sử dụng tên mô tả rõ ràng (firstname, lastname, age, country).
-      </p>
+    <div class="card-body d2c_notification p-0">
+        <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="d2c_notification_content d-flex align-items-start">
+                        <div>
+                            <h1><a style="color: black; font-weight: bolder;" href="#">Biến trong Python</a></h1>
+                            <p style="font-size: large;" class="mb-0">Biến là một phần quan trọng trong lập trình Python, cho phép chúng ta lưu trữ, thao tác và tham chiếu dữ liệu trong suốt quá trình thực thi chương trình. Bài viết này sẽ hướng dẫn chi tiết về biến trong Python, bao gồm các chủ đề như biến trong Python, địa chỉ bộ nhớ, tạo biến, in biến, xóa biến, lấy kiểu của biến, ép kiểu biến, phân biệt chữ hoa chữ thường, gán nhiều biến, quy tắc đặt tên biến, biến cục bộ, biến toàn cục, và hằng số trong Python.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <h3 class="fw-bold">Quy tắc đặt tên biến trong Python</h3>
-      <ul class="fs-5">
-        <li>Tên biến phải bắt đầu bằng chữ cái hoặc dấu gạch dưới (_)</li>
-        <li>Không được bắt đầu bằng số</li>
-        <li>Chỉ được chứa chữ cái, số và dấu gạch dưới (A-z, 0-9, _)</li>
-        <li>Phân biệt chữ hoa và thường (firstname, Firstname là khác nhau)</li>
-      </ul>
+            <br>
 
-      <h4 class="fw-bold">Ví dụ về tên biến hợp lệ:</h4>
-      <pre class="bg-light p-3"><code>
-firstname
-lastname
-age
-country
-city
-first_name
-last_name
-capital_city
-_if
-year_2021
-year2021
-current_year_2021
-birth_year
-num1
-num2
-      </code></pre>
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="d2c_notification_content d-flex align-items-start">
+                        <div>
+                            <h3><a style="color: black; font-weight: bolder;" href="#">Biến trong Python</a></h3>
+                            <p style="font-size: large;" class="mb-0">Biến trong Python là các vị trí bộ nhớ được dành riêng để lưu trữ giá trị. Khi bạn tạo một biến, bạn đang dành một không gian trong bộ nhớ để lưu trữ giá trị đó. Python không yêu cầu khai báo biến trước khi sử dụng hoặc khai báo kiểu của biến. Một biến được tạo ra ngay khi bạn gán giá trị cho nó.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+y = "John"
+print(x)
+print(y)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Mỗi biến trong Python là một tên đại diện cho một vị trí bộ nhớ.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+print(id(x))
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Python không có lệnh để khai báo biến.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 4  # x là kiểu int
+x = "Sally"  # x bây giờ là kiểu str
+print(x)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Bạn có thể sử dụng hàm print() để in giá trị của biến.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+y = "John"
+print(x)
+print(y)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Bạn có thể xóa một biến bằng cách sử dụng lệnh del.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+print(x)
+del x
+# print(x)  # Sẽ gây ra lỗi vì biến x đã bị xóa
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Sử dụng hàm type() để lấy kiểu của biến.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+y = "John"
+print(type(x))
+print(type(y))
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Ép kiểu biến:</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = str(3)
+y = int(3)
+z = float(3)
+print(x)
+print(y)
+print(z)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Tên biến trong Python phân biệt chữ hoa chữ thường.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+a = 4
+A = "Sally"
+print(a)
+print(A)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Gán nhiều biến trong một dòng.</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
 
-      <h4 class="fw-bold">Ví dụ về tên biến không hợp lệ:</h4>
-      <pre class="bg-light p-3"><code>
-first-name
-first@name
-first$name
-num-1
-1num
-      </code></pre>
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Tên biến hợp lệ:</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+user_age = 20
+website = 'https://freecodecamp.org'
+# 1password = True  # không hợp lệ
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Biến cục bộ:</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+def sum(x, y):
+    sum = x + y
+    return sum
 
-      <p class="fs-5">
-        Trong Python, quy tắc đặt tên phổ biến là <strong>snake_case</strong>, dùng dấu gạch dưới giữa các từ:
-        <br>Ví dụ: <code>first_name, last_name, engine_rotation_speed</code>
-      </p>
+print(sum(5, 10))
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Biến toàn cục:</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+x = 5
+y = 10
 
-      <h3 class="fw-bold">Khai báo biến</h3>
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-# Biến trong Python
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-country = 'Finland'
-city = 'Helsinki'
-age = 250
-is_married = True
-skills = ['HTML', 'CSS', 'JS', 'React', 'Python']
-person_info = {
-    'firstname': 'Asabeneh',
-    'lastname': 'Yetayeh',
-    'country': 'Finland',
-    'city': 'Helsinki'
-}
-        </code>
-      </deckgo-highlight-code>
+def sum():
+    return x + y
 
-      <h3 class="fw-bold">Sử dụng print() và len()</h3>
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-print('First name:', first_name)
-print('Độ dài tên:', len(first_name))
-print('Last name:', last_name)
-print('Country:', country)
-print('Age:', age)
-print('Married:', is_married)
-print('Skills:', skills)
-print('Person info:', person_info)
-        </code>
-      </deckgo-highlight-code>
+print(sum())
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-3">Hằng số trong Python (quy ước dùng chữ in hoa):</p>
+<deckgo-highlight-code language="python">
+<code slot="code">
+PI = 3.14159
+GRAVITY = 9.8
+</code>
+</deckgo-highlight-code>
+                            <p class="mt-4">Việc nắm vững cách sử dụng biến trong Python là rất quan trọng để trở thành một lập trình viên Python thành thạo. Bài viết này đã giới thiệu chi tiết về các khái niệm cơ bản như biến trong Python, địa chỉ bộ nhớ, tạo biến, in biến, xóa biến, lấy kiểu của biến, ép kiểu biến, phân biệt chữ hoa chữ thường, gán nhiều biến, quy tắc đặt tên biến, biến cục bộ, biến toàn cục, và hằng số trong Python. Hy vọng rằng bạn đã có thể hiểu rõ hơn về cách sử dụng biến trong Python và sẵn sàng viết mã Python của riêng mình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-      <h3 class="fw-bold">Khai báo nhiều biến trên một dòng</h3>
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-first_name, last_name, country, age, is_married = 'Asabeneh', 'Yetayeh', 'Finland', 250, True
-        </code>
-      </deckgo-highlight-code>
+<div class="card">
+  <div class="card-body d2c_notification p-0">
+    <div class="d2c_notification_wrapper border-bottom px-4 pt-4 py-3">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <div class="d2c_notification_content d-flex align-items-start">
+            <div>
+              <h1 style="font-weight: bolder;">Kiểu dữ liệu trong Python</h1>
+              <p><em>5 phút đọc</em></p>
+              <p>Kiểu dữ liệu là một khái niệm quan trọng trong lập trình, giúp xác định loại dữ liệu mà một biến có thể lưu trữ và các phép toán có thể thực hiện trên dữ liệu đó. Python là một ngôn ngữ lập trình mạnh mẽ và linh hoạt, hỗ trợ nhiều kiểu dữ liệu khác nhau.</p>
 
-      <h3 class="fw-bold">Nhập dữ liệu từ người dùng</h3>
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-first_name = input('Tên của bạn là gì: ')
-age = input('Bạn bao nhiêu tuổi?')
+              <h2>Kiểu dữ liệu là gì?</h2>
+              <p>Kiểu dữ liệu (<strong>data type</strong>) là một phân loại của các loại dữ liệu cụ thể bởi một giá trị nhất định hoặc các phép toán toán học hoặc logic có thể thực hiện trên dữ liệu đó. Trong Python, mọi thứ đều là đối tượng.</p>
 
-print(first_name)
-print(age)
-        </code>
-      </deckgo-highlight-code>
+              <h2>Các kiểu dữ liệu trong Python</h2>
+              <p>Dưới đây là một số kiểu dữ liệu phổ biến trong Python:</p>
+              <ol>
+                <li><strong>Numeric (Số học)</strong>: int, float, complex</li>
+                <li><strong>String (Chuỗi)</strong>: str</li>
+                <li><strong>Sequence (Dãy)</strong>: list, tuple, range</li>
+                <li><strong>Binary (Nhị phân)</strong>: bytes, bytearray, memoryview</li>
+                <li><strong>Mapping (Ánh xạ)</strong>: dict</li>
+                <li><strong>Boolean (Boolean)</strong>: bool</li>
+                <li><strong>Set (Tập hợp)</strong>: set, frozenset</li>
+                <li><strong>None (Không có giá trị)</strong>: NoneType</li>
+              </ol>
 
-      <h3 class="fw-bold">Kiểu dữ liệu và ép kiểu</h3>
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-print(type('Asabeneh'))  # str
-print(type(10))          # int
-print(type(3.14))        # float
-print(type(True))        # bool
-print(type([1,2,3]))     # list
-print(type({'a':1}))     # dict
-print(type((1,2)))       # tuple
-print(type(zip([1,2],[3,4])))  # zip
-        </code>
-      </deckgo-highlight-code>
+              <h2>Kiểu dữ liệu số (Numeric Data Types)</h2>
+<p>Kiểu dữ liệu số trong Python được sử dụng để lưu trữ các giá trị liên quan đến số học. Các giá trị này bao gồm số nguyên, số thực và số phức. Python hỗ trợ ba kiểu dữ liệu số chính:</p>
 
-      <deckgo-highlight-code language="python">
-        <code slot="code">
-# int -> float
-num_int = 10
-num_float = float(num_int)
+<h3>1. <code>int</code> (Số nguyên)</h3>
+<p>Lưu trữ các số nguyên, tức là những số không có phần thập phân. Kiểu <code>int</code> có thể biểu diễn các giá trị rất lớn vì không giới hạn độ dài.</p>
 
-# float -> int
-gravity = 9.81
-int_gravity = int(gravity)
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+num1 = 5
+print(num1, 'là kiểu', type(num1))
+</code>
+</deckgo-highlight-code>
 
-# int -> str
-num_str = str(num_int)
+<h3>2. <code>float</code> (Số thực)</h3>
+<p>Dùng để lưu trữ các số có phần thập phân. Python hỗ trợ độ chính xác lên đến khoảng 15 chữ số thập phân cho kiểu <code>float</code>.</p>
 
-# str -> float -> int
-num_str = '10.6'
-num_float = float(num_str)
-num_int = int(num_float)
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+num2 = 2.0
+print(num2, 'là kiểu', type(num2))
+</code>
+</deckgo-highlight-code>
 
-# str -> list
-first_name = 'Asabeneh'
-first_name_list = list(first_name)
-        </code>
-      </deckgo-highlight-code>
+<h3>3. <code>complex</code> (Số phức)</h3>
+<p>Được sử dụng để biểu diễn số phức, có dạng <code>a + bj</code> trong đó <code>a</code> và <code>b</code> là các số thực, còn <code>j</code> là đơn vị ảo (tương đương với <code>√-1</code>).</p>
 
-      <h3 class="fw-bold">💻 Bài tập - Ngày 2</h3>
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+num3 = 1 + 2j
+print(num3, 'là kiểu', type(num3))
+</code>
+</deckgo-highlight-code>
 
-<h4 class="fw-bold mt-4">🧠 Cấp độ 1: Biến và Kiểu Dữ Liệu</h4>
-<ul class="fs-5">
-  <li>Tạo file <code>Bài_tập.py</code> trong thư mục <code>Buổi 1</code>.</li>
-  <li>Viết chú thích đầu file: <code># Bài tập tại lớp</code></li>
-  <li>Khai báo các biến với dữ liệu phù hợp: <code>first_name</code>, <code>last_name</code>, <code>full_name</code>, <code>country</code>, <code>city</code>, <code>age</code>, <code>is_married</code>, <code>skills</code> (list), <code>person_info</code> (dict).</li>
-  <li>Sử dụng hàm <code>print()</code> để hiển thị nội dung các biến.</li>
-  <li>Dùng <code>len()</code> để hiển thị độ dài của <code>first_name</code> và <code>last_name</code>.</li>
+
+             <h2>Kiểu dữ liệu chuỗi (String Data Type)</h2>
+<p>Kiểu dữ liệu chuỗi trong Python được sử dụng để lưu trữ văn bản, hay còn gọi là chuỗi ký tự. Một chuỗi là một tập hợp có thứ tự các ký tự (letters, numbers, symbols), được đặt trong dấu ngoặc đơn <code>' '</code> hoặc dấu ngoặc kép <code>" "</code>.</p>
+<p>Python hỗ trợ các ký tự Unicode, cho phép bạn làm việc với nhiều ngôn ngữ và biểu tượng trên thế giới. Chuỗi là một kiểu dữ liệu bất biến (immutable), nghĩa là giá trị chuỗi không thể thay đổi sau khi được tạo.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+name = 'Python'
+print(name)
+
+message = "Python for beginners"
+print(message)
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Kiểu dữ liệu dãy (Sequence Data Types)</h2>
+<p>Kiểu dữ liệu dãy trong Python được sử dụng để lưu trữ một tập hợp các mục (elements) theo thứ tự. Các phần tử trong dãy có thể được truy cập thông qua chỉ số (index), bắt đầu từ 0.</p>
+<p>Python hỗ trợ ba kiểu dữ liệu dãy phổ biến:</p>
+
+<h3>1. <code>list</code> (Danh sách)</h3>
+<p><code>list</code> là một dãy có thể thay đổi (mutable), cho phép thêm, xóa hoặc thay đổi phần tử sau khi được tạo. Các phần tử được đặt trong dấu ngoặc vuông <code>[]</code> và có thể thuộc nhiều kiểu dữ liệu khác nhau.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+fruits = ["apple", "banana", "cherry"]
+print(fruits)
+</code>
+</deckgo-highlight-code>
+
+<h3>2. <code>tuple</code> (Bộ giá trị không thay đổi)</h3>
+<p><code>tuple</code> là một dãy bất biến (immutable), tức là không thể thay đổi nội dung sau khi được tạo. Các phần tử được đặt trong dấu ngoặc đơn <code>()</code>.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+coordinates = (10.0, 20.0)
+print(coordinates)
+</code>
+</deckgo-highlight-code>
+
+<h3>3. <code>range</code> (Dãy số nguyên)</h3>
+<p><code>range</code> đại diện cho một dãy các số nguyên liên tiếp, thường được sử dụng trong vòng lặp <code>for</code>. Mặc định, <code>range(n)</code> sẽ tạo ra các số từ 0 đến n-1.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+numbers = range(5)
+print(list(numbers))
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Kiểu dữ liệu nhị phân (Binary Data Types)</h2>
+<p>Python hỗ trợ các kiểu dữ liệu nhị phân dùng để làm việc với dữ liệu dạng byte – thường được sử dụng trong xử lý tệp, truyền dữ liệu qua mạng, hoặc thao tác cấp thấp với bộ nhớ.</p>
+<p>Ba kiểu dữ liệu nhị phân chính trong Python là:</p>
+
+<h3>1. <code>bytes</code></h3>
+<p><code>bytes</code> là một dãy các byte không thể thay đổi (immutable). Mỗi phần tử trong một đối tượng <code>bytes</code> là một số nguyên trong khoảng từ 0 đến 255.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+data = b"Hello"
+print(data)
+</code>
+</deckgo-highlight-code>
+
+<h3>2. <code>bytearray</code></h3>
+<p><code>bytearray</code> tương tự như <code>bytes</code> nhưng có thể thay đổi được (mutable). Điều này cho phép sửa đổi dữ liệu sau khi đã tạo đối tượng.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+data = bytearray(5)
+print(data)
+</code>
+</deckgo-highlight-code>
+
+<h3>3. <code>memoryview</code></h3>
+<p><code>memoryview</code> cung cấp một giao diện cho phép thao tác trực tiếp trên bộ nhớ của các đối tượng hỗ trợ buffer protocol mà không cần sao chép dữ liệu, giúp tối ưu hiệu suất.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+data = memoryview(bytes(5))
+print(data)
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Kiểu dữ liệu ánh xạ (Mapping Data Type)</h2>
+<p>Kiểu dữ liệu ánh xạ trong Python đại diện cho tập hợp các cặp <strong>khóa - giá trị</strong> (key-value). Kiểu phổ biến nhất là <code>dictionary</code>, được sử dụng để lưu trữ và truy xuất dữ liệu dựa trên khóa thay vì chỉ số.</p>
+<p>Trong <code>dict</code>, mỗi khóa là duy nhất và được ánh xạ tới một giá trị cụ thể. Các cặp khóa-giá trị được đặt trong dấu ngoặc nhọn <code>{}</code>, phân cách bằng dấu hai chấm <code>:</code>, và các cặp được phân tách bằng dấu phẩy <code>,</code>.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+person = {"name": "John", "age": 30}
+print(person)
+</code>
+</deckgo-highlight-code>
+
+
+             <h2>Kiểu dữ liệu boolean (Boolean Data Type)</h2>
+<p>Kiểu dữ liệu <code>boolean</code> trong Python dùng để biểu diễn giá trị đúng hoặc sai. Nó chỉ có hai giá trị hợp lệ là <code>True</code> và <code>False</code> – viết hoa chữ cái đầu và không có dấu nháy.</p>
+<p>Kiểu boolean thường được sử dụng trong các biểu thức điều kiện (if, while, v.v.) và là kết quả trả về của các phép so sánh (==, &gt;, &lt;, ...).</p>
+<p>Trong ngữ cảnh Boolean:
+<ul>
+  <li>Các giá trị như <code>0</code>, <code>None</code>, <code>""</code>, <code>[]</code>, <code>{}</code> được coi là <code>False</code>.</li>
+  <li>Mọi giá trị khác đều được coi là <code>True</code>.</li>
+</ul>
+</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+is_active = True
+print(is_active, 'là kiểu', type(is_active))
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Kiểu dữ liệu tập hợp (Set Data Type)</h2>
+<p>Kiểu dữ liệu <code>set</code> trong Python được sử dụng để lưu trữ nhiều phần tử **duy nhất** trong một tập hợp **không có thứ tự** và **không cho phép trùng lặp**.</p>
+<p>Một tập hợp được khai báo bằng dấu ngoặc nhọn <code>{}</code>, hoặc bằng hàm <code>set()</code>. Do không có thứ tự, các phần tử không thể được truy cập bằng chỉ số (index) như trong list hoặc tuple.</p>
+<p>Tập hợp rất hữu ích khi cần loại bỏ các giá trị trùng lặp hoặc thực hiện các phép toán tập hợp như: hợp (<code>union</code>), giao (<code>intersection</code>), hiệu (<code>difference</code>).</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+student_ids = {112, 114, 116, 118, 115}
+print(student_ids)
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Kiểu dữ liệu None (None Data Type)</h2>
+<p><code>None</code> là một giá trị đặc biệt trong Python thuộc kiểu <code>NoneType</code>. Nó được sử dụng để biểu thị rằng một biến không có giá trị hoặc một hàm không trả về gì.</p>
+<p><code>None</code> thường được dùng trong các tình huống như:</p>
+<ul>
+  <li>Gán giá trị mặc định ban đầu cho biến.</li>
+  <li>Làm điều kiện kiểm tra xem một biến đã được khởi tạo hay chưa.</li>
+  <li>Làm giá trị trả về mặc định cho các hàm không có lệnh <code>return</code>.</li>
+</ul>
+<p>Lưu ý rằng <code>None</code> không tương đương với <code>False</code>, <code>0</code> hoặc chuỗi rỗng <code>""</code>, nhưng khi kiểm tra logic, nó được coi là giá trị sai (falsy).</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+value = None
+print(value, 'là kiểu', type(value))
+</code>
+</deckgo-highlight-code>
+
+
+             <h2>Chuyển đổi kiểu dữ liệu trong Python</h2>
+<p>Chuyển đổi kiểu dữ liệu là quá trình chuyển đổi giá trị từ kiểu dữ liệu này sang kiểu dữ liệu khác. Python hỗ trợ hai hình thức chuyển đổi:</p>
+<ul>
+  <li><strong>Chuyển đổi ngầm định (Implicit Conversion)</strong></li>
+  <li><strong>Chuyển đổi tường minh (Explicit Conversion)</strong></li>
 </ul>
 
-<h4 class="fw-bold mt-4">🧠 Cấp độ 2: Ép Kiểu và Nhập Dữ Liệu</h4>
-<ul class="fs-5">
-  <li>Kiểm tra kiểu dữ liệu của từng biến bằng <code>type()</code>.</li>
-  <li>Chuyển đổi <code>age</code> sang kiểu <code>float</code> và <code>str</code>, rồi in ra màn hình.</li>
-  <li>Chuyển đổi <code>first_name</code> thành danh sách các ký tự, ví dụ: <code>['A', 's', 'a', 'b', 'e', 'n', 'e', 'h']</code>.</li>
-  <li>Nhập từ bàn phím: tên, tuổi, kỹ năng (dạng chuỗi cách nhau bằng dấu phẩy), sau đó in ra dưới dạng dict.</li>
-  <li>In độ dài danh sách kỹ năng vừa nhập và kiểu dữ liệu của từng phần tử.</li>
-</ul>
+<h3>1. Chuyển đổi ngầm định (Implicit Type Conversion)</h3>
+<p>Chuyển đổi ngầm định xảy ra khi Python tự động thay đổi kiểu dữ liệu của một giá trị mà không cần sự can thiệp của lập trình viên. Điều này thường xảy ra trong các phép toán khi một kiểu có độ chính xác thấp được nâng lên kiểu có độ chính xác cao hơn để tránh mất dữ liệu.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+a_int = 1
+b_float = 1.0
+c_sum = a_int + b_float
+print(c_sum)        # Kết quả: 2.0
+print(type(c_sum))  # Kết quả: &lt;class 'float'&gt;
+</code>
+</deckgo-highlight-code>
+
+<h3>2. Chuyển đổi tường minh (Explicit Type Conversion)</h3>
+<p>Chuyển đổi tường minh, hay còn gọi là ép kiểu (type casting), là khi lập trình viên chủ động thay đổi kiểu dữ liệu bằng cách sử dụng các hàm dựng sẵn như <code>int()</code>, <code>float()</code>, <code>str()</code>, v.v.</p>
+
+<h4>Ví dụ:</h4>
+<deckgo-highlight-code language="python">
+<code slot="code">
+num_string = '12'
+num_integer = 23
+print("Kiểu dữ liệu của num_string trước khi ép kiểu:", type(num_string))
+
+# Ép kiểu
+num_string = int(num_string)
+print("Kiểu dữ liệu của num_string sau khi ép kiểu:", type(num_string))
+
+num_sum = num_integer + num_string
+print("Tổng:", num_sum)
+print("Kiểu dữ liệu của num_sum:", type(num_sum))
+</code>
+</deckgo-highlight-code>
+
+
+              <h2>Các hàm chuyển đổi kiểu dữ liệu phổ biến</h2>
+              <ul>
+                <li><code>int()</code>: chuyển sang số nguyên</li>
+                <li><code>float()</code>: chuyển sang số thực</li>
+                <li><code>str()</code>: chuyển sang chuỗi</li>
+                <li><code>bool()</code>: chuyển sang boolean</li>
+                <li><code>list()</code>: chuyển sang danh sách</li>
+                <li><code>tuple()</code>: chuyển sang tuple</li>
+                <li><code>set()</code>: chuyển sang tập hợp</li>
+                <li><code>dict()</code>: chuyển sang từ điển</li>
+              </ul>
+
+              <h3>Ví dụ sử dụng các hàm chuyển đổi</h3>
+              <deckgo-highlight-code language="python">
+<code slot="code">
+x = int("10")
+print(x, 'là kiểu', type(x))
+
+y = float("10.5")
+print(y, 'là kiểu', type(y))
+
+z = str(10)
+print(z, 'là kiểu', type(z))
+
+a = bool(1)
+print(a, 'là kiểu', type(a))
+
+b = list((1, 2, 3))
+print(b, 'là kiểu', type(b))
+
+c = tuple([1, 2, 3])
+print(c, 'là kiểu', type(c))
+
+d = set([1, 2, 3])
+print(d, 'là kiểu', type(d))
+
+e = dict([(1, 'one'), (2, 'two')])
+print(e, 'là kiểu', type(e))
+</code>
+</deckgo-highlight-code>
+
+              <h2>Kết luận</h2>
+              <p>Việc nắm vững các kiểu dữ liệu trong Python là rất quan trọng để trở thành một lập trình viên Python thành thạo. Bài viết này đã giới thiệu chi tiết về các khái niệm cơ bản như kiểu dữ liệu là gì, các kiểu dữ liệu trong Python, các loại kiểu dữ liệu trong Python, chuyển đổi kiểu dữ liệu trong Python, và các hàm chuyển đổi kiểu dữ liệu. Hy vọng rằng bạn đã có thể hiểu rõ hơn về cách sử dụng các kiểu dữ liệu trong Python và sẵn sàng viết mã Python của riêng mình.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
 </div>
 
 
